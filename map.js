@@ -23,7 +23,7 @@ function initialiseMap() {
         // location.department = this[4];
         // location.funder = this[0];
         location.url = this[4];
-	locations.push(location);
+          locations.push(location);
     	});
       console.log(locations)
       // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
@@ -61,10 +61,13 @@ function createMarker(map, location, infowindow) {
     position: position,
     map: map,
     title: location.title,
-    });
+  });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
-    '<p><strong>' + ((location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')) 
+    '<p><strong>' + ((location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')) + '</strong></p>' +
+    ((location.institution === undefined) ? "" : ('<p><strong>Lead institution: </strong>' + location.institution + '</p>')) +
+    ((location.department === undefined) ? "" : ('<p><strong>Department: </strong>' + location.department + '</p>')) +
+    ((location.funder === undefined) ? "" : ('<p><strong>Funder: </strong>' + location.funder + '</p>')) +
     '</div>');
     infowindow.open(map, marker);
   });
