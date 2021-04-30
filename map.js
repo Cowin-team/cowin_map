@@ -23,6 +23,7 @@ function initialiseMap() {
         // location.department = this[4];
         // location.funder = this[0];
         location.url = this[4];
+	location.content = this[5];
           locations.push(location);
     	});
       console.log(locations)
@@ -61,6 +62,7 @@ function createMarker(map, location, infowindow) {
     position: position,
     map: map,
     title: location.title,
+    description: location.content,
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
