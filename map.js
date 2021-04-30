@@ -23,6 +23,7 @@ function initialiseMap() {
         // location.department = this[4];
         // location.funder = this[0];
         location.url = this[4];
+	location.covidbed = this[5];
           locations.push(location);
     	});
       console.log(locations)
