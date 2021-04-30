@@ -27,7 +27,7 @@ function initialiseMap() {
 	location.oxybed = this[6];
 	location.icu = this[7];
 	location.venti = this[8];
-		
+	location.update = this[9];
           locations.push(location);
     	});
       console.log(locations)
@@ -75,6 +75,7 @@ function createMarker(map, location, infowindow) {
     ((location.oxybed === undefined) ? "" : ('<p><strong>Oxygen Beds: </strong>' + location.oxybed + '</p>')) +
     ((location.icu === undefined) ? "" : ('<p><strong>ICUs: </strong>' + location.icu + '</p>')) +
     ((location.venti === undefined) ? "" : ('<p><strong>Ventilators: </strong>' + location.venti + '</p>')) +
+    ((location.update === undefined) ? "" : ('<p><strong>LAST UPDATE: </strong>' + location.update + '</p>')) +
     '</div>');
     infowindow.open(map, marker);
   });
