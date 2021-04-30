@@ -62,7 +62,7 @@ function createMarker(map, location, infowindow) {
     position: position,
     map: map,
     title: location.title,
-    description: location.content,
+    //description: location.content,
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
