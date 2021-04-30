@@ -4,39 +4,25 @@ var allCowinMarkers = [];
 
 window.addEventListener("filtersChanged", function(event){
   let drawOptions = {
-    showCovidBeds: false,
-    showOxygenBeds: false,
-    showICUs: false,
-    showVentilators: false
+    shouldHaveCovidBeds: false,
+    shouldHaveOxygenBeds: false,
+    shouldHaveICUs: false,
+    shouldHaveVentilators: false
   }
-  let anyOptionsTrue = false;
 
   event.detail.checkedFilterNames.forEach(function(filterName) {
     if (filterName == "show_covid_beds")  {
-      drawOptions.showCovidBeds = true;
+      drawOptions.shouldHaveCovidBeds = true;
     } else if (filterName == "show_oxygen_beds")  {
-      drawOptions.showOxygenBeds = true;
+      drawOptions.shouldHaveOxygenBeds = true;
     } else if (filterName == "show_icus")  {
-      drawOptions.showICUs = true;
+      drawOptions.shouldHaveICUs = true;
     } else if (filterName == "show_ventilators")  {
-      drawOptions.showVentilators = true;
+      drawOptions.shouldHaveVentilators = true;
     }
   });
 
-  if (drawOptions.showCovidBeds == false &&
-    drawOptions.showOxygenBeds == false &&
-    drawOptions.showICUs == false &&
-    drawOptions.showVentilators == false) {
-
-    drawMarkers({
-      showCovidBeds: true,
-      showOxygenBeds: true,
-      showICUs: true,
-      showVentilators: true
-    });
-  } else {
-    drawMarkers(drawOptions);
-  }
+  drawMarkers(drawOptions);
 });
 
 function locationFromDataRow(dataRow) {
@@ -88,27 +74,29 @@ function initialiseMap() {
     locations.forEach(function(location){
       allCowinMarkers.push(createCowinMarker(map, location, infowindow));
     });
-    drawMarkers({
-      showCovidBeds: true,
-      showOxygenBeds: true,
-      showICUs: true,
-      showVentilators: true
-    });
+    drawMarkers();
   });
 }
 
-function drawMarkers(filters) {
+function drawMarkers(options) {
   let bounds = new google.maps.LatLngBounds();
   allCowinMarkers.forEach(function(cowinMarker) {
-    if ((filters.showCovidBeds && cowinMarker.hasCovidBeds) ||
-      (filters.showOxygenBeds && cowinMarker.hasOxygenBeds) ||
-      (filters.showICUs && cowinMarker.hasICUs) ||
-      (filters.showVentilators && cowinMarker.hasVentilators)) {
+    let shouldRenderMarker = true;
 
+    if (options != null) {
+      if ((options.shouldHaveCovidBeds && !cowinMarker.hasCovidBeds) ||
+        (options.shouldHaveOxygenBeds && !cowinMarker.hasOxygenBeds) ||
+        (options.shouldHaveICUs && !cowinMarker.hasICUs) ||
+        (options.shouldHaveVentilators && !cowinMarker.hasVentilators)) {
+
+          shouldRenderMarker = false;
+        }
+    }
+
+    if (shouldRenderMarker) {
       cowinMarker.mapMarker.setMap(map);
       if (!isNaN(cowinMarker.location.latitude) && !isNaN(cowinMarker.location.longitude)) {
         bounds.extend(cowinMarker.mapMarker.position);
-      } else {
       }
     } else {
       cowinMarker.mapMarker.setMap(null);
