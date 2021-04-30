@@ -23,7 +23,11 @@ function initialiseMap() {
         // location.department = this[4];
         // location.funder = this[0];
         location.url = this[4];
-	location.covidbed = this[5];
+	location.covidbed = this[5]
+	location.oxybed = this[6];
+	location.icu = this[7];
+	location.venti = this[8];
+		
           locations.push(location);
     	});
       console.log(locations)
@@ -62,12 +66,15 @@ function createMarker(map, location, infowindow) {
     position: position,
     map: map,
     title: location.title,
-    description: location.covidbed,
+    
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
     '<p><strong>' + ((location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')) + '</strong></p>' +
     ((location.covidbed === undefined) ? "" : ('<p><strong>COVID Beds: </strong>' + location.covidbed + '</p>')) +
+    ((location.oxybed === undefined) ? "" : ('<p><strong>Oxygen Beds: </strong>' + location.oxybed + '</p>')) +
+    ((location.icu === undefined) ? "" : ('<p><strong>ICUs: </strong>' + location.icu + '</p>')) +
+    ((location.venti === undefined) ? "" : ('<p><strong>Ventilators: </strong>' + location.venti + '</p>')) +
     '</div>');
     infowindow.open(map, marker);
   });
