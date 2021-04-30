@@ -23,8 +23,7 @@ function initialiseMap() {
         // location.department = this[4];
         // location.funder = this[0];
         location.url = this[4];
-	//location.content = this[5];
-          locations.push(location);
+	locations.push(location);
     	});
       console.log(locations)
       // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
@@ -62,8 +61,7 @@ function createMarker(map, location, infowindow) {
     position: position,
     map: map,
     title: location.title,
-    //description: location.content,
-  });
+    });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
     '<p><strong>' + ((location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')) 
