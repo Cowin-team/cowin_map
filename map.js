@@ -67,6 +67,7 @@ function createMarker(map, location, infowindow) {
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<div>'+
     '<p><strong>' + ((location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')) + '</strong></p>' +
+    ((location.covidbed === undefined) ? "" : ('<p><strong>COVID Beds: </strong>' + location.covidbed + '</p>')) +
     '</div>');
     infowindow.open(map, marker);
   });
