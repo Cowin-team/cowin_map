@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+  <head lang="en">
     <meta charset="UTF-8">
     <title>The Cowin Map </title>
     <link rel="stylesheet" href="map.css">
-</head>
+  </head>
 
-<body>
+  <body>
 
-<h3>The Cowin Map</h3>
-<p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.
-Let’s help India win against covid!</p>
+    <h3>The Cowin Map</h3>
+    <p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.
+    Let’s help India win against covid!</p>
 
-<script src="map.js"></script>
+    <form class="filters_form">
+      <input type="checkbox"
+             name="filters[show_covid_beds]"
+             data-filter-name="show_covid_beds"
+             value="1">
+      Covid Beds
 
-<div id="map"></div>
-<!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
-<!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM&callback=initialiseMap">
-</script>   
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <input type="checkbox"
+             name="filters[show_oxygen_beds]"
+             data-filter-name="show_oxygen_beds"
+             value="1">
+      Oxygen Beds
 
-</body>
+      <input type="checkbox"
+             name="filters[show_icus]"
+             data-filter-name="show_icus"
+             value="1">
+      ICUs
+
+      <input type="checkbox"
+             name="filters[show_ventilators]"
+             data-filter-name="show_ventilators"
+             value="1">
+      Ventilators
+    </form>
+
+    <script src="js/map.js"></script>
+
+    <div id="map"></div>
+    <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
+    <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM&callback=initialiseMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/filters.js"></script>
+
+  </body>
 </html>
