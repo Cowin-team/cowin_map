@@ -9,6 +9,10 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -109,6 +113,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
+    jekyll-babel (1.1.0)
+      babel-transpiler
     jekyll-coffeescript (1.1.1)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.11.1)
@@ -264,6 +270,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-babel
 
 BUNDLED WITH
    2.1.4

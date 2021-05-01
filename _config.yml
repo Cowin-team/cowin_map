@@ -3,6 +3,9 @@ description: Senior Ruby Engineer, Munich, Germany, Planet Earth
 description: "#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access."
 url: https://cowinmap.com
 
+plugins:
+  - jekyll-babel
+
 exclude:
   - _dist
   - node_modules
