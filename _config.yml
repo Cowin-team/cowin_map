@@ -13,7 +13,9 @@ exclude:
   - _dist
   - node_modules
   - assets/js/src/
+  - assets/js/dist/README.md
   - package.json
+  - webpack.config.js
   - README.md
   - Gemfile
   - Gemfile.lock
