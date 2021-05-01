@@ -1,0 +1,33 @@
+version: '3'
+services:
+  site:
+    build:
+      context: ./
+    networks:
+      - cowin_dev
+    expose:
+      - 4000
+    ports:
+      - "4000:4000"
+    hostname: "app_server"
+    environment: &app_env
+      BUNDLE_PATH: /app/.bundle
+      EDITOR: vi
+    volumes:
+      - $SSH_AUTH_SOCK:/tmp/agent.sock:cached
+      - app-source:/app
+    tty: true
+    stdin_open: true
+    working_dir: "/app"
+    command: 'sh -c "bundle check && bundle exec jekyll serve -H 0.0.0.0"'
+
+networks:
+  cowin_dev:
+    driver: bridge
+volumes:
+  app-source:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: "${PWD}"
