@@ -1,104 +1,82 @@
-<!DOCTYPE html>
-<html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cowin Map </title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-  </head>
+---
+layout: default
+---
 
-  <body class="is-flex is-flex-direction-column">
-    <div class="pt-3 pb-3">
-      <div class="container">
-        <div class="content">
-          <span class="is-hidden-mobile">
-            <!-- Shown on all screen sizes except mobile -->
-            <h3 class="title is-3">The Cowin Map</h3>
-            <p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
-            <p>Let’s help India win against covid!</p>
-          </span>
-
-          <span class="is-hidden-tablet">
-            <!-- Shown only on mobile -->
-            <h6 class="title is-5">The Cowin Map</h6>
-            <p class="is-size-7">#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
-            <p class="is-size-7">Let’s help India win against covid!</p>
-          </span>
-
-          <div class="columns is-size-7-mobile is-mobile is-vcentered">
-            <div class="column is-hidden-mobile is-narrow has-text-weight-bold">
-              Filter for:
-            </div>
-            <div class="column">
-              <form class="filters_form box">
-                <div class="columns">
+<div class="pt-3 pb-3">
+  <div class="container">
+    <div class="content">
+      <div class="columns is-size-7-mobile is-mobile is-vcentered">
+        <div class="column is-hidden-mobile is-narrow has-text-weight-bold">
+          Filter for:
+        </div>
+        <div class="column">
+          <form class="filters_form box">
+            <div class="columns">
+              <div class="column is-6">
+                <div class="columns is-mobile">
                   <div class="column is-6">
-                    <div class="columns is-mobile">
-                      <div class="column is-6">
-                        <label class="checkbox">
-                          <input type="checkbox"
-                                 name="filters[show_covid_beds]"
-                                 data-filter-name="show_covid_beds"
-                                 value="1">
-                          Covid Beds
-                        </label>
-                      </div>
-
-                      <div class="column is-6">
-                        <label class="checkbox">
-                          <input type="checkbox"
-                                 name="filters[show_oxygen_beds]"
-                                 data-filter-name="show_oxygen_beds"
-                                 value="1">
-                          Oxygen Beds
-                        </label>
-                      </div>
-                    </div>
+                    <label class="checkbox">
+                      <input type="checkbox"
+                             name="filters[show_covid_beds]"
+                             data-filter-name="show_covid_beds"
+                             value="1">
+                      Covid Beds
+                    </label>
                   </div>
 
                   <div class="column is-6">
-                    <div class="columns is-mobile">
-                      <div class="column is-6">
-                        <label class="checkbox">
-                          <input type="checkbox"
-                                 name="filters[show_icus]"
-                                 data-filter-name="show_icus"
-                                 value="1">
-                          ICUs
-                        </label>
-                      </div>
-
-                      <div class="column is-6">
-                        <label class="checkbox">
-                          <input type="checkbox"
-                                 name="filters[show_ventilators]"
-                                 data-filter-name="show_ventilators"
-                                 value="1">
-                          Ventilators
-                        </label>
-                      </div>
-                    </div>
+                    <label class="checkbox">
+                      <input type="checkbox"
+                             name="filters[show_oxygen_beds]"
+                             data-filter-name="show_oxygen_beds"
+                             value="1">
+                      Oxygen Beds
+                    </label>
                   </div>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
+              </div>
 
+              <div class="column is-6">
+                <div class="columns is-mobile">
+                  <div class="column is-6">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                             name="filters[show_icus]"
+                             data-filter-name="show_icus"
+                             value="1">
+                      ICUs
+                    </label>
+                  </div>
+
+                  <div class="column is-6">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                             name="filters[show_ventilators]"
+                             data-filter-name="show_ventilators"
+                             value="1">
+                      Ventilators
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div id="map"></div>
 
-    <script src="/assets/js/map.js"></script>
+  </div>
+</div>
+<div id="map"></div>
 
-    <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
-    <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM&callback=initialiseMap">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/assets/js/filters.js"></script>
 
-  </body>
-</html>
+<script src="/assets/js/map.js"></script>
+
+<!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
+<!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM&callback=initialiseMap">
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/filters.js"></script>
+
