@@ -22,7 +22,7 @@ window.addEventListener("filtersChanged", function(event){
     }
   });
 
-  drawMarkers(drawOptions);
+  drawMarkers(drawOptions, allCowinMarkers);
 });
 
 function locationFromDataRow(dataRow) {
@@ -55,33 +55,39 @@ function initialiseMap() {
     zoom: 10,
     center: new google.maps.LatLng(0, 0)
   });
+  let infowindow = new google.maps.InfoWindow({ content: "Content String" });
 
-  var infowindow = new google.maps.InfoWindow({
-    content: "Content String"
-  });
-
-  // Load data from an example Google spreadsheet that contains latitude and longitude columns using Google Sheets API v4 that returns JSON.
-  // Replace the ID of your Google spreadsheet and you API key in the URL:
-  // https://sheets.googleapis.com/v4/spreadsheets/ID_OF_YOUR_GOOGLE_SPREADSHEET/values/Sheet1!A2:Q?key=YOUR_API_KEY
-  // Also make sure your API key is authorised to access Google Sheets API - you can enable that through your Google Developer console.
-  // Finally, in the URL, fix the sheet name and the range that you are accessing from your spreadsheet. 'Sheet1' is the default name for the first sheet.
-  $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1WW1Lu7S8zP85Qzv-Pn7gp_KUxPJZzvrXnGoWOkwcdbw/values/Sheet1!A2:Q?key=AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM", function(data) {
-    // data.values contains the array of rows from the spreadsheet.
-    // Each row is also an array of cell values.
-    data.values.forEach(function(dataRow) {
-      let location = locationFromDataRow(dataRow);
-      locations.push(location);
+  let cities = {
+    coimbatore: {
+      bedsSpreadheetId:  "1WW1Lu7S8zP85Qzv-Pn7gp_KUxPJZzvrXnGoWOkwcdbw",
+    },
+    tripur: {
+      bedsSpreadheetId: "1T5fUP5nhCctC2bpNWeO4Yg2UYrewbTxrGh58c2zJePU"
+    }
+  };
+  let apiKey = "AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM";
+  for (const cityName in cities) {
+    let city = cities[cityName];
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${city.bedsSpreadheetId}/values/Sheet1!A2:Q?key=${apiKey}`
+    $.getJSON(sheetUrl, function(data) {
+      // data.values contains the array of rows from the spreadsheet.
+      // Each row is also an array of cell values.
+      data.values.forEach(function(dataRow) {
+        let location = locationFromDataRow(dataRow);
+        locations.push(location);
+      });
+      locations.forEach(function(location){
+        allCowinMarkers.push(createCowinMarker(map, location, infowindow));
+      });
+      drawMarkers(null, allCowinMarkers);
     });
-    locations.forEach(function(location){
-      allCowinMarkers.push(createCowinMarker(map, location, infowindow));
-    });
-    drawMarkers();
-  });
+  }
 }
 
-function drawMarkers(options) {
+function drawMarkers(options, cowinMarkers) {
   let bounds = new google.maps.LatLngBounds();
-  allCowinMarkers.forEach(function(cowinMarker) {
+  cowinMarkers.forEach(function(cowinMarker) {
     let shouldRenderMarker = true;
 
     if (options != null) {
@@ -108,11 +114,11 @@ function drawMarkers(options) {
 
 function createCowinMarker(map, location, infowindow) {
   // Modify the code below to suit the structure of your spreadsheet (stored in variable 'location')
-  var position = {
+  let position = {
     lat: parseFloat(location.latitude),
     lng: parseFloat(location.longitude)
   };
-  var mapMarker = new google.maps.Marker({
+  let mapMarker = new google.maps.Marker({
     position: position,
     map: null,
     title: location.title
