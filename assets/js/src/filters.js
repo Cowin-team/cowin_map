@@ -9,10 +9,12 @@ function filterChanged(event) {
   window.dispatchEvent(event);
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
+
+function initFilters() {
   document.querySelectorAll(".filters_form input").forEach(function(filter_chkbx) {
     console.log(filter_chkbx);
     filter_chkbx.addEventListener("change", filterChanged);
-  })
-});
+  });
+}
 
+export { initFilters as default };

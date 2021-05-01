@@ -1,6 +1,6 @@
 version: '3'
 services:
-  site:
+  site: &site
     build:
       context: ./
     networks:
@@ -14,12 +14,16 @@ services:
       BUNDLE_PATH: /app/.bundle
       EDITOR: vi
     volumes:
-      - $SSH_AUTH_SOCK:/tmp/agent.sock:cached
       - app-source:/app
     tty: true
     stdin_open: true
     working_dir: "/app"
     command: 'sh -c "bundle check && bundle exec jekyll serve -H 0.0.0.0"'
+  webpack:
+    <<: *site
+    depends_on: []
+    ports: []
+    command: "npx webpack --watch"
 
 networks:
   cowin_dev:
