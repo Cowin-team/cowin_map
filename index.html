@@ -12,11 +12,22 @@
     <div class="pt-3 pb-3">
       <div class="container">
         <div class="content">
-          <h3 class="title is-3">The Cowin Map</h3>
-          <p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
-          <p>Let’s help India win against covid!</p>
-          <div class="columns is-mobile is-vcentered">
-            <div class="column is-narrow has-text-weight-bold">
+          <span class="is-hidden-mobile">
+            <!-- Shown on all screen sizes except mobile -->
+            <h3 class="title is-3">The Cowin Map</h3>
+            <p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
+            <p>Let’s help India win against covid!</p>
+          </span>
+
+          <span class="is-hidden-tablet">
+            <!-- Shown only on mobile -->
+            <h6 class="title is-5">The Cowin Map</h6>
+            <p class="is-size-7">#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
+            <p class="is-size-7">Let’s help India win against covid!</p>
+          </span>
+
+          <div class="columns is-size-7-mobile is-mobile is-vcentered">
+            <div class="column is-hidden-mobile is-narrow has-text-weight-bold">
               Filter for:
             </div>
             <div class="column">
