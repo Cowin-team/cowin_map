@@ -1,0 +1,17 @@
+title: The Cowin Map
+description: Senior Ruby Engineer, Munich, Germany, Planet Earth
+description: "#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access."
+url: https://cowinmap.com
+
+exclude:
+  - _dist
+  - node_modules
+  - src
+  - gulpfile.js
+  - package.json
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - docker-compose.yml
+  - Dockerfile
