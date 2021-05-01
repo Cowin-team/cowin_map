@@ -15,7 +15,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./assets/js/dist/"),
     chunkLoading: false,
-    wasmLoading: false
+    wasmLoading: false,
+    clean: true
   },
   devtool: "source-map",
   mode: "production",

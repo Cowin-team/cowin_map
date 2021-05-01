@@ -49,6 +49,7 @@ function locationFromDataRow(dataRow) {
   return location;
 };
 
+
 function initialiseMap() {
   // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
   map = new google.maps.Map(document.getElementById('map'), {
@@ -84,6 +85,7 @@ function initialiseMap() {
     });
   }
 }
+window.initialiseMap = initialiseMap;
 
 function drawMarkers(options, cowinMarkers) {
   let bounds = new google.maps.LatLngBounds();
