@@ -37,7 +37,8 @@ function locationFromDataRow(dataRow) {
     covidbed: dataRow[5],
     oxybed: dataRow[6],
     icu: dataRow[7],
-    venti: dataRow[8]
+    venti: dataRow[8],
+    updatedAt: dataRow[9]
   }
 
   if (location.covidbed === undefined) { location.covidbed = "N/A" };
@@ -118,14 +119,17 @@ function createCowinMarker(map, location, infowindow) {
   });
 
   let descriptionHtml = `
-    <div>
-      <p>
+    <div class="content">
+      <h5 class="title is-5 mb-0">
        ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')}
-      </p>
-      <p><strong>COVID Beds: </strong>${location.covidbed}</p>
-      <p><strong>Oxygen Beds: </strong>${location.oxybed}</p>
-      <p><strong>ICUs: </strong>${location.icu}</p>
-      <p><strong>Ventilators: </strong>${location.venti}</p>
+      </h5>
+      <p class="is-size-7 mt-1">Updated at: ${location.updatedAt}</p>
+      <table class="table has-text-left is-striped is-narrow is-hoverable">
+        <tr><th>COVID Beds: </th><td>${location.covidbed}</td></tr>
+        <tr><th>Oxygen Beds: </th><td>${location.oxybed}</td></tr>
+        <tr><th>ICUs: </th><td>${location.icu}</td></tr>
+        <tr><th>Ventilators: </th><td>${location.venti}</td></tr>
+      </table>
     </div>
   `
   google.maps.event.addListener(mapMarker, 'click', function() {
