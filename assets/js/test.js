@@ -1,6 +1,3 @@
----
----
-
 function myFunc() {
   console.log("My func");
 }
