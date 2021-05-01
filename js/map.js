@@ -138,7 +138,7 @@ function createCowinMarker(map, location, infowindow) {
   });
 
   function hasAttribute(attr) {
-    if (location[attr] === undefined || location["attr"] === "") {
+    if (location[attr] === undefined || location[attr] === "") {
       return false;
     }
     if (isNaN(location[attr])) {
