@@ -5,7 +5,7 @@ class OxygenSupplyMarker {
       position: location.position,
       map: null,
       title: location.title,
-      icon: "/assets/images/oxygen-tank-2.png"
+      icon: "/assets/images/oxygen.png"
     });
     this.position = this.marker.position;
 
