@@ -26,5 +26,13 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let maduraiCity = new City(
+    "Madurai",
+    {
+      covidBeds: "1Dr7DYS6GKe5avhHcwhHMB6Z9DTFSj20eEgLvfBlQJSo"
+    },
+    afterCityDataFetchCallback
+  );
 }
 window.initialiseMap = initialiseMap;
