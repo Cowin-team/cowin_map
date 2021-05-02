@@ -1,4 +1,4 @@
-import CovidBedFilters from './filters/covidBedFilters';
+import MapFilters from './mapFilters';
 
 class CowinMap {
   constructor() {
@@ -7,7 +7,7 @@ class CowinMap {
     this.markerInfoWindow = new google.maps.InfoWindow({ content: "" });
     this.cowinMapMarkers = [];
     this.bounds = new google.maps.LatLngBounds();
-    this.covidBedFilters = new CovidBedFilters((newFiltersState) => {
+    this.mapFilters = new MapFilters((newFiltersState) => {
       this.plotAllCowinMapMarkers();
     });
   }
@@ -29,9 +29,19 @@ class CowinMap {
   };
 
   plotCowinMapMarker(cowinMapMarker) {
-    if (this.covidBedFilters.shouldShowLocation(cowinMapMarker.location)) {
-      cowinMapMarker.setMap(this.map);
+    let shouldRenderMarker = true;
 
+    let filters = this.mapFilters.getCurrentSelection();
+    if ((filters.shouldHaveCovidBeds && !cowinMapMarker.location.hasCovidBeds) ||
+      (filters.shouldHaveOxygenBeds && !cowinMapMarker.location.hasOxygenBeds) ||
+      (filters.shouldHaveICUs && !cowinMapMarker.location.hasICUs) ||
+      (filters.shouldHaveVentilators && !cowinMapMarker.location.hasVentilators)) {
+
+      shouldRenderMarker = false;
+    }
+
+    if (shouldRenderMarker) {
+      cowinMapMarker.setMap(this.map);
       if (!isNaN(cowinMapMarker.location.latitude) && !isNaN(cowinMapMarker.location.longitude)) {
         this.bounds.extend(cowinMapMarker.position);
       }
