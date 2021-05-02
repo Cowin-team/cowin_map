@@ -1,11 +1,13 @@
 class MapFilters {
-  constructor() {
+  constructor(onChangeCallback) {
     this.state = {
       shouldHaveCovidBeds: false,
       shouldHaveOxygenBeds: false,
       shouldHaveICUs: false,
       shouldHaveVentilators: false
     };
+    this.setEventListeners();
+    this.onChangeCallback = onChangeCallback;
   }
 
   getCurrentSelection() {
@@ -15,7 +17,6 @@ class MapFilters {
   setEventListeners() {
     let that = this;
     document.querySelectorAll(".filters_form input").forEach(function(filter_chkbx) {
-      console.log(filter_chkbx);
       filter_chkbx.addEventListener("change", (event) => { that.filterChanged(event.target) });
     });
   }
@@ -32,12 +33,8 @@ class MapFilters {
       this.state.shouldHaveVentilators = checkedCheckboxElem.checked;
     }
 
-    var event = new CustomEvent("filtersChanged", { detail: { checkedFilterNames: [] } });
-    window.dispatchEvent(event);
+    this.onChangeCallback(this.state);
   }
 }
 
-var mapFilters = new MapFilters();
-
-export default mapFilters;
-
+export default MapFilters;
