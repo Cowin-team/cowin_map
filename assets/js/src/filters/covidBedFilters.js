@@ -1,4 +1,4 @@
-class MapFilters {
+class CovidBedFilters {
   constructor(onChangeCallback) {
     this.state = {
       shouldHaveCovidBeds: false,
@@ -10,14 +10,21 @@ class MapFilters {
     this.onChangeCallback = onChangeCallback;
   }
 
-  getCurrentSelection() {
-    return this.state;
+  shouldShowLocation(location) {
+    if ((this.state.shouldHaveCovidBeds && !location.hasCovidBeds) ||
+      (this.state.shouldHaveOxygenBeds && !location.hasOxygenBeds) ||
+      (this.state.shouldHaveICUs && !location.hasICUs) ||
+      (this.state.shouldHaveVentilators && !location.hasVentilators)) {
+
+      return false;
+    }
+
+    return true;
   }
 
   setEventListeners() {
-    let that = this;
-    document.querySelectorAll(".filters_form input").forEach(function(filter_chkbx) {
-      filter_chkbx.addEventListener("change", (event) => { that.filterChanged(event.target) });
+    document.querySelectorAll(".filters-form.covid-bed-filters input").forEach((filter_chkbx) => {
+      filter_chkbx.addEventListener("change", (event) => { this.filterChanged(event.target) });
     });
   }
 
@@ -37,4 +44,4 @@ class MapFilters {
   }
 }
 
-export default MapFilters;
+export default CovidBedFilters;
