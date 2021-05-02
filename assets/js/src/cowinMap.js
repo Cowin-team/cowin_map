@@ -29,18 +29,7 @@ class CowinMap {
   };
 
   plotCowinMapMarker(cowinMapMarker) {
-    let shouldRenderMarker = true;
-
-    let filters = this.mapFilters.getCurrentSelection();
-    if ((filters.shouldHaveCovidBeds && !cowinMapMarker.location.hasCovidBeds) ||
-      (filters.shouldHaveOxygenBeds && !cowinMapMarker.location.hasOxygenBeds) ||
-      (filters.shouldHaveICUs && !cowinMapMarker.location.hasICUs) ||
-      (filters.shouldHaveVentilators && !cowinMapMarker.location.hasVentilators)) {
-
-      shouldRenderMarker = false;
-    }
-
-    if (shouldRenderMarker) {
+    if (this.mapFilters.shouldShowLocation(cowinMapMarker.location)) {
       cowinMapMarker.setMap(this.map);
       if (!isNaN(cowinMapMarker.location.latitude) && !isNaN(cowinMapMarker.location.longitude)) {
         this.bounds.extend(cowinMapMarker.position);

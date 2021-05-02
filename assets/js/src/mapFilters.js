@@ -10,10 +10,6 @@ class MapFilters {
     this.onChangeCallback = onChangeCallback;
   }
 
-  getCurrentSelection() {
-    return this.state;
-  }
-
   setEventListeners() {
     let that = this;
     document.querySelectorAll(".filters_form input").forEach(function(filter_chkbx) {
@@ -34,6 +30,18 @@ class MapFilters {
     }
 
     this.onChangeCallback(this.state);
+  }
+
+  shouldShowLocation(location) {
+    if ((this.state.shouldHaveCovidBeds && !location.hasCovidBeds) ||
+      (this.state.shouldHaveOxygenBeds && !location.hasOxygenBeds) ||
+      (this.state.shouldHaveICUs && !location.hasICUs) ||
+      (this.state.shouldHaveVentilators && !location.hasVentilators)) {
+
+      return false;
+    }
+
+    return true;
   }
 }
 
