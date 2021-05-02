@@ -14,7 +14,8 @@ function initialiseMap() {
   let coimbatorCity = new City(
     "coimbatore",
     {
-      covidBeds: "1WW1Lu7S8zP85Qzv-Pn7gp_KUxPJZzvrXnGoWOkwcdbw"
+      covidBeds: "1WW1Lu7S8zP85Qzv-Pn7gp_KUxPJZzvrXnGoWOkwcdbw",
+      oxygenSupply: "1Ry3y1hx1iHeuF17YmWtzfaDQdhx5zRr6lSLrzBW_TU0"
     },
     afterCityDataFetchCallback
   );
