@@ -1,28 +1,15 @@
+import mapFilters from '../filters'
+
 var map;
 var locations = [];
 var allCowinMarkers = [];
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  mapFilters.setEventListeners();
+});
+
 window.addEventListener("filtersChanged", function(event){
-  let drawOptions = {
-    shouldHaveCovidBeds: false,
-    shouldHaveOxygenBeds: false,
-    shouldHaveICUs: false,
-    shouldHaveVentilators: false
-  }
-
-  event.detail.checkedFilterNames.forEach(function(filterName) {
-    if (filterName == "show_covid_beds")  {
-      drawOptions.shouldHaveCovidBeds = true;
-    } else if (filterName == "show_oxygen_beds")  {
-      drawOptions.shouldHaveOxygenBeds = true;
-    } else if (filterName == "show_icus")  {
-      drawOptions.shouldHaveICUs = true;
-    } else if (filterName == "show_ventilators")  {
-      drawOptions.shouldHaveVentilators = true;
-    }
-  });
-
-  drawMarkers(drawOptions, allCowinMarkers);
+  drawMarkers(mapFilters.getCurrentSelection(), allCowinMarkers);
 });
 
 function locationFromDataRow(dataRow) {
