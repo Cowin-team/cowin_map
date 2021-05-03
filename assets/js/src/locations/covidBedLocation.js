@@ -1,5 +1,6 @@
 class CovidBedLocation {
   constructor(dataRow) {
+    this.type      = "CovidBedLocation";
     this.title     = dataRow[0];
     this.latitude  = parseFloat(dataRow[2]);
     this.longitude = parseFloat(dataRow[3]);

@@ -12,50 +12,14 @@ layout: default
         <div class="column">
           <form class="filters_form box">
             <div class="columns">
-              <div class="column is-6">
-                <div class="columns is-mobile">
-                  <div class="column is-6">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                             name="filters[show_covid_beds]"
-                             data-filter-name="show_covid_beds"
-                             value="1">
-                      Covid Beds
-                    </label>
-                  </div>
-
-                  <div class="column is-6">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                             name="filters[show_oxygen_beds]"
-                             data-filter-name="show_oxygen_beds"
-                             value="1">
-                      Oxygen Beds
-                    </label>
-                  </div>
-                </div>
-              </div>
 
               <div class="column is-6">
                 <div class="columns is-mobile">
                   <div class="column is-6">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                             name="filters[show_icus]"
-                             data-filter-name="show_icus"
-                             value="1">
-                      ICUs
-                    </label>
+                    {% include filters/hospitals.html %}
                   </div>
 
                   <div class="column is-6">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                             name="filters[show_ventilators]"
-                             data-filter-name="show_ventilators"
-                             value="1">
-                      Ventilators
-                    </label>
                   </div>
                 </div>
               </div>

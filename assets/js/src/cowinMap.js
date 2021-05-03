@@ -1,15 +1,19 @@
-import MapFilters from './mapFilters';
+import HospitalMapFilters from './filters/hospitalMapFilters';
 
 class CowinMap {
   constructor() {
-    this.map = null;
+    this.map              = null;
     this.initialiseMap();
+
     this.markerInfoWindow = new google.maps.InfoWindow({ content: "" });
-    this.cowinMapMarkers = [];
-    this.bounds = new google.maps.LatLngBounds();
-    this.mapFilters = new MapFilters((newFiltersState) => {
+    this.cowinMapMarkers  = [];
+    this.bounds           = new google.maps.LatLngBounds();
+    this.filters       = [];
+
+    this.hospitalMapFilters = new HospitalMapFilters((newFiltersState) => {
       this.plotAllCowinMapMarkers();
     });
+    this.filters.push(this.hospitalMapFilters);
   }
 
   initialiseMap() {
@@ -48,7 +52,16 @@ class CowinMap {
   };
 
   plotCowinMapMarker(cowinMapMarker) {
-    if (this.mapFilters.shouldShowLocation(cowinMapMarker.location)) {
+    let shouldPlot = true;
+
+    for (let index in this.filters) {
+      if (this.filters[index].shouldHideLocation(cowinMapMarker.location)) {
+        shouldPlot = false;
+        break;
+      }
+    }
+
+    if (shouldPlot) {
       cowinMapMarker.setMap(this.map);
       if (!isNaN(cowinMapMarker.location.latitude) && !isNaN(cowinMapMarker.location.longitude)) {
         this.bounds.extend(cowinMapMarker.position);
