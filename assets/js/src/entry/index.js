@@ -35,10 +35,19 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
   let chennaiCity = new City(
     "Chennai",
     {
       covidBeds: "1YV3DWGxsvlTp0-vaw8f09AajQ5cl3MovFvWVVDtkbOc"
+    },
+    afterCityDataFetchCallback
+  );
+
+  let salemCity = new City(
+    "Salem",
+    {
+      covidBeds: "1GlNu4jyK_nkI2KwEBe9Wc6qgW1bCxbrH9v8cUJDJWrs"
     },
     afterCityDataFetchCallback
   );
