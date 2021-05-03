@@ -1,9 +1,15 @@
 class CovidBedLocation {
   constructor(dataRow) {
     this.title     = dataRow[0];
+    this.url       = dataRow[4];
     this.latitude  = parseFloat(dataRow[2]);
     this.longitude = parseFloat(dataRow[3]);
-    this.url       = dataRow[4];
+    
+    if (isNaN(this.latitude) && isNaN(this.longitude)  && Boolean(this.url)){
+      var url_location = this.url.split('@')[1].split('z')[0].split(',');
+      this.latitude = parseFloat(url_location[0]);
+      this.longitude = parseFloat(url_location[1]);
+    }
     this.covidbed  = (dataRow[5] === undefined ? "N/A" : dataRow[5]);
     this.oxybed    = (dataRow[6] === undefined ? "N/A" : dataRow[6]);
     this.icu       = (dataRow[7] === undefined ? "N/A" : dataRow[7]);
