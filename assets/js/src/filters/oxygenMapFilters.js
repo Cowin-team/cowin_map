@@ -16,11 +16,11 @@ class OxygenMapFilters {
     this.anyApplied = this.parentMapFilters.anyApplied;
   }
 
-  shouldHideLocation(location) {
-    if ((this.parentMapFilters.state.shouldHaveRefilling && !location.hasRefilling) ||
-      (this.parentMapFilters.state.shouldHaveCylinders && !location.hasCylinders) ||
-      (this.parentMapFilters.state.shouldHaveCans && !location.hasCans) ||
-      (this.parentMapFilters.state.shouldHaveConcentrator && !location.hasConcentrator)) {
+  shouldShowLocation(location) {
+    if ((this.parentMapFilters.state.shouldHaveRefilling && location.hasRefilling) ||
+      (this.parentMapFilters.state.shouldHaveCylinders && location.hasCylinders) ||
+      (this.parentMapFilters.state.shouldHaveCans && location.hasCans) ||
+      (this.parentMapFilters.state.shouldHaveConcentrator && location.hasConcentrator)) {
 
       return true;
     }

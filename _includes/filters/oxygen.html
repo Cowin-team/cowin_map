@@ -1,50 +1,42 @@
-<div class="dropdown oxygen-filters">
-  <div class="dropdown-trigger">
-    <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Oxygen</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </div>
+<div class="oxygen-filters">
+  <div class="dropdown-item">
+    <label class="checkbox">
+      <input type="checkbox"
+             name="filters[shouldHaveRefilling]"
+             data-filter-name="shouldHaveRefilling"
+             value="1"
+             checked>
+      Oxygen Refilling
+    </label>
   </div>
-  <div class="dropdown-menu" role="menu">
-    <div class="dropdown-content">
-      <div class="dropdown-item">
-        <label class="checkbox">
-          <input type="checkbox"
-                 name="filters[shouldHaveRefilling]"
-                 data-filter-name="shouldHaveRefilling"
-                 value="1">
-          Refilling
-        </label>
-      </div>
-      <div class="dropdown-item">
-        <label class="checkbox">
-          <input type="checkbox"
-                 name="filters[shouldHaveCylinders]"
-                 data-filter-name="shouldHaveCylinders"
-                 value="1">
-          Cylinders
-        </label>
-      </div>
-      <div class="dropdown-item">
-        <label class="checkbox">
-          <input type="checkbox"
-                 name="filters[shouldHaveCans]"
-                 data-filter-name="shouldHaveCans"
-                 value="1">
-          Cans
-        </label>
-      </div>
-      <div class="dropdown-item">
-        <label class="checkbox">
-          <input type="checkbox"
-                 name="filters[shouldHaveConcentrator]"
-                 data-filter-name="shouldHaveConcentrator"
-                 value="1">
-          Concentrators
-        </label>
-      </div>
-    </div>
+  <div class="dropdown-item">
+    <label class="checkbox">
+      <input type="checkbox"
+             name="filters[shouldHaveCylinders]"
+             data-filter-name="shouldHaveCylinders"
+             value="1"
+             checked>
+      Oxygen Cylinders
+    </label>
+  </div>
+  <div class="dropdown-item">
+    <label class="checkbox">
+      <input type="checkbox"
+             name="filters[shouldHaveCans]"
+             data-filter-name="shouldHaveCans"
+             value="1"
+             checked>
+      Oxygen Cans
+    </label>
+  </div>
+  <div class="dropdown-item">
+    <label class="checkbox">
+      <input type="checkbox"
+             name="filters[shouldHaveConcentrator]"
+             data-filter-name="shouldHaveConcentrator"
+             value="1"
+             checked>
+      Oxygen Concentrators
+    </label>
   </div>
 </div>

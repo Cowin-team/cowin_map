@@ -1,10 +1,10 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-  let dropdowns = document.querySelectorAll('.dropdown');
+  let dropdowns = document.querySelectorAll('.dropdown .dropdown-trigger');
 
   dropdowns.forEach((dropdown) => {
     dropdown.addEventListener('click', function(event) {
       event.stopPropagation();
-      dropdown.classList.toggle('is-active');
+      dropdown.closest(".dropdown").classList.toggle('is-active');
     });
   });
 });
