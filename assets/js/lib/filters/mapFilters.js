@@ -36,5 +36,3 @@ class MapFilters {
     this.onChangeCallback(this.state);
   }
 }
-
-export default MapFilters;

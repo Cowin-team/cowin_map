@@ -28,5 +28,3 @@ class CovidBedLocation {
     return true;
   }
 }
-
-export default CovidBedLocation;

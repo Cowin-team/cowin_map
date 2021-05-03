@@ -1,11 +1,10 @@
-class OxygenSupplyMarker {
+class CovidBedMarker {
   constructor(location) {
     this.location = location;
     this.marker = new google.maps.Marker({
       position: location.position,
       map: null,
-      title: location.title,
-      icon: "/assets/images/oxygen.png"
+      title: location.title
     });
     this.position = this.marker.position;
 
@@ -16,17 +15,11 @@ class OxygenSupplyMarker {
         </h5>
         <p class="is-size-7 mt-1">Updated at: ${location.updatedAt}</p>
         <table class="table has-text-left is-striped is-narrow is-hoverable">
-          <tr><th>Oxygen Refilling</th><td>${location.hasRefilling ? "Yes" : "No" }</td></tr>
-          <tr><th>Oxygen Cylinders</th><td>${location.hasCylinders ? "Yes" : "No" }</td></tr>
-          <tr><th>Oxygen Cans</th><td>${location.hasCans ? "Yes" : "No" }</td></tr>
-          <tr><th>Oxygen Concentrator</th><td>${location.hasConcentrator ? "Yes" : "No" }</td></tr>
+          <tr><th>COVID Beds: </th><td>${location.covidbed}</td></tr>
+          <tr><th>Oxygen Beds: </th><td>${location.oxybed}</td></tr>
+          <tr><th>ICUs: </th><td>${location.icu}</td></tr>
+          <tr><th>Ventilators: </th><td>${location.venti}</td></tr>
         </table>
-        <p>
-        <strong>
-          Additional info:
-        </strong>
-        ${location.additionalInfo}
-        </p>
       </div>
     `
   }
@@ -35,5 +28,3 @@ class OxygenSupplyMarker {
     this.marker.setMap(map);
   }
 }
-
-export default OxygenSupplyMarker;

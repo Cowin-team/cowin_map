@@ -1,45 +1,191 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="pt-3 pb-3">
-  <div class="container">
-    <div class="content">
-      <div class="dropdown">
-        <div class="dropdown-trigger">
-          <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-            <span>Filters</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
+    <script src="https://kit.fontawesome.com/d14f08e7fd.js" crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5KDBBZ6');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  </head>
+
+  <body class="">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KDBBZ6"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+      <header>
+        <div class="container">
+          <div class="content">
+            <span class="is-hidden-mobile">
+              <!-- Shown on all screen sizes except mobile -->
+              <h3 class="title is-3">
+                <a href="https://cowinmap.com">The Cowin Map</a>
+              </h3>
+              <p>#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
+              <p>Let’s help India win against covid!</p>
+            </span>
+
+            <span class="is-hidden-tablet">
+              <!-- Shown only on mobile -->
+              <h6 class="title is-5">
+                <a href="https://cowinmap.com">The Cowin Map</a>
+              </h6>
+              <p class="is-size-7">#verified #covid resources from volunteers across #India on Google maps for quick, updated and easy access.</p>
+              <p class="is-size-7">Let’s help India win against covid!</p>
             </span>
           </div>
         </div>
+      </header>
+      <div class="pt-3 pb-3">
+        <div class="container">
+          <div class="content">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>Filters</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
 
-        <div class="dropdown-menu all-filter-inputs" role="menu">
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <label class="checkbox has-text-grey">
-                <input type="checkbox"
-                       class="selectAllFiltersToggle"
-                       data-target-inputs-selector=".all-filter-inputs input"
-                       value="1"
-                       checked>
-                Select all
-              </label>
+              <div class="dropdown-menu all-filter-inputs" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <label class="checkbox has-text-grey">
+                      <input type="checkbox"
+                             class="selectAllFiltersToggle"
+                             data-target-inputs-selector=".all-filter-inputs input"
+                             value="1"
+                             checked>
+                      Select all
+                    </label>
+                  </div>
+                  <hr class="dropdown-divider">
+                  <div class="hospital-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveCovidBeds]"
+                               data-filter-name="shouldHaveCovidBeds"
+                               value="1"
+                               checked>
+                        Covid Beds
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveOxygenBeds]"
+                               data-filter-name="shouldHaveOxygenBeds"
+                               value="1"
+                               checked>
+                        Oxygen Beds
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveICUs]"
+                               data-filter-name="shouldHaveICUs"
+                               value="1"
+                               checked>
+                        ICUs
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveVentilators]"
+                               data-filter-name="shouldHaveVentilators"
+                               value="1"
+                               checked>
+                        Ventilators
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="dropdown-divider">
+
+                  <div class="oxygen-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveRefilling]"
+                               data-filter-name="shouldHaveRefilling"
+                               value="1"
+                               checked>
+                        Oxygen Refilling
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveCylinders]"
+                               data-filter-name="shouldHaveCylinders"
+                               value="1"
+                               checked>
+                        Oxygen Cylinders
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveCans]"
+                               data-filter-name="shouldHaveCans"
+                               value="1"
+                               checked>
+                        Oxygen Cans
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox"
+                               name="filters[shouldHaveConcentrator]"
+                               data-filter-name="shouldHaveConcentrator"
+                               value="1"
+                               checked>
+                        Oxygen Concentrators
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <hr class="dropdown-divider">
-            {% include filters/hospitals.html %}
-            <hr class="dropdown-divider">
-            {% include filters/oxygen.html %}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-<div id="map"></div>
+      <div id="map"></div>
+  </body>
+</html>
 
-<script src="/assets/js/dist/index.js"></script>
+
+<script src="/assets/js/lib/bulmaInteractions.js"></script>
+<script src="/assets/js/lib/selectAll.js"></script>
+
+<script src="/assets/js/lib/locations/covidBedLocation.js"></script>
+<script src="/assets/js/lib/locations/oxygenSupplyLocation.js"></script>
+
+<script src="/assets/js/lib/markers/covidBedMarker.js"></script>
+<script src="/assets/js/lib/markers/oxygenSupplyMarker.js"></script>
+
+<script src="/assets/js/lib/filters/mapFilters.js"></script>
+<script src="/assets/js/lib/filters/hospitalMapFilters.js"></script>
+<script src="/assets/js/lib/filters/oxygenMapFilters.js"></script>
+
+<script src="/assets/js/lib/city.js"></script>
+<script src="/assets/js/lib/cowinMap.js"></script>
+<script src="/assets/js/index.js"></script>
 
 <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
 <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
