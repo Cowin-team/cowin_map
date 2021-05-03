@@ -16,8 +16,27 @@ class CowinMap {
     // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
     this.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: new google.maps.LatLng(0, 0)
+      center: new google.maps.LatLng(11.0117016,76.8971953)
     });
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          this.map.setCenter(pos);
+        },
+        () => {
+          // Center on Coimbatore
+          this.map.setCenter(new google.maps.LatLng(11.0117016,76.8971953));
+        }
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      // Center on Coimbatore
+      this.map.setCenter(new google.maps.LatLng(11.0117016,76.8971953));
+    }
   }
 
   setupAndPlotCowinMapMarker(cowinMapMarker) {
@@ -44,8 +63,7 @@ class CowinMap {
       this.plotCowinMapMarker(cowinMapMarker);
     });
 
-    this.map.fitBounds(this.bounds);
+    // this.map.fitBounds(this.bounds);
   }
 }
-
 export default CowinMap;
