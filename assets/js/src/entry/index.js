@@ -35,5 +35,13 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+  let chennaiCity = new City(
+    "Chennai",
+    {
+      covidBeds: "1YV3DWGxsvlTp0-vaw8f09AajQ5cl3MovFvWVVDtkbOc"
+    },
+    afterCityDataFetchCallback
+  );
 }
+
 window.initialiseMap = initialiseMap;
