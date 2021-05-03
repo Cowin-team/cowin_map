@@ -1,4 +1,5 @@
 import HospitalMapFilters from './filters/hospitalMapFilters';
+import OxygenMapFilters from './filters/oxygenMapFilters';
 
 class CowinMap {
   constructor() {
@@ -14,6 +15,11 @@ class CowinMap {
       this.plotAllCowinMapMarkers();
     });
     this.filters.push(this.hospitalMapFilters);
+
+    this.oxygenMapFilters = new OxygenMapFilters((newFiltersState) => {
+      this.plotAllCowinMapMarkers();
+    });
+    this.filters.push(this.oxygenMapFilters);
   }
 
   initialiseMap() {
