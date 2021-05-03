@@ -48,7 +48,7 @@ $ docker-compose up
 ```
 and visit http://localhost:4000
 
-As you edit the file, the site will be re-generated automatically.
+As you edit the files, the site will be re-generated automatically.
 
 ## Alternative Setup: Without Docker and natively on your machine
 
@@ -92,4 +92,4 @@ will not be reflected in the `/dist` directory.
 
 and visit http://localhost:4000
 
-As you edit the file, the site will be re-generated automatically.
+As you edit the files, the site will be re-generated automatically.
