@@ -2,7 +2,7 @@ class MapFilters {
   constructor(options) {
     this.state = []
     options.filterNames.forEach((filterName) => {
-      this.state[filterName] = false
+      this.state[filterName] = true
     })
     this.setEventListeners(options.filtersElemSelector);
     this.onChangeCallback = options.onChangeCallback;
@@ -11,7 +11,9 @@ class MapFilters {
   setEventListeners(filtersElemSelector) {
     let that = this;
     document.querySelectorAll(filtersElemSelector).forEach(function(filter_chkbx) {
-      filter_chkbx.addEventListener("change", (event) => { that.filterChanged(event.target) });
+      filter_chkbx.addEventListener("change", (event) => {
+        that.filterChanged(event.target)
+      });
     });
   }
 

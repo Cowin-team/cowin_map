@@ -1,6 +1,7 @@
 import City from '../city'
 import CowinMap from '../cowinMap'
 import '../bulmaInteractions'
+import '../selectAll'
 
 function initialiseMap() {
   let cowinMap = new CowinMap();

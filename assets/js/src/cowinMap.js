@@ -58,11 +58,11 @@ class CowinMap {
   };
 
   plotCowinMapMarker(cowinMapMarker) {
-    let shouldPlot = true;
+    let shouldPlot = false;
 
     for (let index in this.filters) {
-      if (this.filters[index].shouldHideLocation(cowinMapMarker.location)) {
-        shouldPlot = false;
+      if (this.filters[index].shouldShowLocation(cowinMapMarker.location)) {
+        shouldPlot = true;
         break;
       }
     }

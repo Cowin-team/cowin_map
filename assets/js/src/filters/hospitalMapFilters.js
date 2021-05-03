@@ -16,11 +16,11 @@ class HospitalMapFilters {
     this.anyApplied = this.parentMapFilters.anyApplied;
   }
 
-  shouldHideLocation(location) {
-    if ((this.parentMapFilters.state.shouldHaveCovidBeds && !location.hasCovidBeds) ||
-      (this.parentMapFilters.state.shouldHaveOxygenBeds && !location.hasOxygenBeds) ||
-      (this.parentMapFilters.state.shouldHaveICUs && !location.hasICUs) ||
-      (this.parentMapFilters.state.shouldHaveVentilators && !location.hasVentilators)) {
+  shouldShowLocation(location) {
+    if ((this.parentMapFilters.state.shouldHaveCovidBeds && location.hasCovidBeds) ||
+      (this.parentMapFilters.state.shouldHaveOxygenBeds && location.hasOxygenBeds) ||
+      (this.parentMapFilters.state.shouldHaveICUs && location.hasICUs) ||
+      (this.parentMapFilters.state.shouldHaveVentilators && location.hasVentilators)) {
 
       return true;
     }

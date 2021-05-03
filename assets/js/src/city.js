@@ -50,7 +50,6 @@ class City {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
           this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
-          console.log(oxygenSupplyLocation);
         });
 
         this.afterFetchCallback(this.oxygenSupplyMarkers);
