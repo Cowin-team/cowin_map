@@ -1,0 +1,50 @@
+<div class="dropdown hospital-filters">
+  <div class="dropdown-trigger">
+    <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Hospitals</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        <label class="checkbox">
+          <input type="checkbox"
+                 name="filters[shouldHaveCovidBeds]"
+                 data-filter-name="shouldHaveCovidBeds"
+                 value="1">
+          Covid Beds
+        </label>
+      </div>
+      <div class="dropdown-item">
+        <label class="checkbox">
+          <input type="checkbox"
+                 name="filters[shouldHaveOxygenBeds]"
+                 data-filter-name="shouldHaveOxygenBeds"
+                 value="1">
+          Oxygen Beds
+        </label>
+      </div>
+      <div class="dropdown-item">
+        <label class="checkbox">
+          <input type="checkbox"
+                 name="filters[shouldHaveICUs]"
+                 data-filter-name="shouldHaveICUs"
+                 value="1">
+          ICUs
+        </label>
+      </div>
+      <div class="dropdown-item">
+        <label class="checkbox">
+          <input type="checkbox"
+                 name="filters[shouldHaveVentilators]"
+                 data-filter-name="shouldHaveVentilators"
+                 value="1">
+          Ventilators
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
