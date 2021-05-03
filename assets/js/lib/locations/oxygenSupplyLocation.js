@@ -26,5 +26,3 @@ class OxygenSupplyLocation {
     return undefined;
   }
 }
-
-export default OxygenSupplyLocation;

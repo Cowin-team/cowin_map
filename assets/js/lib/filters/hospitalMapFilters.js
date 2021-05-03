@@ -1,5 +1,3 @@
-import MapFilters from "./mapFilters"
-
 class HospitalMapFilters {
   constructor(onChangeCallback) {
     this.parentMapFilters = new MapFilters({
@@ -28,5 +26,3 @@ class HospitalMapFilters {
     return false;
   }
 }
-
-export default HospitalMapFilters;

@@ -1,6 +1,3 @@
-import HospitalMapFilters from './filters/hospitalMapFilters';
-import OxygenMapFilters from './filters/oxygenMapFilters';
-
 class CowinMap {
   constructor() {
     this.map              = null;
@@ -85,4 +82,3 @@ class CowinMap {
     // this.map.fitBounds(this.bounds);
   }
 }
-export default CowinMap;

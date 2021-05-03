@@ -1,5 +1,3 @@
-import MapFilters from "./mapFilters"
-
 class OxygenMapFilters {
   constructor(onChangeCallback) {
     this.parentMapFilters = new MapFilters({
@@ -28,5 +26,3 @@ class OxygenMapFilters {
     return false;
   }
 }
-
-export default OxygenMapFilters;

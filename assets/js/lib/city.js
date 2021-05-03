@@ -1,9 +1,4 @@
 const sheetsApiKey = "AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM";
-import CovidBedLocation from './locations/covidBedLocation';
-import CovidBedMarker from './markers/covidBedMarker';
-
-import OxygenSupplyLocation from './locations/oxygenSupplyLocation';
-import OxygenSupplyMarker from './markers/oxygenSupplyMarker';
 
 class City {
   constructor(name, spreadsheetIds, afterFetchCallback) {
@@ -57,4 +52,3 @@ class City {
   }
 }
 
-export default City;
