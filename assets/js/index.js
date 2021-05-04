@@ -296,6 +296,14 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let thiruchirappalliCity = new City(
+    "Thiruchirappalli",
+    {
+      covidBeds: "1flK4l2oPJ9zvaPCWW1lXqEK3PrKW7B5EgQJQPil_c-8"
+    },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
