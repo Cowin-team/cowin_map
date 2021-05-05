@@ -15,6 +15,12 @@ class City {
     if (spreadsheetIds.oxygenSupply !== undefined) {
       this.fetchOxygemSupplyData();
     }
+
+    this.mealsLocations  = [];
+    this.mealsMarkers    = [];
+    if (spreadsheetIds.meals !== undefined) {
+      this.fetchMealsData();
+    }
   }
 
   fetchCovidBedData() {
@@ -49,6 +55,23 @@ class City {
         });
 
         this.afterFetchCallback(this.oxygenSupplyMarkers);
+      });
+  }
+
+  fetchMealsData() {
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.meals}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
+      .then(response => response.json())
+      .then(data => {
+        data.values.forEach((dataRow) => {
+          let mealsLocation = new MealsLocation(dataRow);
+          this.mealsLocations.push(mealsLocation);
+          this.mealsMarkers.push(new MealsMarker(mealsLocation, this.spreadsheetIds.mealsSupply));
+        });
+
+        this.afterFetchCallback(this.mealsMarkers);
       });
   }
 }
