@@ -313,6 +313,14 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let bloreCity = new City(
+    "Bangalore",
+    {
+      covidBeds: "1H05y2PXFNrvgHnDleC8We453oKFZbsI7I8thPtSMt3M"
+    },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
