@@ -1,25 +1,27 @@
 class CowinMap {
   constructor() {
-    this.map              = null;
+    this.map = null;
     this.initialiseMap();
 
     this.markerInfoWindow = new google.maps.InfoWindow({ content: "" });
-    this.cowinMapMarkers  = [];
-    this.bounds           = new google.maps.LatLngBounds();
-    this.filters       = [];
+    this.cowinMapMarkers = [];
+
+    this.markerClusters = [];
+    this.bounds = new google.maps.LatLngBounds();
+    this.filters = [];
 
     this.hospitalMapFilters = new HospitalMapFilters((newFiltersState) => {
-      this.plotAllCowinMapMarkers();
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.hospitalMapFilters);
 
     this.oxygenMapFilters = new OxygenMapFilters((newFiltersState) => {
-      this.plotAllCowinMapMarkers();
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.oxygenMapFilters);
 
     this.mealsMapFilters = new MealsMapFilters((newFiltersState) => {
-      this.plotAllCowinMapMarkers();
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.mealsMapFilters);
   }
@@ -28,7 +30,7 @@ class CowinMap {
     // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
     this.map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: new google.maps.LatLng(11.0117016,76.8971953)
+      center: new google.maps.LatLng(11.0117016, 76.8971953)
     });
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -41,21 +43,17 @@ class CowinMap {
         },
         () => {
           // Center on Coimbatore
-          this.map.setCenter(new google.maps.LatLng(11.0117016,76.8971953));
+          this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
         }
       );
     } else {
       // Browser doesn't support Geolocation
       // Center on Coimbatore
-      this.map.setCenter(new google.maps.LatLng(11.0117016,76.8971953));
+      this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
     }
   }
 
   setupAndPlotCowinMapMarker(cowinMapMarker) {
-    google.maps.event.addListener(cowinMapMarker.marker, 'click', () => {
-      this.markerInfoWindow.setContent(cowinMapMarker.descriptionHtml);
-      this.markerInfoWindow.open(this.map, cowinMapMarker.marker);
-    });
     this.cowinMapMarkers.push(cowinMapMarker);
   };
 
@@ -68,23 +66,40 @@ class CowinMap {
         break;
       }
     }
+    return shouldPlot;
+  }
 
-    if (shouldPlot) {
-      cowinMapMarker.setMap(this.map);
-
-      if (!isNaN(cowinMapMarker.location.latitude) && !isNaN(cowinMapMarker.location.longitude)) {
-        this.bounds.extend(cowinMapMarker.position);
-      }
-    } else {
-      cowinMapMarker.setMap(null);
+  clearClusters() {
+    for (var idx = 0; idx < this.markerClusters.length; idx++) {
+      this.markerClusters[idx].clearMarkers()
     }
   }
 
   plotAllCowinMapMarkers() {
-    this.cowinMapMarkers.forEach((cowinMapMarker) => {
-      this.plotCowinMapMarker(cowinMapMarker);
-    });
+    this.clearClusters()
+    var filteredMarkers = this.cowinMapMarkers.filter((marker) => {
+      return this.plotCowinMapMarker(marker)
+    })
 
-    // this.map.fitBounds(this.bounds);
+    var oxygenMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof OxygenSupplyMarker
+    }).map((m) => m.getMarker(this.map))
+
+    var bedMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof CovidBedMarker
+    }).map((m) => m.getMarker(this.map))
+
+    var mealMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof MealsMarker
+    }).map((m) => m.getMarker(this.map))
+
+    console.log('mealMarkers', mealMarkers.length)
+
+    var oxygenCluster = new MarkerClusterer(this.map, oxygenMarkers, { imagePath: `./assets/images/clusters/oxygen/m` });
+    this.markerClusters.push(oxygenCluster);
+    var hospitalCluster = new MarkerClusterer(this.map, bedMarkers, { imagePath: `./assets/images/clusters/hospital/m` });
+    this.markerClusters.push(hospitalCluster);
+    var mealCluster = new MarkerClusterer(this.map, mealMarkers, { imagePath: `./assets/images/clusters/meal/m` });
+    this.markerClusters.push(mealCluster);
   }
 }
