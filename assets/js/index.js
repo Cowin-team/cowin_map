@@ -27,7 +27,8 @@ function initialiseMap() {
   let chennaiCity = new City(
     "Chennai",
     {
-      covidBeds: "1YV3DWGxsvlTp0-vaw8f09AajQ5cl3MovFvWVVDtkbOc"
+      covidBeds: "1YV3DWGxsvlTp0-vaw8f09AajQ5cl3MovFvWVVDtkbOc",
+      oxygenSupply: "1p_QIV3kvXZX8C0jB4RIVMsU87YPVm3EJT3-qsJo80b8"
     },
     afterCityDataFetchCallback
   );

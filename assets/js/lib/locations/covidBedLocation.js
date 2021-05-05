@@ -17,7 +17,15 @@ class CovidBedLocation {
     this.venti     = (dataRow[8] === undefined ? "N/A" : dataRow[8]);
     this.updatedAt = dataRow[9];
 
-    this.contact = dataRow[10];
+    this.contacts = [];
+
+    if(dataRow[10]!== undefined) {
+      var contacts_info = dataRow[10].split(',')
+
+      for(var idx =0; idx< contacts_info.length; idx++) {
+        this.contacts.push(contacts_info[idx].trim())
+      }
+    } 
 
     this.position       = { lat: this.latitude, lng: this.longitude };
     this.hasCovidBeds   = this.hasAttribute("covidbed");

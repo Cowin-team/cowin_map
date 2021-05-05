@@ -16,7 +16,15 @@ class OxygenSupplyLocation {
     this.hasConcentrator = this.parseYesOrNo(dataRow[8]);
     this.additionalInfo  = dataRow[9]
     this.updatedAt       = dataRow[10];
-    this.contact       = dataRow[11];
+    this.contacts       = [];
+
+    if(dataRow[11]!== undefined) {
+      var contacts_info = dataRow[11].split(',')
+
+      for(var idx =0; idx< contacts_info.length; idx++) {
+        this.contacts.push(contacts_info[idx].trim())
+      }
+    } 
 
     this.position        = { lat: this.latitude, lng: this.longitude };
   }

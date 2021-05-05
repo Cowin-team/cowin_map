@@ -66,6 +66,7 @@ class CowinMap {
 
     if (shouldPlot) {
       cowinMapMarker.setMap(this.map);
+
       if (!isNaN(cowinMapMarker.location.latitude) && !isNaN(cowinMapMarker.location.longitude)) {
         this.bounds.extend(cowinMapMarker.position);
       }
