@@ -5,10 +5,15 @@ class CovidBedLocation {
     this.latitude  = parseFloat(dataRow[2]);
     this.longitude = parseFloat(dataRow[3]);
     this.url       = dataRow[4];
-    if ((isNaN(this.latitude) || isNaN(this.longitude)) && Boolean(this.url) && this.url.includes("@")) {
-      var url_location = this.url.split('@')[1].split('z')[0].split(',');
-      this.latitude = parseFloat(url_location[0]);
-      this.longitude = parseFloat(url_location[1]);
+    if ((isNaN(this.latitude) || isNaN(this.longitude)) && Boolean(this.url)) {
+      try { 
+         var url_location = this.url.split('@')[1].split('z')[0].split(',');
+         this.latitude = parseFloat(url_location[0]);
+         this.longitude = parseFloat(url_location[1]);
+      } catch (e) { 
+         console.log(`Error in parsing URL for ${this.type} for title: ${this.title}`);
+         console.log(e);
+      }
     }
 
     this.covidbed  = (dataRow[5] === undefined ? "N/A" : dataRow[5]);
