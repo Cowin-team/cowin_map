@@ -37,7 +37,6 @@
 
 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/modal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 </head>
 
@@ -72,12 +71,14 @@
     </div>
   </header>
 
-  <div class="modal-wrap" id="modal-demo">
-    <div class="modal-container">
-      <div class="modal-header">
-        <h2 class="modal-title">Liability Notice</h2>
-      </div>
-      <div class="modal-content">
+  <div id='liability-modal' class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Liability Notice</p>
+        <button id='liability-modal-close' class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
         <p>The user understands that, The Cowin Map has made every attempt to ensure the accuracy and reliability of the
           information provided through these links. However, the information is provided on an “as and when basis” and
           “as
@@ -86,47 +87,23 @@
           content, completeness, legality or reliability of the information contained in any of these. The user
           understands that no warranties, promises and/or representation of any kind, expressed or implied, are made by
           The Cowin Map to the nature, standard, accuracy or otherwise of the information provided in these links nor to
-          the suitability or otherwise of the information to your particular circumstances. The user understands that,
-          The
-          Cowin Map shall not be liable for any loss or damage of whatsoever nature (direct, indirect, consequential, or
+          the suitability or otherwise of the information to your particular circumstances.
+        </p>
+        <p>
+          The user understands that, The Cowin Map shall not be liable for any loss or damage of whatsoever nature
+          (direct, indirect, consequential, or
           other) which may arise as a result of your use of or (inability to use) the information contained in any of
           these links. The user understands that the information contained in these links, provides details like the
           contact numbers etc of hospitals, agencies etc, the contents of which are not within the control of The Cowin
           Map and The Cowin Map has no responsibility for the same. The user agrees to check and verify any/all
           information relied upon basis in these links before acting upon the same. The user understands that The Cowin
-          Map hold no liability or responsibility for real time verification of the same.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button class='accept-btn'>I Understand</button>
-      </div>
+          Map hold no liability or responsibility for real time verification of the same.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button id='liability-notice-accept' class="button is-success">I Understand</button>
+      </footer>
     </div>
   </div>
-
-  <script>
-
-
-    var openModal = document.getElementById('open-modal');
-
-    // Modal ID
-    var modal = document.getElementById('modal-demo');
-
-    // Open modal event listener
-    window.onload = function () {
-      var isLiabilityAccepted = localStorage.getItem('liability_accepted') === "true" || false;
-
-      if(!isLiabilityAccepted) {
-        modal.classList.toggle('visible');
-      }
-    };
-
-    var accept_btn = document.getElementsByClassName('accept-btn')[0];
-
-    accept_btn.addEventListener('click', function () {
-      localStorage.setItem('liability_accepted', true);
-      modal.classList.remove('visible');
-    });
-  </script>
 
   <div class="pt-3 pb-3">
     <div class="container">
@@ -242,6 +219,8 @@
 <script src="assets/js/lib/city.js"></script>
 <script src="assets/js/lib/cowinMap.js"></script>
 <script src="assets/js/index.js"></script>
+
+<script src="assets/js/liability-modal.js"></script>
 
 <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
 <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
