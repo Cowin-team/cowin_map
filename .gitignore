@@ -5,3 +5,4 @@ node_modules/*
 
 # Only on dev
 _dist
+**.DS_STORE**
