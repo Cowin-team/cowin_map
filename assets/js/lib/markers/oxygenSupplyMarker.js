@@ -17,6 +17,7 @@ class OxygenSupplyMarker {
          ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')}
         </h5>
         <p class="is-size-7 mt-1">Updated at: ${location.updatedAt} (<a target="_blank" href="${this.sheet_url}">Source</a>)</p>
+        <p class="is-size-7 mt-1">Contact: ${(location.contact === undefined) ? "N/A" : ('<a href="tel:' + location.contact +'">' + location.contact + '</a>')}</p>
         <table class="table has-text-left is-striped is-narrow is-hoverable">
           <tr><th>Oxygen Refilling</th><td>${location.hasRefilling ? "Yes" : "No" }</td></tr>
           <tr><th>Oxygen Cylinders</th><td>${location.hasCylinders ? "Yes" : "No" }</td></tr>

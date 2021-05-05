@@ -11,6 +11,7 @@ class OxygenSupplyLocation {
     this.hasConcentrator = this.parseYesOrNo(dataRow[8]);
     this.additionalInfo  = dataRow[9]
     this.updatedAt       = dataRow[10];
+    this.contact       = dataRow[11];
 
     this.position        = { lat: this.latitude, lng: this.longitude };
   }
