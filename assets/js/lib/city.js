@@ -27,7 +27,8 @@ class City {
         data.values.forEach((dataRow) => {
           let covidBedLocation = new CovidBedLocation(dataRow);
           this.covidBedLocations.push(covidBedLocation);
-          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
+
+          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation, this.spreadsheetIds.covidBeds));
         });
 
         this.afterFetchCallback(this.covidBedMarkers);
@@ -37,14 +38,13 @@ class City {
   fetchOxygemSupplyData() {
     let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
       `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
-
     fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
         data.values.forEach((dataRow) => {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
-          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
+          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation, this.spreadsheetIds.oxygenSupply));
         });
 
         this.afterFetchCallback(this.oxygenSupplyMarkers);
