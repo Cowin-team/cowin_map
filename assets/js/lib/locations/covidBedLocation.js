@@ -11,6 +11,8 @@ class CovidBedLocation {
     this.venti     = (dataRow[8] === undefined ? "N/A" : dataRow[8]);
     this.updatedAt = dataRow[9];
 
+    this.contact = dataRow[10];
+
     this.position       = { lat: this.latitude, lng: this.longitude };
     this.hasCovidBeds   = this.hasAttribute("covidbed");
     this.hasOxygenBeds  = this.hasAttribute("oxybed");
