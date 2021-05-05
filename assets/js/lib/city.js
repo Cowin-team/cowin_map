@@ -38,6 +38,7 @@ class City {
   fetchOxygemSupplyData() {
     let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
       `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
     fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
