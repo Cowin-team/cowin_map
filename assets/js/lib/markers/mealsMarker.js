@@ -26,7 +26,7 @@ class MealsMarker {
           </h5>
           <p class="is-size-7 mt-1">Contact: ${(location.contacts.length === 0) ? "N/A" : (contact_details)}</p>
           <table class="table has-text-left is-striped is-narrow is-hoverable">
-            <tr><th>Free</th><td>${location.free ? "Yes" : "No" }</td></tr>
+            <tr><th>Free</th><td>${location.hasFree ? "Yes" : "No" }</td></tr>
             <tr><th>Type</th><td>${location.type}</td></tr>
           </table>
           <p>

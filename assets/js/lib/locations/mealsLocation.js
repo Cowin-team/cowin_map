@@ -17,7 +17,7 @@ class MealsLocation {
       
       this.type = dataRow[5];
       if (dataRow[6] !==undefined){
-        this.free = this.parseYesOrNo(dataRow[6]);
+        this.hasFree = this.parseYesOrNo(dataRow[6]);
       }
       
       this.additionalInfo = dataRow[7];
