@@ -304,6 +304,14 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let puneCity = new City(
+    "Pune",
+    {
+      covidBeds: "1WSz9VGzdhiuc37ksXMSrwf8aFIZnG9Hhg9uBJsLn4uA"
+    },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
