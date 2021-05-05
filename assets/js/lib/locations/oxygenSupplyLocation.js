@@ -5,6 +5,11 @@ class OxygenSupplyLocation {
     this.latitude        = parseFloat(dataRow[2]);
     this.longitude       = parseFloat(dataRow[3]);
     this.url             = dataRow[4];
+    if ((isNaN(this.latitude) || isNaN(this.longitude)) && Boolean(this.url)) {
+      var url_location = this.url.split('@')[1].split('z')[0].split(',');
+      this.latitude = parseFloat(url_location[0]);
+      this.longitude = parseFloat(url_location[1]);
+    }
     this.hasRefilling    = this.parseYesOrNo(dataRow[5]);
     this.hasCylinders    = this.parseYesOrNo(dataRow[6]);
     this.hasCans         = this.parseYesOrNo(dataRow[7]);
