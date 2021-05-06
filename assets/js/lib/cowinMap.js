@@ -72,37 +72,16 @@ class CowinMap {
       return this.plotCowinMapMarker(marker)
     })
 
-    filteredMarkers = filteredMarkers.map((marker) => {
-      return marker.getMarker(this.map)
-    })
+    var oxygenMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof OxygenSupplyMarker
+    }).map((m) => m.getMarker(this.map))
 
-    var clusterStyles = [
-      {
-        textColor: 'white',
-        url: './assets/images/oxygen.png',
-        height: 24,
-        width: 24
-      },
-      {
-        textColor: 'white',
-        url: './assets/images/oxygen.png',
-        height: 36,
-        width: 36
-      },
-      {
-        textColor: 'white',
-        url: './assets/images/oxygen.png',
-        height: 50,
-        width: 50
-      }
-    ];
+    var bedMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof CovidBedMarker
+    }).map((m) => m.getMarker(this.map))
 
-    var mcOptions = {
-      gridSize: 100,
-      styles: clusterStyles,
-      maxZoom: 15
-  };
+    new MarkerClusterer(this.map, oxygenMarkers, {imagePath: `./assets/images/clusters/oxygen/m`});
 
-    new MarkerClusterer(this.map, filteredMarkers, mcOptions);
+    new MarkerClusterer(this.map, bedMarkers, {imagePath: `./assets/images/clusters/hospital/m`});
   }
 }
