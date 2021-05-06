@@ -5,7 +5,7 @@ class OxygenSupplyMarker {
       position: location.position,
       map: null,
       title: location.title,
-      icon: "/assets/images/oxygen.png"
+      icon: "/assets/images/oxygen_marker.png"
     });
     this.position = this.marker.position;
 
@@ -40,6 +40,15 @@ class OxygenSupplyMarker {
         </p>
       </div>
     `
+  }
+
+  getMarker(map) {
+    google.maps.event.addListener(this.marker, 'click', function(evt) {
+      infoWin.setContent(this.descriptionHtml);
+      infoWin.open(map, this.marker);
+    })
+
+    return this.marker;
   }
 
   setMap(map) {
