@@ -159,36 +159,66 @@
                 </div>
               </div>
 
-              <hr class="dropdown-divider">
+                <hr class="dropdown-divider">
 
-              <div class="oxygen-filters">
-                <div class="dropdown-item">
-                  <label class="checkbox">
-                    <input type="checkbox" name="filters[shouldHaveRefilling]" data-filter-name="shouldHaveRefilling"
-                      value="1" checked>
-                    Oxygen Refilling
-                  </label>
+                <div class="oxygen-filters">
+                  <div class="dropdown-item">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                              name="filters[shouldHaveRefilling]"
+                              data-filter-name="shouldHaveRefilling"
+                              value="1"
+                              checked>
+                      Oxygen Refilling
+                    </label>
+                  </div>
+                  <div class="dropdown-item">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                              name="filters[shouldHaveCylinders]"
+                              data-filter-name="shouldHaveCylinders"
+                              value="1"
+                              checked>
+                      Oxygen Cylinders
+                    </label>
+                  </div>
+                  <div class="dropdown-item">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                              name="filters[shouldHaveCans]"
+                              data-filter-name="shouldHaveCans"
+                              value="1"
+                              checked>
+                      Oxygen Cans
+                    </label>
+                  </div>
+                  <div class="dropdown-item">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                              name="filters[shouldHaveConcentrator]"
+                              data-filter-name="shouldHaveConcentrator"
+                              value="1"
+                              checked>
+                      Oxygen Concentrators
+                    </label>
+                  </div>
                 </div>
-                <div class="dropdown-item">
-                  <label class="checkbox">
-                    <input type="checkbox" name="filters[shouldHaveCylinders]" data-filter-name="shouldHaveCylinders"
-                      value="1" checked>
-                    Oxygen Cylinders
-                  </label>
+
+                <hr class="dropdown-divider">
+
+                <div class="meals-filters">
+                  <div class="dropdown-item">
+                    <label class="checkbox">
+                      <input type="checkbox"
+                              name="filters[shouldHaveFree]"
+                              data-filter-name="shouldHaveFree"
+                              value="1"
+                              checked>
+                      Free Meals
+                    </label>
+                  </div>
                 </div>
-                <div class="dropdown-item">
-                  <label class="checkbox">
-                    <input type="checkbox" name="filters[shouldHaveCans]" data-filter-name="shouldHaveCans" value="1"
-                      checked>
-                    Oxygen Cans
-                  </label>
-                </div>
-                <div class="dropdown-item">
-                  <label class="checkbox">
-                    <input type="checkbox" name="filters[shouldHaveConcentrator]"
-                      data-filter-name="shouldHaveConcentrator" value="1" checked>
-                    Oxygen Concentrators
-                  </label>
+
                 </div>
               </div>
             </div>
@@ -208,13 +238,16 @@
 
 <script src="assets/js/lib/locations/covidBedLocation.js"></script>
 <script src="assets/js/lib/locations/oxygenSupplyLocation.js"></script>
+<script src="assets/js/lib/locations/mealsLocation.js"></script>
 
 <script src="assets/js/lib/markers/covidBedMarker.js"></script>
 <script src="assets/js/lib/markers/oxygenSupplyMarker.js"></script>
+<script src="assets/js/lib/markers/mealsMarker.js"></script>
 
 <script src="assets/js/lib/filters/mapFilters.js"></script>
 <script src="assets/js/lib/filters/hospitalMapFilters.js"></script>
 <script src="assets/js/lib/filters/oxygenMapFilters.js"></script>
+<script src="assets/js/lib/filters/mealsMapFilters.js"></script>
 
 <script src="assets/js/lib/city.js"></script>
 <script src="assets/js/lib/cowinMap.js"></script>
