@@ -6,8 +6,7 @@ class CovidBedMarker {
     this.marker = new google.maps.Marker({
       position: location.position,
       map: null,
-      title: location.title,
-      icon: "/assets/images/hospital_marker.png"
+      title: location.title
     });
 
     this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
@@ -38,15 +37,6 @@ class CovidBedMarker {
         </table>
       </div>
     `
-  }
-
-  getMarker(map) {
-    google.maps.event.addListener(this.marker, 'click', function(evt) {
-      infoWin.setContent(this.descriptionHtml);
-      infoWin.open(map, this.marker);
-    })
-
-    return this.marker;
   }
 
   setMap(map) {
