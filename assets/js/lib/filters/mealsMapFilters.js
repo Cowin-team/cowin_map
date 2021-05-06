@@ -12,11 +12,11 @@ class MealsMapFilters {
     }
   
     shouldShowLocation(location) {
-    //   if (this.parentMapFilters.state.shouldHaveFree && location.hasFree) {
+      if (this.parentMapFilters.state.shouldHaveFree && location.hasFree) {
   
         return true;
-    //   }
+      }
   
-    //   return false;
+      return false;
     }
   }
