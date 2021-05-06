@@ -17,6 +17,11 @@ class CowinMap {
       this.plotAllCowinMapMarkers();
     });
     this.filters.push(this.oxygenMapFilters);
+
+    this.mealsMapFilters = new MealsMapFilters((newFiltersState) => {
+      this.plotAllCowinMapMarkers();
+    });
+    this.filters.push(this.mealsMapFilters);
   }
 
   initialiseMap() {
