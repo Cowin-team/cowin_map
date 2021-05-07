@@ -50,16 +50,7 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
-  
-  let delhiCity = new City(
-    "Delhi",
-    {
-      
-      oxygenSupply: "1dnrCvIN9Nok119MTP0KBB0ZDhwjB_APa-in2bngkd7g",
-     },
-    afterCityDataFetchCallback
-  );
-  
+
   let dharmapuriCity = new City(
     "Dharmapuri",
     {
@@ -343,7 +334,8 @@ function initialiseMap() {
   let delhi = new City(
     "Delhi",
     {
-      covidBeds: "1vLo6mt3md3i7D_emnYNIgtAqFRAmq7guoj5a1qyKxq8"
+      covidBeds: "1vLo6mt3md3i7D_emnYNIgtAqFRAmq7guoj5a1qyKxq8",
+      oxygenSupply: "1dnrCvIN9Nok119MTP0KBB0ZDhwjB_APa-in2bngkd7g"
     },
     afterCityDataFetchCallback
   );
