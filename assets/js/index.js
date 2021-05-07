@@ -50,7 +50,16 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
-
+  
+  let delhiCity = new City(
+    "Delhi",
+    {
+      
+      oxygenSupply: "1dnrCvIN9Nok119MTP0KBB0ZDhwjB_APa-in2bngkd7g",
+     },
+    afterCityDataFetchCallback
+  );
+  
   let dharmapuriCity = new City(
     "Dharmapuri",
     {
