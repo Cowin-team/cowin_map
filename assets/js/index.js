@@ -322,6 +322,14 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let mumbaiCIty = new City(
+    "Mumbai",
+    {
+      covidBeds: "17OeX5qBHXN3c3ICzp-FIgzrw6iWpQjp-7LS2m1GgTp8"
+    },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
