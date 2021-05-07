@@ -330,6 +330,14 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+
+  let delhi = new City(
+    "Delhi",
+    {
+      covidBeds: "1vLo6mt3md3i7D_emnYNIgtAqFRAmq7guoj5a1qyKxq8"
+    },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
