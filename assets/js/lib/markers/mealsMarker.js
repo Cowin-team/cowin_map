@@ -5,7 +5,7 @@ class MealsMarker {
         position: location.position,
         map: null,
         title: location.title,
-        icon: "/assets/images/cafe_marker.png"
+        icon: "/assets/images/meal_marker.png"
       });
       this.position = this.marker.position;
   

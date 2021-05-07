@@ -18,7 +18,8 @@ class HospitalMapFilters {
     if ((this.parentMapFilters.state.shouldHaveCovidBeds && location.hasCovidBeds) ||
       (this.parentMapFilters.state.shouldHaveOxygenBeds && location.hasOxygenBeds) ||
       (this.parentMapFilters.state.shouldHaveICUs && location.hasICUs) ||
-      (this.parentMapFilters.state.shouldHaveVentilators && location.hasVentilators)) {
+      (this.parentMapFilters.state.shouldHaveVentilators && location.hasVentilators) ||
+      (this.parentMapFilters.state.shouldHaveHDUBeds && location.hasHDUBeds)) {
 
       return true;
     }

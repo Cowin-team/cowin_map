@@ -21,7 +21,8 @@ class CovidBedLocation {
     this.icu       = (dataRow[7] === undefined ? "N/A" : dataRow[7]);
     this.venti     = (dataRow[8] === undefined ? "N/A" : dataRow[8]);
     this.updatedAt = dataRow[9];
-
+    this.hdubed    = (dataRow[12] === undefined ? "N/A" : dataRow[12])
+    this.sourceURL    = dataRow[11]
     this.contacts = [];
 
     if(dataRow[10]!== undefined) {
@@ -37,6 +38,7 @@ class CovidBedLocation {
     this.hasOxygenBeds  = this.hasAttribute("oxybed");
     this.hasICUs        = this.hasAttribute("icu");
     this.hasVentilators = this.hasAttribute("venti");
+    this.hasHDUBeds     = this.hasAttribute("hdubed");
   }
 
   hasAttribute(attr) {
