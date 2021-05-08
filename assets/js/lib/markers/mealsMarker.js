@@ -5,20 +5,20 @@ class MealsMarker {
         position: location.position,
         map: null,
         title: location.title,
-        icon: "/assets/images/meal_marker.png"
+        icon: "assets/images/meal_marker.png"
       });
       this.position = this.marker.position;
-  
+
       this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
-  
+
       var contact_info = []
-  
+
       for(var idx =0; idx< location.contacts.length; idx++) {
         contact_info.push('<a href="tel:' + location.contacts[idx] +'">' + location.contacts[idx] + '</a>')
       }
-  
+
       var contact_details = contact_info.join('<br/>')
-  
+
       this.descriptionHtml = `
         <div class="content">
           <h5 class="title is-5 mb-0">
@@ -38,9 +38,9 @@ class MealsMarker {
         </div>
       `
     }
-  
+
     setMap(map) {
       this.marker.setMap(map);
     }
   }
-  
+

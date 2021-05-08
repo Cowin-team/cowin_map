@@ -1,13 +1,13 @@
 class CovidBedMarker {
   constructor(location, sheet_id) {
     this.location = location;
-    
+
 
     this.marker = new google.maps.Marker({
       position: location.position,
       map: null,
       title: location.title,
-      icon: "/assets/images/hospital_marker.png"
+      icon: "assets/images/hospital_marker.png"
     });
 
     this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
@@ -29,7 +29,7 @@ class CovidBedMarker {
         </h5>
         <p class="is-size-7 mt-1">Updated at: ${location.updatedAt}</p>
         <p class="is-size-7 mt-1">${(location.sourceURL === undefined) ? "": ('<a href="' + location.sourceURL +'">' + 'Source' + '</a>')}</p>
-        
+
         <p class="is-size-7 mt-1">Contact: ${(location.contacts.length === 0) ? "N/A" : (contact_details)}</p>
         <table class="table has-text-left is-striped is-narrow is-hoverable">
           <tr><th>COVID Beds: </th><td>${location.covidbed}</td></tr>
