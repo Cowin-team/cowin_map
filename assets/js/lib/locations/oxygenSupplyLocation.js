@@ -6,11 +6,11 @@ class OxygenSupplyLocation {
     this.longitude       = parseFloat(dataRow[3]);
     this.url             = dataRow[4];
     if ((isNaN(this.latitude) || isNaN(this.longitude)) && Boolean(this.url)) {
-      try { 
+      try {
          var url_location = this.url.split('@')[1].split('z')[0].split(',');
          this.latitude = parseFloat(url_location[0]);
          this.longitude = parseFloat(url_location[1]);
-      } catch (e) { 
+      } catch (e) {
          console.log(`Error in parsing URL for ${this.type} for title: ${this.title}`);
          console.log(e);
       }
@@ -29,12 +29,16 @@ class OxygenSupplyLocation {
       for(var idx =0; idx< contacts_info.length; idx++) {
         this.contacts.push(contacts_info[idx].trim())
       }
-    } 
+    }
 
     this.position        = { lat: this.latitude, lng: this.longitude };
   }
 
   parseYesOrNo(value) {
+    if (value === undefined) {
+      return undefined;
+    }
+
     value = value.toLowerCase().trim();
     if (value == "yes") {
       return true;
