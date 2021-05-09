@@ -339,6 +339,35 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
+  let hyderabadCity = new City(
+    "Hyderabad",
+    {
+      covidBeds: "17flt2bxwPsIf2y_MpJDLA5ATt0rW8Xm_hbA1sq716qo"
+     },
+    afterCityDataFetchCallback
+  );
+  let warangaluCity = new City(
+    "Warangal Urban",
+    {
+      covidBeds: "1jDqsZDTy70368kl7YOEyPGa37xqpPJhhDGLohRjInxI"
+     },
+    afterCityDataFetchCallback
+  );
+  let warangalrCity = new City(
+    "Warangal Rural",
+    {
+      covidBeds: "1WMijTIV6QGmKDVWhTB11ibBnG8n6M5nM5AbAXoWjP_0"
+     },
+    afterCityDataFetchCallback
+  );
+  
+   let karimnagarCity = new City(
+    "Karimnagar",
+    {
+      covidBeds: "1T-a4MJqesqwnV37MkfHXIO5X6QpVKUyL4l7fBdcbnqg"
+     },
+    afterCityDataFetchCallback
+  );
 }
 
 window.initialiseMap = initialiseMap;
