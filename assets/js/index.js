@@ -318,7 +318,8 @@ function initialiseMap() {
   let bloreCity = new City(
     "Bangalore",
     {
-      covidBeds: "1H05y2PXFNrvgHnDleC8We453oKFZbsI7I8thPtSMt3M"
+      covidBeds: "1H05y2PXFNrvgHnDleC8We453oKFZbsI7I8thPtSMt3M",
+      oxygenSupply: "1Nuj9ITW1gKarTHJKP7MBwjuWxtjF8akd8Plnk0ywc9s"
     },
     afterCityDataFetchCallback
   );
