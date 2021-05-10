@@ -369,6 +369,15 @@ function initialiseMap() {
      },
     afterCityDataFetchCallback
   );
+  let kashmir = new City(
+    "Kashmir",
+    {
+      
+      oxygenSupply: "1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU"
+    },
+    afterCityDataFetchCallback
+  );
+ 
 }
 
 window.initialiseMap = initialiseMap;
