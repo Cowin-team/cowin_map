@@ -369,6 +369,21 @@ function initialiseMap() {
      },
     afterCityDataFetchCallback
   );
+  
+    let adilabadCity = new City(
+    "Adilabad",
+    {
+      covidBeds: "14lPZWg4vZ258cnMRtSXeJ0muhnEEG6cFMj7EHGGbJM4"
+     },
+    afterCityDataFetchCallback
+  );
+  let jangaonCity = new City(
+    "Jangaon",
+    {
+      covidBeds: "1HzO0hFfNw5I38pExN_awTYEuLJVxl8O-atxt1F_OTCM"
+     },
+    afterCityDataFetchCallback
+  );
   let kashmir = new City(
     "Kashmir",
     {
