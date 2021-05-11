@@ -361,7 +361,7 @@ function initialiseMap() {
      },
     afterCityDataFetchCallback
   );
-  
+
    let karimnagarCity = new City(
     "Karimnagar",
     {
@@ -372,25 +372,11 @@ function initialiseMap() {
   let kashmir = new City(
     "Kashmir",
     {
-      
+
       oxygenSupply: "1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU"
     },
     afterCityDataFetchCallback
   );
-  let kancheepuramCity = new City(
-    "Kancheepuram",
-    {
-      covidBeds: "1JFeF1AtpCxRKy6Wb1Mfxq0wCT6M6ULFBvbGwBkMTzjc"
-     },
-    afterCityDataFetchCallback
-  );
-  let thoothukudiCity = new City(
-    "Thoothukudi",
-    {
-      covidBeds: "1CliAXv8Ws8tmu1yGzFo5TgOYVdUrPW9Et7KU-fvm-3k"
-     },
-    afterCityDataFetchCallback
-  );  
 }
 
 window.initialiseMap = initialiseMap;
