@@ -377,7 +377,20 @@ function initialiseMap() {
     },
     afterCityDataFetchCallback
   );
- 
+  let kancheepuramCity = new City(
+    "Kancheepuram",
+    {
+      covidBeds: "1JFeF1AtpCxRKy6Wb1Mfxq0wCT6M6ULFBvbGwBkMTzjc"
+     },
+    afterCityDataFetchCallback
+  );
+  let thoothukudiCity = new City(
+    "Thoothukudi",
+    {
+      covidBeds: "1CliAXv8Ws8tmu1yGzFo5TgOYVdUrPW9Et7KU-fvm-3k"
+     },
+    afterCityDataFetchCallback
+  );  
 }
 
 window.initialiseMap = initialiseMap;
