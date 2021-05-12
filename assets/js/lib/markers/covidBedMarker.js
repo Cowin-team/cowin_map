@@ -42,7 +42,7 @@ class CovidBedMarker {
     `
   }
 
-  setMap(map) {
-    this.marker.setMap(map);
+  getMarker() {
+    return this.marker;
   }
 }

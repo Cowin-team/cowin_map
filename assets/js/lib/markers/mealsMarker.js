@@ -39,8 +39,8 @@ class MealsMarker {
       `
     }
 
-    setMap(map) {
-      this.marker.setMap(map);
+    getMarker() {
+      return this.marker;
     }
   }
 
