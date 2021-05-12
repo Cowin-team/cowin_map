@@ -39,12 +39,7 @@ class MealsMarker {
       `
     }
 
-    getMarker(map) {
-      google.maps.event.addListener(this.marker, 'click', function(evt) {
-        infoWin.setContent(this.descriptionHtml);
-        infoWin.open(map, this.marker);
-      })
-  
+    getMarker() {
       return this.marker;
     }
   }
