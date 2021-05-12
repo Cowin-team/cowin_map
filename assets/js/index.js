@@ -384,6 +384,13 @@ function initialiseMap() {
      },
     afterCityDataFetchCallback
   );
+  let gandhinagarCity = new City(
+    "Gandhinagar",
+    {
+      covidBeds: "1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA"
+     },
+    afterCityDataFetchCallback
+  );
   let kashmir = new City(
     "Kashmir",
     {
