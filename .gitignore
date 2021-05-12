@@ -6,3 +6,4 @@ node_modules/*
 # Only on dev
 _dist
 **.DS_STORE**
+generate/node_modules/*

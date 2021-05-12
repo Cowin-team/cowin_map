@@ -108,7 +108,7 @@
   <div class="pt-3 pb-3">
     <div class="container">
       <div class="content">
-        <div class="dropdown">
+        <div class="dropdown ml-2">
           <div class="dropdown-trigger">
             <div class="button" aria-haspopup="true" aria-controls="dropdown-menu">
               <span>Filters</span>
@@ -122,11 +122,8 @@
             <div class="dropdown-content">
               <div class="dropdown-item">
                 <label class="checkbox has-text-grey">
-                  <input type="checkbox"
-                          class="selectAllFiltersToggle"
-                          data-target-inputs-selector=".all-filter-inputs input"
-                          value="1"
-                          checked>
+                  <input type="checkbox" class="selectAllFiltersToggle"
+                    data-target-inputs-selector=".all-filter-inputs input" value="1" checked>
                   Select all
                 </label>
               </div>
@@ -162,86 +159,79 @@
                 </div>
                 <div class="dropdown-item">
                   <label class="checkbox">
-                    <input type="checkbox" name="filters[shouldHaveHDUBeds]"
-                      data-filter-name="shouldHaveHDUBeds" value="1" checked>
+                    <input type="checkbox" name="filters[shouldHaveHDUBeds]" data-filter-name="shouldHaveHDUBeds"
+                      value="1" checked>
                     HDU Beds
                   </label>
                 </div>
               </div>
 
-                <hr class="dropdown-divider">
+              <hr class="dropdown-divider">
 
-                <div class="oxygen-filters">
-                  <div class="dropdown-item">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                              name="filters[shouldHaveRefilling]"
-                              data-filter-name="shouldHaveRefilling"
-                              value="1"
-                              checked>
-                      Oxygen Refilling
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                              name="filters[shouldHaveCylinders]"
-                              data-filter-name="shouldHaveCylinders"
-                              value="1"
-                              checked>
-                      Oxygen Cylinders
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                              name="filters[shouldHaveCans]"
-                              data-filter-name="shouldHaveCans"
-                              value="1"
-                              checked>
-                      Oxygen Cans
-                    </label>
-                  </div>
-                  <div class="dropdown-item">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                              name="filters[shouldHaveConcentrator]"
-                              data-filter-name="shouldHaveConcentrator"
-                              value="1"
-                              checked>
-                      Oxygen Concentrators
-                    </label>
-                  </div>
+              <div class="oxygen-filters">
+                <div class="dropdown-item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="filters[shouldHaveRefilling]" data-filter-name="shouldHaveRefilling"
+                      value="1" checked>
+                    Oxygen Refilling
+                  </label>
                 </div>
-
-                <hr class="dropdown-divider">
-
-                <div class="meals-filters">
-                  <div class="dropdown-item">
-                    <label class="checkbox">
-                      <input type="checkbox"
-                              name="filters[shouldHaveFree]"
-                              data-filter-name="shouldHaveFree"
-                              value="1"
-                              checked>
-                      Free Meals
-                    </label>
-                  </div>
+                <div class="dropdown-item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="filters[shouldHaveCylinders]" data-filter-name="shouldHaveCylinders"
+                      value="1" checked>
+                    Oxygen Cylinders
+                  </label>
                 </div>
-
+                <div class="dropdown-item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="filters[shouldHaveCans]" data-filter-name="shouldHaveCans" value="1"
+                      checked>
+                    Oxygen Cans
+                  </label>
+                </div>
+                <div class="dropdown-item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="filters[shouldHaveConcentrator]"
+                      data-filter-name="shouldHaveConcentrator" value="1" checked>
+                    Oxygen Concentrators
+                  </label>
                 </div>
               </div>
+
+              <hr class="dropdown-divider">
+
+              <div class="meals-filters">
+                <div class="dropdown-item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="filters[shouldHaveFree]" data-filter-name="shouldHaveFree" value="1"
+                      checked>
+                    Free Meals
+                  </label>
+                </div>
+              </div>
+
             </div>
+          </div>
+          <div class="select ml-5">
+            <select id="citySelector"></select>
           </div>
         </div>
       </div>
+
+      
     </div>
+
+
+  </div>
+  </div>
   </div>
   <div id="map"></div>
 </body>
 
 </html>
 
+<script src="assets/js/lib/citiesWithResources.js"></script>
 <script src="assets/js/lib/markers/markerclusterer.js"></script>
 <script src="assets/js/lib/bulmaInteractions.js"></script>
 <script src="assets/js/lib/selectAll.js"></script>
@@ -264,6 +254,7 @@
 <script src="assets/js/index.js"></script>
 
 <script src="assets/js/lib/liability-modal.js"></script>
+<script src="assets/js/lib/cityDropdown.js"></script>
 
 <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
 <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
