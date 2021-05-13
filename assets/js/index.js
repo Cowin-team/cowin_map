@@ -62,7 +62,8 @@ function initialiseMap() {
   let dindigulCity = new City(
     "Dindigul",
     {
-      covidBeds: "1RPZhwn_Aw-g7o2pBgfe4r0MJe-1UjpQxGkWjzMsQTHY"
+      covidBeds: "1RPZhwn_Aw-g7o2pBgfe4r0MJe-1UjpQxGkWjzMsQTHY",
+      oxygenSupply: "1TXQJClVgsUZrlM7riWdcdqassbq2eLLyM7_u49pUSjA"
     },
     afterCityDataFetchCallback
   );
@@ -70,7 +71,8 @@ function initialiseMap() {
   let erodeCity = new City(
     "Erode",
     {
-      covidBeds: "16X-7DT_U_XLFYusN9z_tFypRre1suvJ8wkTHeb1YtCQ"
+      covidBeds: "16X-7DT_U_XLFYusN9z_tFypRre1suvJ8wkTHeb1YtCQ",
+      oxygenSupply: "1XqOcQLJ-4EcH0EoNbSVsJAKcoVsqoocTKE56RSxHQ7E"
     },
     afterCityDataFetchCallback
   );
@@ -86,7 +88,8 @@ function initialiseMap() {
   let kancheepuramCity = new City(
     "Kancheepuram",
     {
-      covidBeds: "1JFeF1AtpCxRKy6Wb1Mfxq0wCT6M6ULFBvbGwBkMTzjc"
+      covidBeds: "1JFeF1AtpCxRKy6Wb1Mfxq0wCT6M6ULFBvbGwBkMTzjc",
+      oxygenSupply: "1rusD1ki3o4ZPiINi5zmz-lTS2DdFSI8toQvzWh1DzjM"
     },
     afterCityDataFetchCallback
   );
@@ -94,7 +97,8 @@ function initialiseMap() {
   let kanyakumariCity = new City(
     "Kanyakumari",
     {
-      covidBeds: "1mmnz6UDlqkm3EqU6UdW7nqOAmyeZcSH14fftnO1rqh8"
+      covidBeds: "1mmnz6UDlqkm3EqU6UdW7nqOAmyeZcSH14fftnO1rqh8",
+      oxygenSupply: "1Wph7kltlEew06IB8zebiktIfj3koFAkjDT5enidmLVM"
     },
     afterCityDataFetchCallback
   );
@@ -110,7 +114,8 @@ function initialiseMap() {
   let krishnagiri = new City(
     "Krishnagiri",
     {
-      covidBeds: "1bkBE2k5zB7FlhsFHtpdzNKF7EKON_vKP7mjdCAZLt9Y"
+      covidBeds: "1bkBE2k5zB7FlhsFHtpdzNKF7EKON_vKP7mjdCAZLt9Y",
+      oxygenSupply: "14BHWZyxxbYpqHPtKusLtP0y4Y-EOjKuKvX9fFRckoeY"
     },
     afterCityDataFetchCallback
   );
@@ -118,7 +123,8 @@ function initialiseMap() {
   let maduraiCity = new City(
     "Madurai",
     {
-      covidBeds: "1Dr7DYS6GKe5avhHcwhHMB6Z9DTFSj20eEgLvfBlQJSo"
+      covidBeds: "1Dr7DYS6GKe5avhHcwhHMB6Z9DTFSj20eEgLvfBlQJSo",
+      oxygenSupply: "1vWJ8l9Hso6PD9cjs0a6rR49j-7H5nKKCmkIB7aMMEb0"
     },
     afterCityDataFetchCallback
   );
@@ -134,7 +140,8 @@ function initialiseMap() {
   let namakkalCity = new City(
     "Namakkal",
     {
-      covidBeds: "1RP_dDLl4a49_hq-Mp39WWiZiNXKOq5wUBkq1iw7hSFY"
+      covidBeds: "1RP_dDLl4a49_hq-Mp39WWiZiNXKOq5wUBkq1iw7hSFY",
+      oxygenSupply: "1FilCvqv6Dh4tXxNKRuRUmjvR_bg7w17m8TQJayCRk8s"
     },
     afterCityDataFetchCallback
   );
@@ -182,7 +189,8 @@ function initialiseMap() {
   let salemCity = new City(
     "Salem",
     {
-      covidBeds: "1GlNu4jyK_nkI2KwEBe9Wc6qgW1bCxbrH9v8cUJDJWrs"
+      covidBeds: "1GlNu4jyK_nkI2KwEBe9Wc6qgW1bCxbrH9v8cUJDJWrs",
+      oxygenSupply: "13L6bhcNQFNlkTrQFV79xyEf11FAQSKSb2WMCCLJ5blM"
     },
     afterCityDataFetchCallback
   );
@@ -214,7 +222,8 @@ function initialiseMap() {
   let theniCity = new City(
     "Theni",
     {
-      covidBeds: "1xgvC0LSHJ4gedshTMEjlqOqM7OIlRFmlgD5z_CdL8jQ"
+      covidBeds: "1xgvC0LSHJ4gedshTMEjlqOqM7OIlRFmlgD5z_CdL8jQ",
+      oxygenSupply: "1R1JBktkU2Uae7walzJ-chGwfv8icl4-yupW2OmoxmE4"
     },
     afterCityDataFetchCallback
   );
@@ -238,7 +247,8 @@ function initialiseMap() {
   let thoothukudiCity = new City(
     "Thoothukudi",
     {
-      covidBeds: "1CliAXv8Ws8tmu1yGzFo5TgOYVdUrPW9Et7KU-fvm-3k"
+      covidBeds: "1CliAXv8Ws8tmu1yGzFo5TgOYVdUrPW9Et7KU-fvm-3k",
+      oxygenSupply: "1zkcR2R93gYNayeSdkxvwl9kSeqDhQpdC3dJTfSOgmyM"
     },
     afterCityDataFetchCallback
   );
@@ -302,7 +312,8 @@ function initialiseMap() {
   let thiruchirappalliCity = new City(
     "Thiruchirappalli",
     {
-      covidBeds: "1flK4l2oPJ9zvaPCWW1lXqEK3PrKW7B5EgQJQPil_c-8"
+      covidBeds: "1flK4l2oPJ9zvaPCWW1lXqEK3PrKW7B5EgQJQPil_c-8",
+      oxygenSupply: "1FhcJTJ1CZp4L5ZQFkAdVYQ_19ceryWPRee7fM7u4zDQ"
     },
     afterCityDataFetchCallback
   );
