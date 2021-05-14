@@ -10,11 +10,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     option.value = 'default'
     citySelector.add(option)
 
-    citiesWithResources.forEach(element => {
-        let option = document.createElement("option");
-        option.text = element.city;
-        option.value = element.city.toLowerCase()
-        citySelector.add(option)
+    let cityNames = citiesWithResources.map(cityObject => {
+      return cityObject.city;
+    })
+    cityNames.sort();
+    cityNames.forEach(cityName => {
+      var option = document.createElement("option");
+      option.text = cityName;
+        option.value = cityName.toLowerCase()
+      citySelector.add(option)
     });
 
     if (city != undefined) {
