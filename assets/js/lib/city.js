@@ -4,27 +4,42 @@ class City {
   constructor(name, resources, afterFetchCallback) {
     this.name               = name;
     this.afterFetchCallback = afterFetchCallback;
+    this.availableResources = resources;
 
     this.covidBedLocations  = [];
     this.covidBedMarkers    = [];
-    
+    this.hasFetchedCovidBedsData = false;
+
     if (resources.includes('beds')) {
       this.fetchCovidBedData();
     }
 
     this.oxygenSupplyLocations  = [];
     this.oxygenSupplyMarkers    = [];
-    
+    this.hasFetchedOxygenData = false
+
     if (resources.includes('oxygen')) {
       this.fetchOxygemSupplyData();
     }
 
     this.mealsLocations  = [];
     this.mealsMarkers    = [];
-    
+    this.hasFetchedMealsData = false;
+
     if (resources.includes('meals')) {
       this.fetchMealsData();
     }
+  }
+
+  fetchedAllData() {
+    if ((this.availableResources.includes("beds") && !this.hasFetchedCovidBedsData) ||
+      (this.availableResources.includes("oxygen") && !this.hasFetchedOxygenData) ||
+      (this.availableResources.includes("meals") && !this.hasFetchedMealsData)) {
+
+      return false;
+    }
+
+    return true;
   }
 
   fetchCovidBedData() {
@@ -40,7 +55,12 @@ class City {
           this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
         });
 
+        this.hasFetchedCovidBedsData = true;
         this.afterFetchCallback(this.covidBedMarkers);
+      })
+      .catch(error => {
+        console.error(`!!!! Failed to fetch BEDS for ${this.name}: ${error}`);
+        this.hasFetchedCovidBedsData = true;
       });
   }
 
@@ -53,11 +73,16 @@ class City {
         data.forEach((dataRow) => {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
-          
+
           this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
         });
 
+        this.hasFetchedOxygenData = true;
         this.afterFetchCallback(this.oxygenSupplyMarkers);
+      })
+      .catch(error => {
+        console.error(`!!!! Failed to fetch OXYGEN SUPPLY for ${this.name}: ${error}`);
+        this.hasFetchedOxygenData = true;
       });
   }
 
@@ -70,11 +95,16 @@ class City {
         data.forEach((dataRow) => {
           let mealsLocation = new MealsLocation(dataRow);
           this.mealsLocations.push(mealsLocation);
-          
+
           this.mealsMarkers.push(new MealsMarker(mealsLocation));
         });
 
+        this.hasFetchedMealsData = true;
         this.afterFetchCallback(this.mealsMarkers);
+      })
+      .catch(error => {
+        console.error(`!!!! Failed to fetch MEALS for ${this.name}: ${error}`);
+        this.hasFetchedMealsData = true;
       });
   }
 }

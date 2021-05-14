@@ -5,7 +5,6 @@ function initialiseMap() {
     cowinMapMarkers.forEach((cowinMapMarker) => {
       cowinMap.setupAndPlotCowinMapMarker(cowinMapMarker);
     });
-    cowinMap.plotAllCowinMapMarkers();
   };
 
   let resourceUrl = "http://35.223.206.45/resource/get";
