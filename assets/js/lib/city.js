@@ -1,40 +1,43 @@
 const sheetsApiKey = "AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM";
 
 class City {
-  constructor(name, spreadsheetIds, afterFetchCallback) {
+  constructor(name, resources, afterFetchCallback) {
     this.name               = name;
-    this.spreadsheetIds     = spreadsheetIds;
     this.afterFetchCallback = afterFetchCallback;
 
     this.covidBedLocations  = [];
     this.covidBedMarkers    = [];
-    this.fetchCovidBedData();
+    
+    if (resources.includes('beds')) {
+      this.fetchCovidBedData();
+    }
 
     this.oxygenSupplyLocations  = [];
     this.oxygenSupplyMarkers    = [];
-    if (spreadsheetIds.oxygenSupply !== undefined) {
+    
+    if (resources.includes('oxygen')) {
       this.fetchOxygemSupplyData();
     }
 
     this.mealsLocations  = [];
     this.mealsMarkers    = [];
-    if (spreadsheetIds.meals !== undefined) {
+    
+    if (resources.includes('meals')) {
       this.fetchMealsData();
     }
   }
 
   fetchCovidBedData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.covidBeds}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `http://35.223.206.45/sheet/fetch?city=${this.name}&resource=beds`
 
-    fetch(sheetUrl)
+    fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
-        data.values.forEach((dataRow) => {
+        data.forEach((dataRow) => {
           let covidBedLocation = new CovidBedLocation(dataRow);
           this.covidBedLocations.push(covidBedLocation);
 
-          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation, this.spreadsheetIds.covidBeds));
+          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
         });
 
         this.afterFetchCallback(this.covidBedMarkers);
@@ -42,16 +45,16 @@ class City {
   }
 
   fetchOxygemSupplyData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `http://35.223.206.45/sheet/fetch?city=${this.name}&resource=oxygen`
 
-    fetch(sheetUrl)
+    fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
-        data.values.forEach((dataRow) => {
+        data.forEach((dataRow) => {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
-          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation, this.spreadsheetIds.oxygenSupply));
+          
+          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
         });
 
         this.afterFetchCallback(this.oxygenSupplyMarkers);
@@ -59,16 +62,16 @@ class City {
   }
 
   fetchMealsData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.meals}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `http://35.223.206.45/sheet/fetch?city=${this.name}&resource=meals`
 
-    fetch(sheetUrl)
+    fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
-        data.values.forEach((dataRow) => {
+        data.forEach((dataRow) => {
           let mealsLocation = new MealsLocation(dataRow);
           this.mealsLocations.push(mealsLocation);
-          this.mealsMarkers.push(new MealsMarker(mealsLocation, this.spreadsheetIds.mealsSupply));
+          
+          this.mealsMarkers.push(new MealsMarker(mealsLocation));
         });
 
         this.afterFetchCallback(this.mealsMarkers);
