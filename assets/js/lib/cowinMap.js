@@ -32,7 +32,13 @@ class CowinMap {
       zoom: 10,
       center: new google.maps.LatLng(11.0117016, 76.8971953)
     });
-    if (navigator.geolocation) {
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const city = urlParams.get('city');
+
+    if (city !== null) {
+      this.setMapAddress(city)
+    } else if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const pos = {
@@ -42,15 +48,28 @@ class CowinMap {
           this.map.setCenter(pos);
         },
         () => {
-          // Center on Coimbatore
-          this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
+          // could not fetch location
+          this.setDefaultMapLocation()
         }
       );
     } else {
       // Browser doesn't support Geolocation
+      // No city found in url param
       // Center on Coimbatore
-      this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
+      this.setDefaultMapLocation()
     }
+  }
+
+  setDefaultMapLocation() {
+    this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
+  }
+
+  setMapAddress(city) {
+    citiesWithResources.forEach((element) => {
+      if(element.city.toLowerCase() == city.toLowerCase()) {
+        this.map.setCenter(new google.maps.LatLng(element.lat, element.lng));
+      }
+    })
   }
 
   setupAndPlotCowinMapMarker(cowinMapMarker) {
