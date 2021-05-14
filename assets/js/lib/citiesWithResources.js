@@ -278,7 +278,8 @@ const citiesWithResources = [
   },
   {
     city: 'Mumbai',
-    resources: { covidBeds: '17OeX5qBHXN3c3ICzp-FIgzrw6iWpQjp-7LS2m1GgTp8' },
+    resources: { covidBeds: '17OeX5qBHXN3c3ICzp-FIgzrw6iWpQjp-7LS2m1GgTp8', 
+               oxygenSupply: '1Ihof7PzjiDTdLlEjy8UdjUYF0aAwYVW8Brgx61XVnW0'},
     lat: 19.0759837,
     lng: 72.8776559
   },
