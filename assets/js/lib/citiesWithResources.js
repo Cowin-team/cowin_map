@@ -21,7 +21,7 @@ const citiesWithResources = [
     lng: 80.2707184
   },
   {
-    city: 'coimbatore',
+    city: 'Coimbatore',
     resources: {
       covidBeds: '1WW1Lu7S8zP85Qzv-Pn7gp_KUxPJZzvrXnGoWOkwcdbw',
       oxygenSupply: '1Ry3y1hx1iHeuF17YmWtzfaDQdhx5zRr6lSLrzBW_TU0',
@@ -159,8 +159,8 @@ const citiesWithResources = [
       covidBeds: '1GlNu4jyK_nkI2KwEBe9Wc6qgW1bCxbrH9v8cUJDJWrs',
       oxygenSupply: '13L6bhcNQFNlkTrQFV79xyEf11FAQSKSb2WMCCLJ5blM'
     },
-    lat: 42.51954,
-    lng: -70.8967155
+    lat: 11.6538948,
+    lng: 78.0682571
   },
   {
     city: 'Sivagangai',
