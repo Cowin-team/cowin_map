@@ -330,7 +330,9 @@ const citiesWithResources = [
   },
   {
     city: 'Gandhinagar',
-    resources: { covidBeds: '1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA' },
+    resources: { covidBeds: '1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA',
+                 oxygenSupply:'1kKBW9v4KbEPm5QicjVCnyC-yulBFf6OK3-Y36g9P62I'
+               },
     lat: 23.2156354,
     lng: 72.63694149999999
   },
