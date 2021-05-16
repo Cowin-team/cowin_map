@@ -1,3 +1,7 @@
+if (location.protocol === "https:") {
+  location.protocol = "http:";
+}
+
 function initialiseMap() {
   let cowinMap = new CowinMap();
 
