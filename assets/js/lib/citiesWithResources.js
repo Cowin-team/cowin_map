@@ -294,7 +294,8 @@ const citiesWithResources = [
   },
   {
     city: 'Hyderabad',
-    resources: { covidBeds: '17flt2bxwPsIf2y_MpJDLA5ATt0rW8Xm_hbA1sq716qo' },
+    resources: { covidBeds: '17flt2bxwPsIf2y_MpJDLA5ATt0rW8Xm_hbA1sq716qo',
+                 oxygenSupply: '1lJrldsvrCpmU9epXWwefHwUvj_gR97uCix42uD3GRSo'},
     lat: 17.385044,
     lng: 78.486671
   },
