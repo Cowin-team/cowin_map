@@ -342,7 +342,7 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU' },
     lat: 33.277839,
     lng: 75.34121789999999
-  }
+  },
    {
     city: 'Dehradun',
     resources: { oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U' },
