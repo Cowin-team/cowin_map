@@ -1,3 +1,7 @@
+if (location.protocol === "https:") {
+  location.protocol = "http:";
+}
+
 function initialiseMap() {
   let cowinMap = new CowinMap();
 
@@ -7,7 +11,7 @@ function initialiseMap() {
     });
   };
 
-  let resourceUrl = "https://34.93.236.45/resource/get";
+  let resourceUrl = "http://34.93.236.45/resource/get";
   let cities = [];
 
   fetch(resourceUrl)
