@@ -7,7 +7,7 @@ function initialiseMap() {
     });
   };
 
-  let resourceUrl = "http://35.223.206.45/resource/get";
+  let resourceUrl = "http://34.93.236.45/resource/get";
   let cities = [];
 
   fetch(resourceUrl)
