@@ -6,29 +6,24 @@ class CowinMap {
     this.markerInfoWindow = new google.maps.InfoWindow({ content: "" });
     this.cowinMapMarkers = [];
 
+    this.markerClusters = [];
     this.bounds = new google.maps.LatLngBounds();
     this.filters = [];
 
     this.hospitalMapFilters = new HospitalMapFilters((newFiltersState) => {
-      this.replotAllMarkerClusters()
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.hospitalMapFilters);
 
     this.oxygenMapFilters = new OxygenMapFilters((newFiltersState) => {
-      this.replotAllMarkerClusters()
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.oxygenMapFilters);
 
     this.mealsMapFilters = new MealsMapFilters((newFiltersState) => {
-      this.replotAllMarkerClusters()
+      this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.mealsMapFilters);
-
-    this.oxygenMarkers = [];
-    this.covidBedMarkers = [];
-    this.mealMarkers = [];
-    this.markerClusters = [];
-    this.resetMarkerClusters();
   }
 
   initialiseMap() {
@@ -83,18 +78,7 @@ class CowinMap {
       this.markerInfoWindow.open(this.map, cowinMapMarker.marker);
     });
     this.cowinMapMarkers.push(cowinMapMarker);
-    this.plotCowinMapMarker(cowinMapMarker);
   };
-
-  plotCowinMapMarker(cowinMapMarker) {
-    if (cowinMapMarker instanceof OxygenSupplyMarker) {
-      this.oxygenCluster.addMarker(cowinMapMarker.marker);
-    } else if (cowinMapMarker instanceof CovidBedMarker) {
-      this.hospitalCluster.addMarker(cowinMapMarker.marker);
-    } else if (cowinMapMarker instanceof MealsMarker) {
-      this.mealCluster.addMarker(cowinMapMarker.marker);
-    }
-  }
 
   shouldPlotCowinMapMarker(cowinMapMarker) {
     let shouldPlot = false;
@@ -108,39 +92,33 @@ class CowinMap {
     return shouldPlot;
   }
 
-  resetMarkerClusters() {
+  clearClustersMarkers() {
     this.markerClusters.forEach(cluster => cluster.clearMarkers());
-
-    this.markerClusters = [];
-    this.oxygenCluster = new MarkerClusterer(
-      this.map,
-      [],
-      { imagePath: `./assets/images/clusters/oxygen/m` }
-    );
-    this.markerClusters.push(this.oxygenCluster);
-
-    this.hospitalCluster = new MarkerClusterer(
-      this.map,
-      [],
-      { imagePath: `./assets/images/clusters/hospital/m` }
-    );
-    this.markerClusters.push(this.hospitalCluster);
-
-    this.mealCluster = new MarkerClusterer(
-      this.map,
-      [],
-      { imagePath: `./assets/images/clusters/meal/m` }
-    );
-    this.markerClusters.push(this.mealCluster);
   }
 
-  replotAllMarkerClusters() {
-    this.resetMarkerClusters()
+  plotAllCowinMapMarkers() {
+    this.clearClustersMarkers()
+    let filteredMarkers = this.cowinMapMarkers.filter((marker) => {
+      return this.shouldPlotCowinMapMarker(marker)
+    })
 
-    let filteredMarkers = this.cowinMapMarkers.filter((cowinMapMarker) => {
-      if (this.shouldPlotCowinMapMarker(cowinMapMarker)) {
-        this.plotCowinMapMarker(cowinMapMarker);
-      }
-    });
+    let oxygenMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof OxygenSupplyMarker
+    }).map((m) => m.getMarker())
+
+    let bedMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof CovidBedMarker
+    }).map((m) => m.getMarker())
+
+    let mealMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof MealsMarker
+    }).map((m) => m.getMarker())
+
+    let oxygenCluster = new MarkerClusterer(this.map, oxygenMarkers, { imagePath: `./assets/images/clusters/oxygen/m` });
+    this.markerClusters.push(oxygenCluster);
+    let hospitalCluster = new MarkerClusterer(this.map, bedMarkers, { imagePath: `./assets/images/clusters/hospital/m` });
+    this.markerClusters.push(hospitalCluster);
+    let mealCluster = new MarkerClusterer(this.map, mealMarkers, { imagePath: `./assets/images/clusters/meal/m` });
+    this.markerClusters.push(mealCluster);
   }
 }
