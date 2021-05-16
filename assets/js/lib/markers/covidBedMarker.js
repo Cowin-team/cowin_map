@@ -1,5 +1,5 @@
 class CovidBedMarker {
-  constructor(location, sheet_id) {
+  constructor(location) {
     this.location = location;
 
 
@@ -9,8 +9,6 @@ class CovidBedMarker {
       title: location.title,
       icon: "assets/images/hospital_marker.png"
     });
-
-    this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
 
     this.position = this.marker.position;
 

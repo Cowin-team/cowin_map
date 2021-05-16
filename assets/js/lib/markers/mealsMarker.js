@@ -1,5 +1,5 @@
 class MealsMarker {
-    constructor(location, sheet_id) {
+    constructor(location) {
       this.location = location;
       this.marker = new google.maps.Marker({
         position: location.position,
@@ -8,8 +8,6 @@ class MealsMarker {
         icon: "assets/images/meal_marker.png"
       });
       this.position = this.marker.position;
-
-      this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
 
       var contact_info = []
 
