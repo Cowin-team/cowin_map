@@ -43,7 +43,7 @@ class City {
   }
 
   fetchCovidBedData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=beds`
+    let dataUrl = `https://34.93.236.45/sheet/fetch?city=${this.name}&resource=beds`
 
     fetch(dataUrl)
       .then(response => response.json())
@@ -65,7 +65,7 @@ class City {
   }
 
   fetchOxygemSupplyData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=oxygen`
+    let dataUrl = `https://34.93.236.45/sheet/fetch?city=${this.name}&resource=oxygen`
 
     fetch(dataUrl)
       .then(response => response.json())
@@ -87,7 +87,7 @@ class City {
   }
 
   fetchMealsData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=meals`
+    let dataUrl = `https://34.93.236.45/sheet/fetch?city=${this.name}&resource=meals`
 
     fetch(dataUrl)
       .then(response => response.json())
