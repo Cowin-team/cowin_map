@@ -348,6 +348,18 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U' },
     lat: 30.31498113274747,
     lng: 78.03051469656198
+  },
+  {
+    city: 'Jaipur',
+    resources: { covidBeds: '1lwJadk2va0ImwhfHY0zDmsDgqmI2ARMqrvpQgENKQf8'},
+    lat: 26.902594566452265, 
+    lng: 75.7627388270979
+  },
+  {
+    city: 'Kota',
+    resources: { covidBeds: '1mrvwUaTXHSKDz2v87yajt9BRPwshdPro1UYZ1WWeIhk'},
+    lat: 25.20010485377562, 
+    lng: 75.87818898274959
   }
 ]
 
