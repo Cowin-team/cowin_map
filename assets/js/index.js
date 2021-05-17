@@ -1,7 +1,3 @@
-if (location.protocol === "https:") {
-  location.href = "http://cowinmap.com?redirect_to_http=true";
-}
-
 function initialiseMap() {
   let cowinMap = new CowinMap();
 
