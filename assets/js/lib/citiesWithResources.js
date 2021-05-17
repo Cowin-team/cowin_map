@@ -360,6 +360,12 @@ const citiesWithResources = [
     resources: { covidBeds: '1mrvwUaTXHSKDz2v87yajt9BRPwshdPro1UYZ1WWeIhk'},
     lat: 25.20010485377562, 
     lng: 75.87818898274959
+  },
+  {
+    city: 'Jodhpur',
+    resources: { covidBeds: '1TLmtaDUM5EEnEyqpsURapCYVPBHa8633l4XL8vRrnE0'},
+    lat: 26.25248490994748,  
+    lng: 73.02195815724737
   }
 ]
 
