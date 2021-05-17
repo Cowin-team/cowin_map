@@ -1,110 +1,77 @@
 const sheetsApiKey = "AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM";
 
 class City {
-  constructor(name, resources, afterFetchCallback) {
+  constructor(name, spreadsheetIds, afterFetchCallback) {
     this.name               = name;
+    this.spreadsheetIds     = spreadsheetIds;
     this.afterFetchCallback = afterFetchCallback;
-    this.availableResources = resources;
 
     this.covidBedLocations  = [];
     this.covidBedMarkers    = [];
-    this.hasFetchedCovidBedsData = false;
-
-    if (resources.includes('beds')) {
-      this.fetchCovidBedData();
-    }
+    this.fetchCovidBedData();
 
     this.oxygenSupplyLocations  = [];
     this.oxygenSupplyMarkers    = [];
-    this.hasFetchedOxygenData = false
-
-    if (resources.includes('oxygen')) {
+    if (spreadsheetIds.oxygenSupply !== undefined) {
       this.fetchOxygemSupplyData();
     }
 
     this.mealsLocations  = [];
     this.mealsMarkers    = [];
-    this.hasFetchedMealsData = false;
-
-    if (resources.includes('meals')) {
+    if (spreadsheetIds.meals !== undefined) {
       this.fetchMealsData();
     }
   }
 
-  fetchedAllData() {
-    if ((this.availableResources.includes("beds") && !this.hasFetchedCovidBedsData) ||
-      (this.availableResources.includes("oxygen") && !this.hasFetchedOxygenData) ||
-      (this.availableResources.includes("meals") && !this.hasFetchedMealsData)) {
-
-      return false;
-    }
-
-    return true;
-  }
-
   fetchCovidBedData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=beds`
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.covidBeds}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
 
-    fetch(dataUrl)
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let covidBedLocation = new CovidBedLocation(dataRow);
           this.covidBedLocations.push(covidBedLocation);
 
-          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
+          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation, this.spreadsheetIds.covidBeds));
         });
 
-        this.hasFetchedCovidBedsData = true;
         this.afterFetchCallback(this.covidBedMarkers);
-      })
-      .catch(error => {
-        console.error(`!!!! Failed to fetch BEDS for ${this.name}: ${error}`);
-        this.hasFetchedCovidBedsData = true;
       });
   }
 
   fetchOxygemSupplyData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=oxygen`
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
 
-    fetch(dataUrl)
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
-
-          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
+          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation, this.spreadsheetIds.oxygenSupply));
         });
 
-        this.hasFetchedOxygenData = true;
         this.afterFetchCallback(this.oxygenSupplyMarkers);
-      })
-      .catch(error => {
-        console.error(`!!!! Failed to fetch OXYGEN SUPPLY for ${this.name}: ${error}`);
-        this.hasFetchedOxygenData = true;
       });
   }
 
   fetchMealsData() {
-    let dataUrl = `http://34.93.236.45/sheet/fetch?city=${this.name}&resource=meals`
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.meals}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
 
-    fetch(dataUrl)
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let mealsLocation = new MealsLocation(dataRow);
           this.mealsLocations.push(mealsLocation);
-
-          this.mealsMarkers.push(new MealsMarker(mealsLocation));
+          this.mealsMarkers.push(new MealsMarker(mealsLocation, this.spreadsheetIds.mealsSupply));
         });
 
-        this.hasFetchedMealsData = true;
         this.afterFetchCallback(this.mealsMarkers);
-      })
-      .catch(error => {
-        console.error(`!!!! Failed to fetch MEALS for ${this.name}: ${error}`);
-        this.hasFetchedMealsData = true;
       });
   }
 }
