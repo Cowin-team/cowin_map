@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let cityNames = citiesWithResources.map(cityObject => {
       return cityObject.city;
     })
-    cityNames.sort();
+    cityNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
     cityNames.forEach(cityName => {
       var option = document.createElement("option");
       option.text = cityName;

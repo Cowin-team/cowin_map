@@ -159,8 +159,8 @@ const citiesWithResources = [
       covidBeds: '1GlNu4jyK_nkI2KwEBe9Wc6qgW1bCxbrH9v8cUJDJWrs',
       oxygenSupply: '13L6bhcNQFNlkTrQFV79xyEf11FAQSKSb2WMCCLJ5blM'
     },
-    lat: 42.51954,
-    lng: -70.8967155
+    lat: 11.6538948,
+    lng: 78.0682571
   },
   {
     city: 'Sivagangai',
@@ -278,7 +278,8 @@ const citiesWithResources = [
   },
   {
     city: 'Mumbai',
-    resources: { covidBeds: '17OeX5qBHXN3c3ICzp-FIgzrw6iWpQjp-7LS2m1GgTp8' },
+    resources: { covidBeds: '17OeX5qBHXN3c3ICzp-FIgzrw6iWpQjp-7LS2m1GgTp8', 
+               oxygenSupply: '1Ihof7PzjiDTdLlEjy8UdjUYF0aAwYVW8Brgx61XVnW0'},
     lat: 19.0759837,
     lng: 72.8776559
   },
@@ -293,7 +294,8 @@ const citiesWithResources = [
   },
   {
     city: 'Hyderabad',
-    resources: { covidBeds: '17flt2bxwPsIf2y_MpJDLA5ATt0rW8Xm_hbA1sq716qo' },
+    resources: { covidBeds: '17flt2bxwPsIf2y_MpJDLA5ATt0rW8Xm_hbA1sq716qo',
+                 oxygenSupply: '1lJrldsvrCpmU9epXWwefHwUvj_gR97uCix42uD3GRSo'},
     lat: 17.385044,
     lng: 78.486671
   },
@@ -329,7 +331,9 @@ const citiesWithResources = [
   },
   {
     city: 'Gandhinagar',
-    resources: { covidBeds: '1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA' },
+    resources: { covidBeds: '1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA',
+                 oxygenSupply:'1kKBW9v4KbEPm5QicjVCnyC-yulBFf6OK3-Y36g9P62I'
+               },
     lat: 23.2156354,
     lng: 72.63694149999999
   },
@@ -338,6 +342,30 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU' },
     lat: 33.277839,
     lng: 75.34121789999999
+  },
+   {
+    city: 'Dehradun',
+    resources: { oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U' },
+    lat: 30.31498113274747,
+    lng: 78.03051469656198
+  },
+  {
+    city: 'Jaipur',
+    resources: { covidBeds: '1lwJadk2va0ImwhfHY0zDmsDgqmI2ARMqrvpQgENKQf8'},
+    lat: 26.902594566452265, 
+    lng: 75.7627388270979
+  },
+  {
+    city: 'Kota',
+    resources: { covidBeds: '1mrvwUaTXHSKDz2v87yajt9BRPwshdPro1UYZ1WWeIhk'},
+    lat: 25.20010485377562, 
+    lng: 75.87818898274959
+  },
+  {
+    city: 'Jodhpur',
+    resources: { covidBeds: '1TLmtaDUM5EEnEyqpsURapCYVPBHa8633l4XL8vRrnE0'},
+    lat: 26.25248490994748,  
+    lng: 73.02195815724737
   }
 ]
 
