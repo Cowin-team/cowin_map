@@ -409,6 +409,12 @@ const citiesWithResources = [
     resources: { covidBeds: '1wmhbElpgubWAraqokoOjPP154zqNBz5y4t48pLvXoiQ'},
     lat: 25.352741298559966, 
     lng: 74.62864578749179
+  },
+   {
+    city: 'Goa',
+    resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
+    lat: 15.25762732333053, 
+    lng: 74.00196437794229
   }
 ]
 
