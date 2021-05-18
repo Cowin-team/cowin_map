@@ -367,6 +367,18 @@ const citiesWithResources = [
     resources: { covidBeds: '1TLmtaDUM5EEnEyqpsURapCYVPBHa8633l4XL8vRrnE0'},
     lat: 26.25248490994748,  
     lng: 73.02195815724737
+  },
+  {
+    city: 'Ajmer',
+    resources: { covidBeds: '1zldQ_mPvjd6PmehUGgErOD4N455mh_uyTsNgitJWMCM'},
+    lat: 26.465981536218713, 
+    lng: 74.6358828892385
+  },
+   {
+    city: 'Alwar',
+    resources: { covidBeds: '1aVOWA7nPhtICa6WvGUP_nIjt_4mFBhqO1eFUgrGobQw'},
+    lat: 27.5605725838108, 
+    lng: 76.6261192069617
   }
 ]
 
