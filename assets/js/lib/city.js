@@ -30,8 +30,7 @@ class City {
   }
 
   fetchCovidBedData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.covidBeds}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=beds`
 
     fetch(sheetUrl)
       .then(response => response.json())
@@ -48,8 +47,7 @@ class City {
   }
 
   fetchOxygemSupplyData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=oxygen`
 
     fetch(sheetUrl)
       .then(response => response.json())
@@ -65,8 +63,7 @@ class City {
   }
 
   fetchMealsData() {
-    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
-      `${this.spreadsheetIds.meals}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=meals`
 
     fetch(sheetUrl)
       .then(response => response.json())
