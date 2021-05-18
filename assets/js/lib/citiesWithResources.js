@@ -379,6 +379,36 @@ const citiesWithResources = [
     resources: { covidBeds: '1aVOWA7nPhtICa6WvGUP_nIjt_4mFBhqO1eFUgrGobQw'},
     lat: 27.5605725838108, 
     lng: 76.6261192069617
+  },
+   {
+    city: 'Bharatpur',
+    resources: { covidBeds: '1KLjNd4zzrtRkepJ6rhyjwTwk5n8HVpN0Y2OucI52sa8'},
+    lat: 27.220761376296327,
+    lng:  77.50105453056
+  },
+  {
+    city: 'Banswara',
+    resources: { covidBeds: '1_J4CxkJLCncltDTP0d22W220gqzAOq36GccGkkZQr18'},
+    lat: 23.54636214922438, 
+    lng: 74.44424796389497
+  },
+  {
+    city: 'Baran',
+    resources: { covidBeds: '1ZS6aG3anCC8_MokgiO0sgZ0uVQJqQVVTd5UuymSW-kM'},
+    lat: 25.107271775740173, 
+    lng: 76.49037046469367
+  },
+  {
+    city: 'Barmer',
+    resources: { covidBeds: '1seYSjORleK0tXJcu-AxrO4OF2lJ_WuHITSno8elBUy0'},
+    lat: 25.7651769700699, 
+    lng: 71.40071455923368
+  },
+  {
+    city: 'Bhilwara',
+    resources: { covidBeds: '1wmhbElpgubWAraqokoOjPP154zqNBz5y4t48pLvXoiQ'},
+    lat: 25.352741298559966, 
+    lng: 74.62864578749179
   }
 ]
 
