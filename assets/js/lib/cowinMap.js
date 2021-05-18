@@ -24,6 +24,11 @@ class CowinMap {
       this.plotAllCowinMapMarkers()
     });
     this.filters.push(this.mealsMapFilters);
+
+    this.triageMapFilters = new TriageMapFilters((newFiltersState) => {
+      this.plotAllCowinMapMarkers()
+    });
+    this.filters.push(this.triageMapFilters);
   }
 
   initialiseMap() {
@@ -114,11 +119,17 @@ class CowinMap {
       return marker instanceof MealsMarker
     }).map((m) => m.getMarker())
 
+    let triageMarkers = filteredMarkers.filter((marker) => {
+      return marker instanceof TriageMarker
+    }).map((m) => m.getMarker())
+
     let oxygenCluster = new MarkerClusterer(this.map, oxygenMarkers, { imagePath: `./assets/images/clusters/oxygen/m` });
     this.markerClusters.push(oxygenCluster);
     let hospitalCluster = new MarkerClusterer(this.map, bedMarkers, { imagePath: `./assets/images/clusters/hospital/m` });
     this.markerClusters.push(hospitalCluster);
     let mealCluster = new MarkerClusterer(this.map, mealMarkers, { imagePath: `./assets/images/clusters/meal/m` });
     this.markerClusters.push(mealCluster);
+    let triageCluster = new MarkerClusterer(this.map, triageMarkers, { imagePath: `./assets/images/clusters/triage/m` });
+    this.markerClusters.push(triageCluster);
   }
 }

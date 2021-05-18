@@ -21,6 +21,12 @@ class City {
     if (spreadsheetIds.meals !== undefined) {
       this.fetchMealsData();
     }
+
+    this.triageLocations  = [];
+    this.triageMarkers    = [];
+    if (spreadsheetIds.triage !== undefined) {
+      this.fetchTriageData();
+    }
   }
 
   fetchCovidBedData() {
@@ -72,6 +78,24 @@ class City {
         });
 
         this.afterFetchCallback(this.mealsMarkers);
+      });
+  }
+
+  fetchTriageData() {
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.triage}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        data.values.forEach((dataRow) => {
+          let triageLocation = new TriageLocation(dataRow);
+          this.mealsLocations.push(triageLocation);
+          this.triageMarkers.push(new TriageMarker(triageLocation, this.spreadsheetIds.triage));
+        });
+
+        this.afterFetchCallback(this.triageMarkers);
       });
   }
 }
