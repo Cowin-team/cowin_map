@@ -1,7 +1,3 @@
-if (location.protocol === "https:") {
-  location.href = "http://cowinmap.com?redirect_to_http=true";
-}
-
 function initialiseMap() {
   let cowinMap = new CowinMap();
 
@@ -11,7 +7,7 @@ function initialiseMap() {
     });
   };
 
-  let resourceUrl = "http://34.93.236.45/resource/get";
+  let resourceUrl = "https://cowinmapapis.com/resource/get";
   let cities = [];
 
   fetch(resourceUrl)
