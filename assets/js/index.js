@@ -8,13 +8,16 @@ function initialiseMap() {
     cowinMap.plotAllCowinMapMarkers();
   };
 
-  citiesWithResources.forEach((cityWithResource)=> {
-    new City(
-      cityWithResource.city,
-      cityWithResource.resources,
-      afterCityDataFetchCallback
-    );
-  })
+  let resourceUrl = "https://cowinmapapis.com/resource/get";
+  let cities = [];
+
+  fetch(resourceUrl)
+    .then(response => response.json())
+    .then(data => {
+      for (let city in data) {
+        cities.push(new City(city, data[city], afterCityDataFetchCallback));
+      }
+    });
 }
 
 window.initialiseMap = initialiseMap;
