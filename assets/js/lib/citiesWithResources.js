@@ -272,7 +272,7 @@ const citiesWithResources = [
     resources: {
       covidBeds: '1H05y2PXFNrvgHnDleC8We453oKFZbsI7I8thPtSMt3M',
       oxygenSupply: '1Nuj9ITW1gKarTHJKP7MBwjuWxtjF8akd8Plnk0ywc9s',
-      triage: '1tTSs7_4BXpnrmfUFhA2_kdhSiiLUrpadlD7Eh1eCh2U'
+      // triage: '1tTSs7_4BXpnrmfUFhA2_kdhSiiLUrpadlD7Eh1eCh2U'
     },
     lat: 12.9715987,
     lng: 77.5945627

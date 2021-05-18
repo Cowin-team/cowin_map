@@ -22,11 +22,11 @@ class City {
       this.fetchMealsData();
     }
 
-    this.triageLocations  = [];
-    this.triageMarkers    = [];
-    if (spreadsheetIds.triage !== undefined) {
-      this.fetchTriageData();
-    }
+    // this.triageLocations  = [];
+    // this.triageMarkers    = [];
+    // if (spreadsheetIds.triage !== undefined) {
+    //   this.fetchTriageData();
+    // }
   }
 
   fetchCovidBedData() {
