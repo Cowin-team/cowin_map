@@ -410,6 +410,24 @@ const citiesWithResources = [
     lat: 25.352741298559966, 
     lng: 74.62864578749179
   },
+  {
+    city: 'Bikaner',
+    resources: { covidBeds: '1TRBhE-ObupteDzGDf5UH6qdniA1ypCexcWm8S74JTto'},
+    lat: 28.025178576424473, 
+    lng: 73.27507781629895
+  },
+  {
+    city: 'Bundi',
+    resources: { covidBeds: '1eFGCZYouUQRIDkQA-A7hVQ7vLISqhAknt7Hb05a5vKM'},
+    lat: 25.43590705745427,  
+    lng: 75.65316429463746
+  },
+  {
+    city: 'Chittorgarh',
+    resources: { covidBeds: '1N9L6OvHcC5mh866jSvj-njuKIMLXrz9mSlA3aHEIdz8'},
+    lat: 24.907168296149898,   
+    lng: 74.6317217124535
+  },
    {
     city: 'Goa',
     resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
