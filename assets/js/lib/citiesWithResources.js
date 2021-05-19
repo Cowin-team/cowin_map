@@ -595,6 +595,12 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
     lat: 15.25762732333053, 
     lng: 74.00196437794229
+  },
+   {
+    city: 'Kolkata',
+    resources: { oxygenSupply: '1QFsQ-lR0Ui3TuuM6a6UXwhEXhprUynJK5R4qqzAszfM'},
+    lat: 22.498872729543695,  
+    lng: 88.31114803067148
   }
 ]
 
