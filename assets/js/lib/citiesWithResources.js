@@ -459,6 +459,24 @@ const citiesWithResources = [
     lng: 74.26213855944553      
   },
   {
+    city: 'Jaisalmer',
+    resources: { covidBeds: '1tv1K8S0npjBAHFD7PoAjRhSpvuK6S2cSp-iGbGAuAao'},
+    lat: 26.899122049776363,   
+    lng: 70.88528636249808      
+  },
+  {
+    city: 'Jalore',
+    resources: { covidBeds: '12jKZDa2sCVLAcix8ucZZtEMs9BHZfNKQ19z-GY88C9o'},
+    lat: 25.332222536273918,   
+    lng: 72.61618600048386      
+  },
+  {
+    city: 'Hanumangarh',
+    resources: { covidBeds: '1HyoH1P6Gon1Lwej8ILprm4XUwm5KBkTvkVPT7B1hTbU'},
+    lat: 29.59036043056152,   
+    lng: 74.33461175484176      
+  },
+  {
     city: 'Ambala',
     resources: { covidBeds: '1O4O_cX1K5BZTaaCaK_77bmamoaaVP14pY7zfrI3nMwk'},
     lat: 30.367828313869154,   
