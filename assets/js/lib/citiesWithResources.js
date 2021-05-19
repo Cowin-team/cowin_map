@@ -458,6 +458,138 @@ const citiesWithResources = [
     lat: 25.21763741816557,  
     lng: 74.26213855944553      
   },
+  {
+    city: 'Ambala',
+    resources: { covidBeds: '1O4O_cX1K5BZTaaCaK_77bmamoaaVP14pY7zfrI3nMwk'},
+    lat: 30.367828313869154,   
+    lng: 76.77579547392473      
+  },
+  {
+    city: 'Bhiwani',
+    resources: { covidBeds: '1B9FqaO9pNRIM7ZmLgIYaIyFVEmR9VMkWhS441T_DkIY'},
+    lat: 28.804907553201005,    
+    lng: 76.1295596340145      
+  },
+  {
+    city: 'Charki Dadri',
+    resources: { covidBeds: '1PLelJ656jXEVZ7gEaOgSAQRby0eiQX7yB8FkjxcR5gc'},
+    lat: 28.597669949064233,    
+    lng: 76.26026620800943       
+  },
+  {
+    city: 'Faridabad',
+    resources: { covidBeds: '1pmudISuslWVLwfQTCyfzGvF8vmcawA89ycV7Vyo5f7k'},
+    lat: 28.367086022751877,    
+    lng: 77.29847286220924        
+  },
+  {
+    city: 'Fatehabad',
+    resources: { covidBeds: '1MWoohXWQaApmMSVUanQvTRnircz5TCumU9fDW050m_s'},
+    lat: 29.509091139133584,     
+    lng: 75.44322868686757        
+  },
+   {
+    city: 'Gurugram',
+    resources: { covidBeds: '1udE2L0YhyjBS-KUduZ9VE3jAXa3o9fmWCDb5pDYM01A'},
+    lat: 28.415088863933438,      
+    lng: 76.96674445322436        
+  },
+  {
+    city: 'Hisar',
+    resources: { covidBeds: '1-8qm0CAfwkdVSf_Wjnm9-ZkVNenPIYC1Hqvh5VL8L5s'},
+    lat: 29.182253901162124,       
+    lng: 75.69442549035034        
+  },
+  {
+    city: 'Jhajjar',
+    resources: { covidBeds: '15BFVyVvzWjw5rwg_2q0pskgGOweBA-WWRIWZ-DYb7bA'},
+    lat: 28.60706658848837,        
+    lng: 76.65605465508307        
+  },
+    {
+    city: 'Jind',
+    resources: { covidBeds: '1-h6YVInfD5tiHFU-Wr3mTkbM5h_nYTWicHUfA5tFKiE'},
+    lat: 29.309445767992713,          
+    lng: 76.29798842028644        
+  },
+  {
+    city: 'Kaithal',
+    resources: { covidBeds: '1XMyHqMZtsfU6ncVMAfO-hPLlzQ7xfeFYT5nPRAMY1gE'},
+    lat: 29.797444707447085,          
+    lng: 76.40235885528072         
+  },
+   {
+    city: 'Karnal',
+    resources: { covidBeds: '15HWgPfNsvyjfnRyGEKBFXnHwzGPuyy4PCsW9-fkVgT4'},
+    lat: 29.700450925884027,           
+    lng: 76.9752136316515         
+  },
+  {
+    city: 'Kurukshetra',
+    resources: { covidBeds: '1mXyuecgHauM9arJ0FI07nDJhvTYJm-OrmMC6CoPZc6E'},
+    lat: 29.984150284623198,            
+    lng: 76.88078577861012         
+  },
+  {
+    city: 'Mahendragarh',
+    resources: { covidBeds: '1_gukJs4SAD2O8HkYTec2xr-ebwUDtwamFtl23PRTGA4'},
+    lat: 28.274443371154888,             
+    lng: 76.13475134653244         
+  },
+  {
+    city: 'Nuh',
+    resources: { covidBeds: '1cKMR6QTYwgbsM5yIoVkAdo5fhWSGABd9CPRVTAmF3Cg'},
+    lat: 28.106140495415755,              
+    lng: 76.99018837157979         
+  },
+  {
+    city: 'Palwal',
+    resources: { covidBeds: '1FkH4uOa-3lvdl5uDEd5YNyrqJBFE8VYALKT8iemP5Ls'},
+    lat: 28.14844903652926,               
+    lng: 77.31767709554381         
+  },
+  {
+    city: 'Panchkula',
+    resources: { covidBeds: '1gMUy3ak9trrqofGiOhzc_83StT1_CUcD4zDRS1C3sKQ'},
+    lat: 30.699695796522583,                
+    lng: 76.84216623047953         
+  },
+  {
+    city: 'Panipat',
+    resources: { covidBeds: '1tUh5th1cjAYlfhCp6J_tiRHZVVw2NwsJRPBzu6di-fQ'},
+    lat: 29.418937520794454,                 
+    lng: 76.95210411018972         
+  },
+   {
+    city: 'Rewari',
+    resources: { covidBeds: '1FOXvxakGj2-BxeVhdrqjP0OGtkd70nkPcKNl0IkQq0Y'},
+    lat: 28.19805000972606,                  
+    lng: 76.61645606758763         
+  },
+  {
+    city: 'Rohtak',
+    resources: { covidBeds: '1hc1Tvw3ItFyXnKEbG13tQF37gBee0qasMUSfJ9Rxkeg'},
+    lat: 28.887727903030726,                   
+    lng: 76.583032146931         
+  },
+  {
+    city: 'Sirsa',
+    resources: { covidBeds: '1th7mY60rsZbItB6fvA19gAELu6Zbt4rYQKiHBo8mt1c'},
+    lat: 29.544446955781382,                    
+    lng: 75.00191061811728         
+  },
+  {
+    city: 'Sonipat',
+    resources: { covidBeds: '1XHBRDJMIiTBa1OsZJ4zpLHKIBxaV-rObnE1BLqgkUhk'},
+    lat: 28.957758634313944,                     
+    lng: 76.99767865264431         
+  },
+  {
+    city: 'Yamunanagar',
+    resources: { covidBeds: '1BiKX3Uqz7QkFWRiZ8AD3hJcPJW3UnD1OmU-9N_osyrI'},
+    lat: 30.131280590638248,                      
+    lng: 77.26085648245983         
+  },
    {
     city: 'Goa',
     resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
