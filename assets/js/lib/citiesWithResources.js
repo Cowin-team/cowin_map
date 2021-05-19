@@ -429,6 +429,30 @@ const citiesWithResources = [
     lng: 74.6317217124535
   },
    {
+    city: 'Dausa',
+    resources: { covidBeds: '1MYYcg3N3Ub3bgtkqWcpLLK-stGjO25wVax5Scupc1kY'},
+    lat: 26.89154801508786,   
+    lng: 76.31506678307296 
+  },
+  {
+    city: 'Churu',
+    resources: { covidBeds: '1thYUMJ1c1e2KhY8twX551Tu0JHuQ5zunMJGMt4ktT0U'},
+    lat: 28.296970615881026, 
+    lng: 74.9643085359672    
+  },
+    {
+    city: 'Dholpur',
+    resources: { covidBeds: '1WM8r6uue5GoC7jsAnJA6nByk3y6NBwZGt4Ij5i7SMDw'},
+    lat: 26.693220211048583, 
+    lng: 77.87371617559843     
+  },
+  {
+    city: 'Dungarpur',
+    resources: { covidBeds: '1QC_Qg6ZD2R8at-bRunS0CeqAvm2r2eIZ1elY9Gq_goM'},
+    lat: 23.850896519580857, 
+    lng: 73.7160225202444      
+  },
+   {
     city: 'Goa',
     resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
     lat: 15.25762732333053, 
