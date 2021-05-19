@@ -452,6 +452,12 @@ const citiesWithResources = [
     lat: 23.850896519580857, 
     lng: 73.7160225202444      
   },
+  {
+    city: 'Ganganagar',
+    resources: { covidBeds: '1ptr34byUPDEa0NVs1BaBtRcimn8V4i1nh26slUlxj6U'},
+    lat: 25.21763741816557,  
+    lng: 74.26213855944553      
+  },
    {
     city: 'Goa',
     resources: { oxygenSupply: '1Mgk8lPONsA4U87QYf-Z-s7hSCE8CLTv6Na0iORzvaBw'},
