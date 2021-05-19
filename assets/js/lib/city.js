@@ -1,47 +1,46 @@
 const sheetsApiKey = "AIzaSyClGVndCtMIDvZ7GdE1fO5OPQL5XdtMvVM";
 
 class City {
-  constructor(name, resources, afterFetchCallback) {
+  constructor(name, spreadsheetIds, afterFetchCallback) {
     this.name               = name;
+    this.spreadsheetIds     = spreadsheetIds;
     this.afterFetchCallback = afterFetchCallback;
-    this.resources          = resources;
 
     this.covidBedLocations  = [];
     this.covidBedMarkers    = [];
-    if (resources.includes('beds')) {
-      this.fetchCovidBedData();
-    }
+    this.fetchCovidBedData();
 
     this.oxygenSupplyLocations  = [];
     this.oxygenSupplyMarkers    = [];
-    if (resources.includes('oxygen')) {
+    if (spreadsheetIds.oxygenSupply !== undefined) {
       this.fetchOxygemSupplyData();
     }
 
     this.mealsLocations  = [];
     this.mealsMarkers    = [];
-    if (resources.includes('meals')) {
+    if (spreadsheetIds.meals !== undefined) {
       this.fetchMealsData();
     }
 
     // this.triageLocations  = [];
     // this.triageMarkers    = [];
-    // if (resources.includes('triage')) {
+    // if (spreadsheetIds.triage !== undefined) {
     //   this.fetchTriageData();
     // }
   }
 
   fetchCovidBedData() {
-    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=beds`
-    
-    fetch(dataUrl)
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.covidBeds}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let covidBedLocation = new CovidBedLocation(dataRow);
           this.covidBedLocations.push(covidBedLocation);
 
-          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
+          this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation, this.spreadsheetIds.covidBeds));
         });
 
         this.afterFetchCallback(this.covidBedMarkers);
@@ -49,15 +48,16 @@ class City {
   }
 
   fetchOxygemSupplyData() {
-    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=oxygen`
-    
-    fetch(dataUrl)
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.oxygenSupply}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let oxygenSupplyLocation = new OxygenSupplyLocation(dataRow);
           this.oxygenSupplyLocations.push(oxygenSupplyLocation);
-          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
+          this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation, this.spreadsheetIds.oxygenSupply));
         });
 
         this.afterFetchCallback(this.oxygenSupplyMarkers);
@@ -65,15 +65,16 @@ class City {
   }
 
   fetchMealsData() {
-    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=meals`
-    
-    fetch(dataUrl)
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.meals}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        data.values.forEach((dataRow) => {
           let mealsLocation = new MealsLocation(dataRow);
           this.mealsLocations.push(mealsLocation);
-          this.mealsMarkers.push(new MealsMarker(mealsLocation));
+          this.mealsMarkers.push(new MealsMarker(mealsLocation, this.spreadsheetIds.mealsSupply));
         });
 
         this.afterFetchCallback(this.mealsMarkers);
@@ -81,18 +82,21 @@ class City {
   }
 
   fetchTriageData() {
-    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=triage`
-    
-    fetch(dataUrl)
+    let sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/"+
+      `${this.spreadsheetIds.triage}/values/Sheet1!A2:Q?key=${sheetsApiKey}`
+
+    fetch(sheetUrl)
       .then(response => response.json())
       .then(data => {
-        data.forEach((dataRow) => {
+        console.log(data)
+        data.values.forEach((dataRow) => {
           let triageLocation = new TriageLocation(dataRow);
           this.mealsLocations.push(triageLocation);
-          this.triageMarkers.push(new TriageMarker(triageLocation));
+          this.triageMarkers.push(new TriageMarker(triageLocation, this.spreadsheetIds.triage));
         });
 
         this.afterFetchCallback(this.triageMarkers);
       });
   }
 }
+

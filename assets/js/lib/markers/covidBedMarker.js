@@ -1,5 +1,5 @@
 class CovidBedMarker {
-  constructor(location) {
+  constructor(location, sheet_id) {
     this.location = location;
 
 
@@ -9,6 +9,8 @@ class CovidBedMarker {
       title: location.title,
       icon: "assets/images/hospital_marker.png"
     });
+
+    this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
 
     this.position = this.marker.position;
 
@@ -23,10 +25,10 @@ class CovidBedMarker {
     this.descriptionHtml = `
       <div class="content">
         <h5 class="title is-5 mb-0">
-         ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'" target="_blank">' + location.title + '</a>')}
+         ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')}
         </h5>
         <p class="is-size-7 mt-1">Updated at: ${location.updatedAt}</p>
-        <p class="is-size-7 mt-1">${(location.sourceURL === undefined) ? "": ('<a href="' + location.sourceURL +'" target="_blank">' + 'Source' + '</a>')}</p>
+        <p class="is-size-7 mt-1">${(location.sourceURL === undefined) ? "": ('<a href="' + location.sourceURL +'">' + 'Source' + '</a>')}</p>
 
         <p class="is-size-7 mt-1">Contact: ${(location.contacts.length === 0) ? "N/A" : (contact_details)}</p>
         <table class="table has-text-left is-striped is-narrow is-hoverable">

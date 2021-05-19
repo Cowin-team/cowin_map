@@ -1,5 +1,5 @@
 class TriageMarker {
-  constructor(location) {
+  constructor(location, sheet_id) {
     this.location = location;
     this.marker = new google.maps.Marker({
       position: location.position,
@@ -25,10 +25,12 @@ class TriageMarker {
 
     var helpline_contact_details = helpline_contact_info.join('<br/>')
 
+    this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
+
     this.descriptionHtml = `
         <div class="content">
           <h5 class="title is-5 mb-0">
-           ${(location.url === undefined) ? location.title : ('<a href="' + location.url + '" target="_blank">' + location.title + '</a>')}
+           ${(location.url === undefined) ? location.title : ('<a href="' + location.url + '">' + location.title + '</a>')}
           </h5>
           <p>
           <p class="is-size-7 mt-1">Nodal officer: ${location.nodal_officer}</p>
@@ -43,3 +45,4 @@ class TriageMarker {
     return this.marker;
   }
 }
+

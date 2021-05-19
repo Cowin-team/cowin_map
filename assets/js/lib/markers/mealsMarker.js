@@ -1,5 +1,5 @@
 class MealsMarker {
-    constructor(location) {
+    constructor(location, sheet_id) {
       this.location = location;
       this.marker = new google.maps.Marker({
         position: location.position,
@@ -8,6 +8,8 @@ class MealsMarker {
         icon: "assets/images/meal_marker.png"
       });
       this.position = this.marker.position;
+
+      this.sheet_url = "https://docs.google.com/spreadsheets/d/" + sheet_id
 
       var contact_info = []
 
@@ -20,7 +22,7 @@ class MealsMarker {
       this.descriptionHtml = `
         <div class="content">
           <h5 class="title is-5 mb-0">
-           ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'" target="_blank">' + location.title + '</a>')}
+           ${(location.url === undefined) ? location.title : ('<a href="' + location.url +'">' + location.title + '</a>')}
           </h5>
           <p class="is-size-7 mt-1">Contact: ${(location.contacts.length === 0) ? "N/A" : (contact_details)}</p>
           <table class="table has-text-left is-striped is-narrow is-hoverable">
