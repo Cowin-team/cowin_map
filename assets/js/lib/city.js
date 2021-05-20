@@ -4,32 +4,51 @@ class City {
   constructor(name, resources, afterFetchCallback) {
     this.name               = name;
     this.afterFetchCallback = afterFetchCallback;
-    this.resources          = resources;
+    this.availableResources          = resources;
 
     this.covidBedLocations  = [];
     this.covidBedMarkers    = [];
+    this.hasFetchedCovidBedsData = false;
+
     if (resources.includes('beds')) {
       this.fetchCovidBedData();
     }
 
     this.oxygenSupplyLocations  = [];
     this.oxygenSupplyMarkers    = [];
+    this.hasFetchedOxygenData = false
+
     if (resources.includes('oxygen')) {
       this.fetchOxygemSupplyData();
     }
 
     this.mealsLocations  = [];
     this.mealsMarkers    = [];
+    this.hasFetchedMealsData = false;
+
     if (resources.includes('meals')) {
       this.fetchMealsData();
     }
 
     // this.triageLocations  = [];
     // this.triageMarkers    = [];
+    // this.hasFetchedTriageData = true;
+
     // if (resources.includes('triage')) {
     //   this.fetchTriageData();
     // }
   }
+
+  fetchedAllData() {
+     if ((this.availableResources.includes("beds") && !this.hasFetchedCovidBedsData) ||
+       (this.availableResources.includes("oxygen") && !this.hasFetchedOxygenData) ||
+       (this.availableResources.includes("meals") && !this.hasFetchedMealsData)) {
+
+       return false;
+     }
+
+     return true;
+   }
 
   fetchCovidBedData() {
     let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=beds`
@@ -44,8 +63,13 @@ class City {
           this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
         });
 
+        this.hasFetchedCovidBedsData = true;
         this.afterFetchCallback(this.covidBedMarkers);
-      });
+      })
+      .catch(error => {
+         console.error(`!!!! Failed to fetch BEDS for ${this.name}: ${error}`);
+         this.hasFetchedCovidBedsData = true;
+       });;
   }
 
   fetchOxygemSupplyData() {
@@ -60,8 +84,13 @@ class City {
           this.oxygenSupplyMarkers.push(new OxygenSupplyMarker(oxygenSupplyLocation));
         });
 
+        this.hasFetchedOxygenData = true;
         this.afterFetchCallback(this.oxygenSupplyMarkers);
-      });
+      })
+      .catch(error => {
+         console.error(`!!!! Failed to fetch OXYGEN SUPPLY for ${this.name}: ${error}`);
+         this.hasFetchedOxygenData = true;
+       });;
   }
 
   fetchMealsData() {
@@ -76,8 +105,13 @@ class City {
           this.mealsMarkers.push(new MealsMarker(mealsLocation));
         });
 
+        this.hasFetchedMealsData = true;
         this.afterFetchCallback(this.mealsMarkers);
-      });
+      })
+      .catch(error => {
+         console.error(`!!!! Failed to fetch MEALS for ${this.name}: ${error}`);
+         this.hasFetchedMealsData = true;
+       });;
   }
 
   fetchTriageData() {
@@ -92,7 +126,12 @@ class City {
           this.triageMarkers.push(new TriageMarker(triageLocation));
         });
 
+        this.hasFetchedTriageData = true;
         this.afterFetchCallback(this.triageMarkers);
-      });
+      })
+      .catch(error => {
+         console.error(`!!!! Failed to fetch TRIAGE for ${this.name}: ${error}`);
+         this.hasFetchedTriageData = true;
+       });;
   }
 }
