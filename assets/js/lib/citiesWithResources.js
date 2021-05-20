@@ -470,6 +470,12 @@ const citiesWithResources = [
     lat: 25.332222536273918,   
     lng: 72.61618600048386      
   },
+   {
+    city: 'Jhalawar',
+    resources: { covidBeds: '1mP2EiRpmQQ_p-ko31iyX4S9rs0SXqLAJ_7_t5mNveEM'},
+    lat: 24.594903036861812,    
+    lng: 76.1548600608567      
+  },
   {
     city: 'Hanumangarh',
     resources: { covidBeds: '1HyoH1P6Gon1Lwej8ILprm4XUwm5KBkTvkVPT7B1hTbU'},
