@@ -30,19 +30,20 @@ class City {
       this.fetchMealsData();
     }
 
-    // this.triageLocations  = [];
-    // this.triageMarkers    = [];
-    // this.hasFetchedTriageData = true;
+    this.triageLocations  = [];
+    this.triageMarkers    = [];
+    this.hasFetchedTriageData = true;
 
-    // if (resources.includes('triage')) {
-    //   this.fetchTriageData();
-    // }
+    if (resources.includes('triage')) {
+      this.fetchTriageData();
+    }
   }
 
   fetchedAllData() {
      if ((this.availableResources.includes("beds") && !this.hasFetchedCovidBedsData) ||
        (this.availableResources.includes("oxygen") && !this.hasFetchedOxygenData) ||
-       (this.availableResources.includes("meals") && !this.hasFetchedMealsData)) {
+       (this.availableResources.includes("meals") && !this.hasFetchedMealsData) ||
+       (this.availableResources.includes("triage") && !this.hasFetchedTriageData)) {
 
        return false;
      }
@@ -52,7 +53,7 @@ class City {
 
   fetchCovidBedData() {
     let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=beds`
-    
+
     fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
@@ -74,7 +75,7 @@ class City {
 
   fetchOxygemSupplyData() {
     let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=oxygen`
-    
+
     fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
@@ -95,7 +96,7 @@ class City {
 
   fetchMealsData() {
     let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=meals`
-    
+
     fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
@@ -116,13 +117,13 @@ class City {
 
   fetchTriageData() {
     let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=triage`
-    
+
     fetch(dataUrl)
       .then(response => response.json())
       .then(data => {
         data.forEach((dataRow) => {
           let triageLocation = new TriageLocation(dataRow);
-          this.mealsLocations.push(triageLocation);
+          this.triageLocations.push(triageLocation);
           this.triageMarkers.push(new TriageMarker(triageLocation));
         });
 

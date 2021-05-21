@@ -24,16 +24,16 @@ class CowinMap {
     });
     this.filters.push(this.mealsMapFilters);
 
-    // this.triageMapFilters = new TriageMapFilters((newFiltersState) => {
-    //   this.replotAllMarkerClusters()
-    // });
-    // this.filters.push(this.triageMapFilters);
+    this.triageMapFilters = new TriageMapFilters((newFiltersState) => {
+      this.replotAllMarkerClusters()
+    });
+    this.filters.push(this.triageMapFilters);
 
     this.oxygenMarkers = [];
     this.covidBedMarkers = [];
     this.mealMarkers = [];
-    // this.triageMarkers = [];
-    
+    this.triageMarkers = [];
+
     this.markerClusters = [];
     this.resetMarkerClusters();
   }
@@ -100,6 +100,8 @@ class CowinMap {
        this.hospitalCluster.addMarker(cowinMapMarker.marker);
      } else if (cowinMapMarker instanceof MealsMarker) {
        this.mealCluster.addMarker(cowinMapMarker.marker);
+     } else if (cowinMapMarker instanceof TriageMarker) {
+       this.triageCluster.addMarker(cowinMapMarker.marker);
      }
    }
 
@@ -139,6 +141,13 @@ class CowinMap {
       { imagePath: `./assets/images/clusters/meal/m` }
     );
     this.markerClusters.push(this.mealCluster);
+
+    this.triageCluster = new MarkerClusterer(
+      this.map,
+      [],
+      { imagePath: `./assets/images/clusters/triage/m` }
+    );
+    this.markerClusters.push(this.triageCluster);
   }
 
   replotAllMarkerClusters() {
