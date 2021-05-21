@@ -775,7 +775,85 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1QFsQ-lR0Ui3TuuM6a6UXwhEXhprUynJK5R4qqzAszfM'},
     lat: 22.498872729543695,  
     lng: 88.31114803067148
-  }
+  },
+   {
+    city: 'Krishna',
+    resources: { covidBeds: '1IOChcK9xY3-hvPHHQaHGeh5ER3prAKTOIriXlhCkbyY'},
+    lat: 16.396893086921445,                       
+    lng: 80.8685699774087         
+  },
+  {
+    city: 'East godavari',
+    resources: { covidBeds: '1lcoIeFALDmznWomaIkKOeuD_gO3WvP5H-gVlKOrm_Zs'},
+    lat: 17.125223747759264,                        
+    lng: 81.90772474787013         
+  },
+  {
+    city: 'Spsr nellore',
+    resources: { covidBeds: '1ma3yzgcD2tns16xqO6okvwIFMt7W0dObufyMW3lSw_M'},
+    lat: 14.23517037461913,                         
+    lng: 79.68228736682772         
+  },
+  {
+    city: 'Ysr',
+    resources: { covidBeds: '1s4k_aX_NcQtyHUKN5DCTvoJ5qPMJ30W8XCnGIp1Ic7E'},
+    lat: 14.432198126256667,                          
+    lng: 78.51249877296         
+  },
+   {
+    city: 'Guntur',
+    resources: { covidBeds: '1IsJ90naQn8g_YnS7ERYykwxfTr7PbjBKSmiCBAvj68Y'},
+    lat: 16.321590803399225,                           
+    lng: 80.41494879644107         
+  },
+  {
+    city: 'Kurnool',
+    resources: { covidBeds: '1EgWkX_sh20yGsT_4ABc2W9gpKdv8unarhGv5sdAe-MI'},
+    lat: 15.803006924781908,                            
+    lng: 78.04143273212938         
+  },
+  {
+    city: 'Vizianagaram',
+    resources: { covidBeds: '1qwvj-oEmW5raPp8hNfL1uh2o_nAaauEfpJJOv9sAvEk'},
+    lat: 18.096566522748972,                             
+    lng: 83.39746809380658         
+  },
+  {
+    city: 'West godavari',
+    resources: { covidBeds: '1DKOVGpghmaURYzl_JQ6ewervnPeg7zrIddQfDzaZP8Q'},
+    lat: 16.83649704014346,                              
+    lng: 81.33163667918814         
+  },
+  {
+    city: 'Prakasam',
+    resources: { covidBeds: '1an_7IlggwOto64pzFJ3ujdYM_8NZfKzum612nZMq1RE'},
+    lat: 15.591280928217449,                               
+    lng: 79.0787944572315         
+  },
+  {
+    city: 'Srikakulam',
+    resources: { covidBeds: '1qSqrYNB9rDIZaDd1-ks0qFLU61xMf011y_idFhBosJY'},
+    lat: 16.19741545887158,                                
+    lng: 80.84904322154091         
+  },
+  {
+    city: 'Anantapur',
+    resources: { covidBeds: '1bF9xH65LuMkpg6qo4Q_LDgm7zzSoKAfI0EM0du161Gs'},
+    lat: 14.653000225697005,                                 
+    lng: 77.5960942662483         
+  },
+   {
+    city: 'Visakhapatanam',
+    resources: { covidBeds: '16auqyaphO5xeF-j8EXo5nU9A4vNdebK0EQZPByLNJ_I'},
+    lat: 17.740584495623455,                                  
+    lng: 83.22825243667585         
+  },
+   {
+    city: 'Chittoor',
+    resources: { covidBeds: '1GL6dmljtpn_tmn_ZxjRgPZJjMQ-5f6jGiTHGh8FVEUc'},
+    lat: 13.20825895747156,                                   
+    lng: 79.09000591613848         
+  },
 ]
 
 
