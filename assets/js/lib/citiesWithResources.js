@@ -772,7 +772,9 @@ const citiesWithResources = [
   },
    {
     city: 'Kolkata',
-    resources: { oxygenSupply: '1QFsQ-lR0Ui3TuuM6a6UXwhEXhprUynJK5R4qqzAszfM'},
+    resources: { oxygenSupply: '1QFsQ-lR0Ui3TuuM6a6UXwhEXhprUynJK5R4qqzAszfM',
+                 covidBeds: '16HiM4kXfV-BBJ8Ybf89OzC_BVA8uvc8zJZLmd8qqvK8'
+               },
     lat: 22.498872729543695,  
     lng: 88.31114803067148
   },
