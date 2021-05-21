@@ -330,6 +330,156 @@ const citiesWithResources = [
     lat: 17.7226509,
     lng: 79.1517868
   },
+   {
+    city: 'Nizamabad',
+    resources: { covidBeds: '10giapVMbSggVjLrWIeyCD4_TJkAI1LWLiI3-Zm1Q8Zc' },
+    lat: 18.677616127769276, 
+    lng: 78.0893157586052
+  },
+  {
+    city: 'Rangareddy',
+    resources: { covidBeds: '1-W52kf8VWSCLLLYu_v3OEhs6IwKp5sn8BK92tH7bx9g' },
+    lat: 17.32264062145411, 
+    lng:  77.94868009355865
+  },
+  {
+    city: 'Sangareddy',
+    resources: { covidBeds: '1Msajjnq6b1ePC01TyonnENBOHgInEdp9SsqsOOoZN00' },
+    lat: 17.615758338094533,
+    lng:   78.076189740768 
+  },
+  {
+    city: 'Rajanna',
+    resources: { covidBeds: '1sE-rWDKTXi3I_6ORnH9OwQ126iLRI6U4VXPkyo2kcRw' },
+    lat: 18.390610294332063, 
+    lng:   78.80740917321216 
+  },
+  {
+    city: 'Peddapalli',
+    resources: { covidBeds: '1xYftqk3LN4dyoZcpRIYJTzRqFalYcK5X1_dLOsa6ZH4' },
+    lat: 18.61460077564138,  
+    lng:   79.37673986263441 
+  },
+  {
+    city: 'Nirmal',
+    resources: { covidBeds: '1LRWY08kLaB9h5u5iPB-PZjUhMLTMNXZAINu2DzjrKtY' },
+    lat: 19.08617715833125,   
+    lng:   78.34365590638431 
+  },
+   {
+    city: 'Nalgonda',
+    resources: { covidBeds: '17LroXGuIIG9_XeHOMsmF4sGk-pShEYWjdMbXma2J4yQ' },
+    lat: 17.06318066084265,    
+    lng:   79.25185195580453 
+  },
+   {
+    city: 'Medchal',
+    resources: { covidBeds: '1rxG6qswQeyoTwrM_LY_GrZ-JUsf279wacI03yUDv-8o' },
+    lat: 17.637122641936063,     
+    lng:   78.47697390074633 
+  },
+  {
+    city: 'Jagtial',
+    resources: { covidBeds: '17gGuxkQ8FcFLMK338jh3ECKHjI-_6GaOXSaadKk1BQo' },
+    lat: 18.794840656951486,     
+    lng:   78.91103964342503  
+  },
+   {
+    city: 'Medak',
+    resources: { covidBeds: '1lk05b-W_Kw24MImg0XaEHvux4eZnBHuDLCxR8_mPsvo' },
+    lat: 18.048525336522612,    
+    lng:   78.25977562819628   
+  },
+  {
+    city: 'Mancherial',
+    resources: { covidBeds: '13j1bDF8sUOFrPvcogDZI3ZKb7ajx8gi6NkdQ14IrvVQ' },
+    lat: 18.882299365285437,     
+    lng:   79.469024631476   
+  },
+  {
+    city: 'Mahabubnagar',
+    resources: { covidBeds: '15ncCGoD506AWyxV7RRF4k7yO3UF3V5RcKe8RQZ-thoM' },
+    lat: 16.75772814550086,      
+    lng:   78.00647007614526   
+  },
+  {
+    city: 'Mahabubabad',
+    resources: { covidBeds: '12zMdBVUDuIn8yiCJ0Vhif3e2dtjMmnvmK3LECjjf1Lc' },
+    lat: 17.60290938177371,       
+    lng:   79.99392796441296   
+  },
+  {
+    city: 'Komaram Bheem',
+    resources: { covidBeds: '1TotjGurevBF7pLoxoVR0ur2lmL4SoA2H15IQOa5Gz3A' },
+    lat: **,       
+    lng:   **
+  },
+  {
+    city: 'Kamareddy',
+    resources: { covidBeds: '1JqdofLG0lGT0QYBWU6yJjbgyZbgrYvRoq__gsiAAxKw' },
+    lat: 18.323504306146408,       
+    lng: 78.33185428432418 
+  },
+  {
+    city: 'Jogulamba',
+    resources: { covidBeds: '1xBh1znYku0lNfHWfg4W3XOj_id1NB_5IJ4P5J1O1rGI' },
+    lat: **,       
+    lng: ** 
+  },
+  {
+    city: 'Jayashankar',
+    resources: { covidBeds: '1xrCq07fDhL9DbNS55ZT2gCVwSFXx45jrjs51IJ2dIyE' },
+    lat: **,       
+    lng: ** 
+  },
+    {
+    city: 'Yadadri',
+    resources: { covidBeds: '1KL5sgbia3ytrkxUBCFDOfsH4f7zH3x1aUbMN1IRgxww' },
+    lat: 17.492237098482654,        
+    lng: 78.94364633198467 
+  },
+    {
+    city: 'Narayanpet',
+    resources: { covidBeds: '1icAhY03MP_BKyntdhbhZMzRU5RpqHCut8aBueaW3iBE' },
+    lat: 16.745012825747782,         
+    lng: 77.49189375207665 
+  },
+   {
+    city: 'Mulugu',
+    resources: { covidBeds: '13MSE3yt2cU5ji5GRdS0wqT_umQJdjtxaQ19RDBQfvlM' },
+    lat: 18.195169123553832,          
+    lng: 79.93553790758035 
+  },
+  {
+    city: 'Khammam',
+    resources: { covidBeds: '1sWZF0OUSQ3sWWsUoJyMfRQi7S2e1SMCQmQ6GTHrE4Js' },
+    lat: 17.261139213244824,           
+    lng: 80.14030652466634 
+  },
+    {
+    city: 'Suryapet',
+    resources: { covidBeds: '1WKKz9nvG0NEcpydM-h6rde-Bux4GKhbRdQg10NNQLc0' },
+    lat: 17.140581435436633,            
+    lng: 79.60684764628763 
+  },
+   {
+    city: 'Wanaparthy',
+    resources: { covidBeds: '15OBxBnGXqpLGjCfEPYWdgiBRDX2reWjzmFQn6Hhhyro' },
+    lat: 16.35876715477846,             
+    lng: 78.05580135924764 
+  },
+  {
+    city: 'Nagarkurnool',
+    resources: { covidBeds: '1jmiqBr-svm-KiVFMyIBioyWzVKqz0YitsPV1Fm4bHqE' },
+    lat: 16.494895280631695,             
+    lng:  78.30252170628077
+  },
+  {
+    city: 'Vikarabad',
+    resources: { covidBeds: '1MAnap2oPMjyQpBaV5Rsm1zUFT5rFpxT2yPE_n1Vx5e8' },
+    lat: 17.34327368308828,             
+    lng:  77.87622604357428 
+  },
   {
     city: 'Gandhinagar',
     resources: { covidBeds: '1MY97vkgkhq_nH0Smm4yUiP788WkQigVElmBcjnoaPhA',
