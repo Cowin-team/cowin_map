@@ -411,8 +411,8 @@ const citiesWithResources = [
   {
     city: 'Komaram Bheem',
     resources: { covidBeds: '1TotjGurevBF7pLoxoVR0ur2lmL4SoA2H15IQOa5Gz3A' },
-    lat: **,       
-    lng:   **
+    lat:  19.3654858,       
+    lng:   79.282869
   },
   {
     city: 'Kamareddy',
@@ -423,14 +423,14 @@ const citiesWithResources = [
   {
     city: 'Jogulamba',
     resources: { covidBeds: '1xBh1znYku0lNfHWfg4W3XOj_id1NB_5IJ4P5J1O1rGI' },
-    lat: **,       
-    lng: ** 
+    lat: 16.2321306,       
+    lng: 77.7869784 
   },
   {
     city: 'Jayashankar',
     resources: { covidBeds: '1xrCq07fDhL9DbNS55ZT2gCVwSFXx45jrjs51IJ2dIyE' },
-    lat: **,       
-    lng: ** 
+    lat: 18.4277451,     
+    lng:  79.8265872   
   },
     {
     city: 'Yadadri',
