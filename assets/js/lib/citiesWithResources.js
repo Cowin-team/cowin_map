@@ -268,6 +268,12 @@ const citiesWithResources = [
     lng: 73.8567437
   },
   {
+    city: 'Nashik',
+    resources: { covidBeds: '1wsxfIklfjmU-P-eiB9UTGlWN-MSn2lwtSAvJqongrbo' },
+    lat: 19.981228640979207, 
+    lng: 73.78424433073263
+  },
+  {
     city: 'Bangalore',
     resources: {
       covidBeds: '1H05y2PXFNrvgHnDleC8We453oKFZbsI7I8thPtSMt3M',
@@ -631,6 +637,72 @@ const citiesWithResources = [
     resources: { covidBeds: '1HyoH1P6Gon1Lwej8ILprm4XUwm5KBkTvkVPT7B1hTbU'},
     lat: 29.59036043056152,   
     lng: 74.33461175484176      
+  },
+    {
+    city: 'Udaipur',
+    resources: { covidBeds: '1cPbRkiW83SGG-IzFAU5Ll_-Le_kh0VtnFVlwDUb22ug'},
+    lat: 24.614992995004158,    
+    lng: 73.69864665846268      
+  },
+   {
+    city: 'Tonk',
+    resources: { covidBeds: '1xbOg38aPy4XamUWLDRmedYJ7HrKTetLQbH2hPSygNz8'},
+    lat: 26.162165183880372,     
+    lng: 75.79190955641376      
+  },
+  {
+    city: 'Sirohi',
+    resources: { covidBeds: '1QpE7cVWQ3xDnyE8nVjJ0tVaZg_5NWPL4A8Rsvl0HyFE'},
+    lat: 24.891008871982265,      
+    lng: 72.84028318490579      
+  },
+   {
+    city: 'Sikar',
+    resources: { covidBeds: '1szc52Uo4N6MTaKWUVsAFEN9C36ie_RjZQB1JOOnpbqk'},
+    lat: 27.619733800317327,       
+    lng: 75.13465244131241      
+  },
+   {
+    city: 'Sawai Madhopur',
+    resources: { covidBeds: '1z6mdHX3O2CHi91WoZxjlwVxFAdXvY3Kaf7r0Xf6OOF0'},
+    lat: 26.02916125468007,        
+    lng: 76.36339147739544      
+  },
+   {
+    city: 'Rajsamand',
+    resources: { covidBeds: '1aJwPOXMRCayfp5J-2I08_YdSQKLzAglVxdm5fRDARlM'},
+    lat: 25.067951353559394,         
+    lng: 73.8640952787224      
+  },
+  {
+    city: 'Pratapgarh',
+    resources: { covidBeds: '18d4h11Z3GNC7FJ44BjHKqcjXduyOL0hw4NXJSHVg8so'},
+    lat: 25.914572884199625,          
+    lng: 81.97696750094438      
+  },
+  {
+    city: 'Pali',
+    resources: { covidBeds: '1hl8Zf2lIyUXlYb2e3Ul5ESHd8_Lqzq_LhEtw6NwBd2E'},
+    lat: 25.7788620374593,           
+    lng: 73.30861875565509      
+  },
+  {
+    city: 'Nagaur',
+    resources: { covidBeds: '10YAqED2kEFxVH67b1i64f5Ms__-wf4YK6L5JoNK1HBM'},
+    lat: 27.201628772983423,            
+    lng: 73.71859968897607      
+  },
+  {
+    city: 'Karauli',
+    resources: { covidBeds: '1h387gjTx5PkMknr3K1uZXGwVsTdmy369sAFoVi_Ud2E'},
+    lat: 26.49584100420632,             
+    lng: 77.01531880352304      
+  },
+  {
+    city: 'Jhunjhunu',
+    resources: { covidBeds: '1xycB99Ne5gKSyYmjBsm0wFyNo4HBfz-JuzVZcHEhVXE'},
+    lat: 28.128323160163436,              
+    lng: 75.38556744522447      
   },
   {
     city: 'Ambala',
