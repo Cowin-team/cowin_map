@@ -1086,6 +1086,12 @@ const citiesWithResources = [
     lat: 13.20825895747156,                                   
     lng: 79.09000591613848         
   },
+  {
+    city: 'Dispur',
+    resources: { oxygenSupply: '1sx5gscjpnvdAnVF-AepnygZFHSnIoIMnJvxcnGsiYfE'},
+    lat: 26.14295020537283,                                    
+    lng: 91.78902868412459         
+  }
 ]
 
 
