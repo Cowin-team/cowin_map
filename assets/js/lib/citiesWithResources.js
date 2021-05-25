@@ -802,7 +802,8 @@ const citiesWithResources = [
   },
   {
     city: 'Panipat',
-    resources: { covidBeds: '1tUh5th1cjAYlfhCp6J_tiRHZVVw2NwsJRPBzu6di-fQ'},
+    resources: { covidBeds: '1tUh5th1cjAYlfhCp6J_tiRHZVVw2NwsJRPBzu6di-fQ',
+                 oxygenSupply: '1U0h1HZmgADEgYDC20H7gpRMLxsiblTFSCA8vfwiTN7Y'},
     lat: 29.418937520794454,                 
     lng: 76.95210411018972         
   },
