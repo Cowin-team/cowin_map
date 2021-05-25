@@ -1008,14 +1008,7 @@ const citiesWithResources = [
     lat: 22.45695305658366,                    
     lng:    87.09014019916918
   },
-  {
-    city: 'Paschim Medinipur',
-    resources: { covidBeds: '1h30e3JTMr1sp4y9xsIsgp-0DqWFYgMuvJMZsFQPq-Mc'
-               },
-    lat: 22.45695305658366,                    
-    lng:    87.09014019916918
-  },
-   {
+    {
     city: 'Krishna',
     resources: { covidBeds: '1IOChcK9xY3-hvPHHQaHGeh5ER3prAKTOIriXlhCkbyY'},
     lat: 16.396893086921445,                       
