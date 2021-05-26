@@ -1092,6 +1092,13 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1sx5gscjpnvdAnVF-AepnygZFHSnIoIMnJvxcnGsiYfE'},
     lat: 26.14295020537283,                                    
     lng: 91.78902868412459         
+  },
+  
+  {
+    city: 'Cochin',
+    resources: { oxygenSupply: '1SFdwBriuyLxu8gocSQC702El-ZqK7tgwGb7JEkGXBew'},
+    lat: 9.96408348755382,                                     
+    lng: 76.31396914190627         
   }
 ]
 
