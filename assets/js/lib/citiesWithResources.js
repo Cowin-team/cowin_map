@@ -506,12 +506,7 @@ const citiesWithResources = [
     lat: 33.277839,
     lng: 75.34121789999999
   },
-   {
-    city: 'Dehradun',
-    resources: { oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U' },
-    lat: 30.31498113274747,
-    lng: 78.03051469656198
-  },
+  
   {
     city: 'Jaipur',
     resources: { covidBeds: '1lwJadk2va0ImwhfHY0zDmsDgqmI2ARMqrvpQgENKQf8'},
@@ -1105,7 +1100,89 @@ const citiesWithResources = [
     resources: { oxygenSupply: '1SFdwBriuyLxu8gocSQC702El-ZqK7tgwGb7JEkGXBew'},
     lat: 9.96408348755382,                                     
     lng: 76.31396914190627         
+  },
+   {
+    city: 'Almora',
+    resources: { covidBeds: '1wjVw9SfVMtDd3GHWDwvuZ81nOPcTIZwu0S2O2RYq_gs'},
+    lat: 29.59493745518106,                                      
+    lng: 79.646597058318         
+  },
+  
+   {
+    city: 'Haridwar',
+    resources: { covidBeds: '1ODaQi5O0TpoA-T5pDG3YcXD6Hyh5E5ZD3gnP2Hkr8yc'},
+    lat: 29.941935795823774,                                       
+    lng: 78.0961843255898         
+  },
+  {
+    city: 'Dehradun',
+    resources: { covidBeds: '1HK8GD7rDcjbyTuyeV-iUfgJ5iPo21jvP3RK4piO5ZL4',
+                 oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U'
+               },
+    lat: 30.320978488338188,                                        
+    lng: 77.98263034786419         
+  },
+  {
+    city: 'Nainital',
+    resources: { covidBeds: '1Ig5af3dwVFgBordIAuXafXy5a6Xc66pYU5xMr4cRGXA'},
+    lat: 29.394266013474155,                                         
+    lng: 79.45574279620949         
+  },
+  {
+    city: 'Udham Singh Nagar',
+    resources: { covidBeds: '1HOaJtCR7PR4RoE2yPcrci5-0-nXGj-rAhnF3FWPsgCw'},
+    lat: 29.060190723560403,                                          
+    lng: 79.30636231983026         
+  },
+  {
+    city: 'Champawat',
+    resources: { covidBeds: '1T6k_euIfTEIJur3yRqEuUBF7pBMw8EGRo5iwN2NMgyg'},
+    lat: 29.33813838330643,                                           
+    lng: 80.09182535237791         
+  },
+  {
+    city: 'Tehri Garhwal',
+    resources: { covidBeds: '1mWtIpox1-lQ2MzeVcMKkQ-tF6OePTDxYtcJjABLOAUw'},
+    lat: 30.387388969351537,                                            
+    lng: 78.46950765565313         
+  },
+  {
+    city: 'Pauri Garhwal',
+    resources: { covidBeds: '1tHSBjM9GngUCIXfUyWcvbNucAAIJ80TLYBFWIPgvlcQ'},
+    lat: 30.387388969351537,                                            
+    lng: 78.46950765565313         
+  },
+  {
+    city: 'Rudraprayag',
+    resources: { covidBeds: '1lJRfL1gBTGfgTWC4ulYLglRsrSH6Mv15bq9_e6zEQZQ'},
+    lat: 30.28372353338845,                                             
+    lng: 78.97896412594955         
+  },
+  {
+    city: 'Chamoli',
+    resources: { covidBeds: '1d1zha73Fl0cWDeHeA1Db-7KCq4cnPkGb020BktLqtFE'},
+    lat: 30.12437969988813,                                              
+    lng: 78.65473334867922         
+  },
+  {
+    city: 'Bageshwar',
+    resources: { covidBeds: '1dd2R1Npuwnk2d6Wyzv2NepTEWEbrxxhv93KBxH9fpYY'},
+    lat: 29.840209703154397,                                               
+    lng: 79.76605295477198         
+  },
+  {
+    city: 'Pithoragarh',
+    resources: { covidBeds: '1krw8alfH5muBzqCg5qu1arnlOQKHnFlWtMo7RwNURMw'},
+    lat: 29.587872393824142,                                                
+    lng: 80.2210306792313         
+  },
+  {
+    city: 'Uttarakashi',
+    resources: { covidBeds: '1j6nHPdZw4uqsaZ4zXv8l72cKQtW1DktzEEO1isG9Llo'},
+    lat: 30.726876135168116,                                                
+    lng: 78.43085996829741         
   }
+  
 ]
 
 
