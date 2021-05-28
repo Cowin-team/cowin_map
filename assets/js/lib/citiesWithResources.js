@@ -495,6 +495,12 @@ const citiesWithResources = [
     lng: 72.63694149999999
   },
   {
+    city: 'Ahmedabad',
+    resources: { covidBeds: '1oJHvEWzFuSs-LawiNUkGJM_9CdZVUzdAH65Upq03v9I'},
+    lat: 23.064227237060607, 
+    lng: 72.53300953671666
+  },
+  {
     city: 'Kashmir',
     resources: { oxygenSupply: '1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU' },
     lat: 33.277839,
