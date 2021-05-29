@@ -725,7 +725,8 @@ const citiesWithResources = [
   },
   {
     city: 'Faridabad',
-    resources: { covidBeds: '1pmudISuslWVLwfQTCyfzGvF8vmcawA89ycV7Vyo5f7k'},
+    resources: { covidBeds: '1pmudISuslWVLwfQTCyfzGvF8vmcawA89ycV7Vyo5f7k',
+                 oxygenSupply: '1U0h1HZmgADEgYDC20H7gpRMLxsiblTFSCA8vfwiTN7Y'},
     lat: 28.367086022751877,    
     lng: 77.29847286220924        
   },
