@@ -1188,7 +1188,7 @@ const citiesWithResources = [
     resources: { covidBeds: '1EviRgBbnupcLziourVke5U5CG72LzOnDRigmE1oM2-M'},
     lat: 9.53082639956268,                                                 
     lng: 76.31738393090492         
-  }
+  },
   {
     city: 'ernakulam',
     resources: { covidBeds: '1Bk397i6m-tLjIcIMLRS5RKnBA1QQvNNiQaHEGoO7dtI'},
