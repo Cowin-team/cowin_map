@@ -1208,12 +1208,6 @@ const citiesWithResources = [
     lng: 75.36428388         
   },
   {
-    city: 'Kasaragod',
-    resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
-    lat: 12.50806571,	                                                 
-    lng: 74.97945745        
-  },
-  {
     city: 'Kozhikode',
     resources: { covidBeds: '1xMfJOPFnDSjDvsMU31c2YNAXf8JJrDeo8PGeJkHz1kg'},
     lat: 11.27838585,	                                                 
@@ -1242,6 +1236,12 @@ const citiesWithResources = [
     resources: { covidBeds: '1MwggfGdXhcKF8rXRS9CTum90IDmRL8zl5mTG5fSQ62A'},
     lat: 9.261176645,	                                                 
     lng: 76.75179715        
+  },
+  {
+    city: 'Kasaragod',
+    resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
+    lat: 12.50806571,	                                                 
+    lng: 74.97945745        
   }
 
 ]
