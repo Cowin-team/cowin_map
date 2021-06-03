@@ -1242,8 +1242,31 @@ const citiesWithResources = [
     resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
     lat: 12.50806571,	                                                 
     lng: 74.97945745        
+  },
+  {
+    city: 'Pallakad',
+    resources: { covidBeds: '1Q-pqEAAYZczvFRmmg9J_zRHUA0-5Vzt6DXKb51Oj0j8'},
+    lat: 10.8072209,	                                                 
+    lng: 76.63708438        
+  },
+  {
+    city: 'Mallapuram',
+    resources: { covidBeds: '1UG9rfEESfu5OLV-7SRI2KTfpyLPTDpZTHxP5hEER8Bo'},
+    lat: 11.06666261,	                                                 
+    lng: 76.05414375        
+  },
+  {
+    city: 'Wayanad',
+    resources: { covidBeds: '1gVQGzcwwOoAtZbl4yPtAWwR6pAHOz1uF9e78MlLeNR0'},
+    lat: 11.7107682	,	                                                 
+    lng: 76.08421677       
+  },
+  {
+    city: 'Idukki',
+    resources: { covidBeds: '1zYwKN3AbDoptVL8guxjwU5bQM42UO73uXTEIdZvFsSY'},
+    lat: 9.832305619,	                                                 
+    lng: 76.89560917       
   }
-
 ]
 
 // module.exports.citiesWithResources = citiesWithResources;
