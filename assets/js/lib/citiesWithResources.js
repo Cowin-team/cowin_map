@@ -1226,7 +1226,7 @@ const citiesWithResources = [
     lng: 76.55232925         
   },
   {
-    city: 'Thrissur,
+    city: 'Thrissur',
     resources: { covidBeds: '1yd6ubGZrFiOgWUNGKNYh1RNM75EsTH8tNl_HCHrnXyg'},
     lat: 10.52286255,	                                                 
     lng: 76.18050635        
