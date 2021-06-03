@@ -31,7 +31,7 @@
     <!-- End Google Tag Manager -->
   
     <script src="https://kit.fontawesome.com/d14f08e7fd.js" crossorigin="anonymous"></script>
-  
+
   
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
@@ -46,10 +46,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-  
 
 <body>
-
    <!--non-collapsible navbar-->
    <nav class="navbar navbar-light navbar-expand-xl bg-light ml-auto flex-row justify-content-center">
     <div class="navbar-header"> 
@@ -66,7 +64,7 @@
           <a class="nav-link" href="index.html">Home</a>
         </li>      
         <li class="nav-item">
-          <a class="nav-link" href="about_us.html">About Us</a>
+          <a class="nav-link active" href="about_us.html">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Media Kit</a>
@@ -75,7 +73,7 @@
           <a class="nav-link" href="https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sources</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="disclaimer.html" target="_blank">Disclaimer</a>
+          <a class="nav-link" href="disclaimer.html" target="_blank">Disclaimer</a>
         </li>
         <li>
           <a href="https://twitter.com/The_CowinMap" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
@@ -90,40 +88,48 @@
     </div>
   </nav>   
 
-      <div class='container' style="font-size:medium;">
-        <div class = "block">
-          <h2 class="title has-text-centered" style="font-weight:400;">Liability Notice</h2>
+    <div class='container' style="font-size:medium;">
+       <div class="block">
+         <span class="is-hidden-mobile">
+             <!-- Shown on all screen sizes except mobile -->
+             <div class = "block">
+                 <h3 class="title is-3 has-text-centered">
+                     <a>About Us</a>
+                 </h3>
+             </div>
+         </span>     
+
+         <span class="is-hidden-tablet">
+            <!-- Shown only on mobile -->
+            <div class = "block">
+                 <h6 class="title is-5 has-text-centered">
+                    <a>About Us</a>
+                </h6>
+            </div> 
+         </span>  
+
         </div>
 
         <div class = "block">
             <p>    
-                The links to the data sources that The Cowin Map obtains its information from may be viewed <a href="https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>. This list will continuously be updated.
+                India is going through a crisis with the second wave of Covid19. Some social media posts asked "How can you help if you are living away from India", others asked "Where can you donate money". Meanwhile, two overwhelmed young Indians, Nivedita Mahesh and Aishwarya struggled to find resources for their family member affected with Covid, without added issues such as driving through traffic or going far away without knowing if the resource was still available. This is when they realized that there needed to be a way to have a central dataset on a location based UI. Within a few days, they, along with two other friends, brought cowinmap.com to life.
             </p>
         </div>
         <div class = "block">
-            <p>The user understands that The Cowin Map has made every attempt to ensure the accuracy and reliability of the
-          information provided through these links. However, the information is provided on an “as and when basis” and
-          “as is basis” based on fact check done by volunteers who are dedicated towards helping individuals and families in such
-          challenging times. The Cowin Map, however, does not accept any responsibility or liability for the accuracy,
-          content, completeness, legality or reliability of the information contained in any of these links. The user
-          understands that no warranties, promises and/or representation of any kind, expressed or implied, are made by
-          The Cowin Map to the nature, standard, accuracy or otherwise, of the information provided in these links, nor to
-          the suitability or otherwise, of the information to your particular circumstances.
+            <p>That was in April 2021. Since then, The Cowin Map has become 45+ volunteers strong, working in shifts across the US, India, Singapore, Germany, updating resources every few hours, making calls, verifying resources.
+                The strength of a community during a crisis is powerful and unmatched.   
             </p>
         </div>
         <div class = "block">
-            <p>
-          The user understands that The Cowin Map shall not be liable for any loss or damage of whatsoever nature
-          (direct, indirect, consequential, or other) which may arise as a result of your use of or (inability to use) the information contained in any of
-          these links. The user understands that the information contained in these links provides details like the
-          contact numbers etc. of hospitals, agencies etc., the contents of which are not within the control of The Cowin
-          Map, and The Cowin Map has no responsibility for the same. The user agrees to check and verify any/all
-          information obtained from these links before acting upon the same. The user understands that The Cowin
-          Map holds no liability or responsibility for real time verification of the same.</p>
+            <p>This is new. This is exhilarating.</p>
         </div>   
+        <div class = "block">
+            <p>Share The Cowin Map - help us help India.</p>
+        </div> 
     </div>
   
 </body>
 </html>
 
+<script src="assets/js/lib/bulmaInteractions.js"></script>
 <script src="assets/js/lib/navbarIcon.js"></script>
