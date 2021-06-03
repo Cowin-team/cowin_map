@@ -1182,6 +1182,12 @@ const citiesWithResources = [
     resources: { covidBeds: '1j6nHPdZw4uqsaZ4zXv8l72cKQtW1DktzEEO1isG9Llo'},
     lat: 30.726876135168116,                                                
     lng: 78.43085996829741         
+  },
+  {
+    city: 'alappuzha',
+    resources: { covidBeds: '1EviRgBbnupcLziourVke5U5CG72LzOnDRigmE1oM2-M'},
+    lat: 9.53082639956268,                                                 
+    lng: 76.31738393090492         
   }
   
 ]
