@@ -1246,5 +1246,4 @@ const citiesWithResources = [
 
 ]
 
-
 // module.exports.citiesWithResources = citiesWithResources;
