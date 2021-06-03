@@ -1243,7 +1243,7 @@ const citiesWithResources = [
     lat: 9.261176645,	                                                 
     lng: 76.75179715        
   }
-  
+
 ]
 
 
