@@ -1230,6 +1230,18 @@ const citiesWithResources = [
     resources: { covidBeds: '1yd6ubGZrFiOgWUNGKNYh1RNM75EsTH8tNl_HCHrnXyg'},
     lat: 10.52286255,	                                                 
     lng: 76.18050635        
+  },
+  {
+    city: 'Thiruvananthapuram',
+    resources: { covidBeds: '1B39vsjzGN4B-esgcGrAoGWoPkQWvEhhQff_lCh2tMBI'},
+    lat: 8.529266567,	                                                 
+    lng: 76.9142086        
+  },
+  {
+    city: 'Pathannamthitta',
+    resources: { covidBeds: '1MwggfGdXhcKF8rXRS9CTum90IDmRL8zl5mTG5fSQ62A'},
+    lat: 9.261176645,	                                                 
+    lng: 76.75179715        
   }
   
 ]
