@@ -1194,12 +1194,18 @@ const citiesWithResources = [
     resources: { covidBeds: '1Bk397i6m-tLjIcIMLRS5RKnBA1QQvNNiQaHEGoO7dtI'},
     lat: 9.968162191,                                                 
     lng: 76.30657506         
-  }
+  },
   {
     city: 'kottayam',
     resources: { covidBeds: '1j2DY7QXMnDpnCPnvQHfYhCiokUdxPEMSStMM9IXnRgA'},
     lat: 9.601480325777741,	                                                 
     lng: 76.51956263         
+  },
+  {
+    city: 'kannur',
+    resources: { covidBeds: '11SpU5FqbW7zmzxVWHskWI4sIQ8NXQIocM4f5sVE1Obw'},
+    lat: 11.87567368,	                                                 
+    lng: 75.36428388         
   }
 ]
 
