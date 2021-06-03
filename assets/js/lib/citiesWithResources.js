@@ -1184,28 +1184,34 @@ const citiesWithResources = [
     lng: 78.43085996829741         
   },
   {
-    city: 'alappuzha',
+    city: 'Alappuzha',
     resources: { covidBeds: '1EviRgBbnupcLziourVke5U5CG72LzOnDRigmE1oM2-M'},
     lat: 9.53082639956268,                                                 
     lng: 76.31738393090492         
   },
   {
-    city: 'ernakulam',
+    city: 'Ernakulam',
     resources: { covidBeds: '1Bk397i6m-tLjIcIMLRS5RKnBA1QQvNNiQaHEGoO7dtI'},
     lat: 9.968162191,                                                 
     lng: 76.30657506         
   },
   {
-    city: 'kottayam',
+    city: 'Kottayam',
     resources: { covidBeds: '1j2DY7QXMnDpnCPnvQHfYhCiokUdxPEMSStMM9IXnRgA'},
     lat: 9.601480325777741,	                                                 
     lng: 76.51956263         
   },
   {
-    city: 'kannur',
+    city: 'Kannur',
     resources: { covidBeds: '11SpU5FqbW7zmzxVWHskWI4sIQ8NXQIocM4f5sVE1Obw'},
     lat: 11.87567368,	                                                 
     lng: 75.36428388         
+  },
+  {
+    city: 'Kasaragod',
+    resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
+    lat: 12.50806571,	                                                 
+    lng: 74.97945745        
   }
 ]
 
