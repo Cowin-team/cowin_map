@@ -1212,6 +1212,18 @@ const citiesWithResources = [
     resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
     lat: 12.50806571,	                                                 
     lng: 74.97945745        
+  },
+  {
+    city: 'Kozhikode',
+    resources: { covidBeds: '1xMfJOPFnDSjDvsMU31c2YNAXf8JJrDeo8PGeJkHz1kg'},
+    lat: 11.27838585,	                                                 
+    lng: 75.81630544         
+  },
+  {
+    city: 'Kollam',
+    resources: { covidBeds: '1Ey5F2Y_pbzemXMMa56ydBB5Sb63ko1z0VtZArABCYxg'},
+    lat: 8.912879376,	                                                 
+    lng: 76.55232925         
   }
 ]
 
