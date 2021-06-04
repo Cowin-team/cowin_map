@@ -495,17 +495,18 @@ const citiesWithResources = [
     lng: 72.63694149999999
   },
   {
+    city: 'Ahmedabad',
+    resources: { covidBeds: '1oJHvEWzFuSs-LawiNUkGJM_9CdZVUzdAH65Upq03v9I'},
+    lat: 23.064227237060607, 
+    lng: 72.53300953671666
+  },
+  {
     city: 'Kashmir',
     resources: { oxygenSupply: '1WXcOiDBAN4HqwSDCSA5AB0Q4NQncSL6CGPgB-8OpBvU' },
     lat: 33.277839,
     lng: 75.34121789999999
   },
-   {
-    city: 'Dehradun',
-    resources: { oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U' },
-    lat: 30.31498113274747,
-    lng: 78.03051469656198
-  },
+  
   {
     city: 'Jaipur',
     resources: { covidBeds: '1lwJadk2va0ImwhfHY0zDmsDgqmI2ARMqrvpQgENKQf8'},
@@ -724,7 +725,8 @@ const citiesWithResources = [
   },
   {
     city: 'Faridabad',
-    resources: { covidBeds: '1pmudISuslWVLwfQTCyfzGvF8vmcawA89ycV7Vyo5f7k'},
+    resources: { covidBeds: '1pmudISuslWVLwfQTCyfzGvF8vmcawA89ycV7Vyo5f7k',
+                 oxygenSupply: '1U0h1HZmgADEgYDC20H7gpRMLxsiblTFSCA8vfwiTN7Y'},
     lat: 28.367086022751877,    
     lng: 77.29847286220924        
   },
@@ -802,7 +804,8 @@ const citiesWithResources = [
   },
   {
     city: 'Panipat',
-    resources: { covidBeds: '1tUh5th1cjAYlfhCp6J_tiRHZVVw2NwsJRPBzu6di-fQ'},
+    resources: { covidBeds: '1tUh5th1cjAYlfhCp6J_tiRHZVVw2NwsJRPBzu6di-fQ',
+                 oxygenSupply: '1U0h1HZmgADEgYDC20H7gpRMLxsiblTFSCA8vfwiTN7Y'},
     lat: 29.418937520794454,                 
     lng: 76.95210411018972         
   },
@@ -850,7 +853,165 @@ const citiesWithResources = [
     lat: 22.498872729543695,  
     lng: 88.31114803067148
   },
+  
    {
+    city: 'Purulia',
+    resources: { covidBeds: '11P32Kyp5Dy4b0IPTBe7K827nIvlocEmMkJEB-lqmvZs'
+               },
+    lat: 23.324594778573,   
+    lng: 86.35363278742965
+  },
+   {
+    city: 'Coochbehar',
+    resources: { covidBeds: '1qpat0IqNI8XYVImLOIxBPb7tn34CAtT6rfDTMDKoM24'
+               },
+    lat: 26.331966598953134,    
+    lng: 89.43023689372866
+  },
+  
+   {
+    city: 'Murshidabad',
+    resources: { covidBeds: '1nlwETve6cWvRALzHdAZ2RvmOjFhKnq2CcRR1mmG4t-M'
+               },
+    lat: 24.182850858653158,     
+    lng: 88.27205649591993
+  },
+  
+   {
+    city: 'Dakshin 24 Pargana',
+    resources: { covidBeds: '1RqnmlQS98-fDvUN_bCu9UgOUKvHCVE0VZXYC9yipypU'
+               },
+    lat: 22.207206080326817,      
+    lng: 88.49792643067215
+  },
+    {
+    city: 'Purba Bardhhaman',
+    resources: { covidBeds: '1kZoohAQteucfkvv1sYHsr8p3-ejEy66txBBsCLZEbmQ'
+               },
+    lat: 23.240778091385238,       
+    lng: 87.8624725031369
+  },
+  {
+    city: 'Bankura',
+    resources: { covidBeds: '1yFKBrstzZy2yp0krG38t6H5un9nmYa4Z7Lsg91UoXGw'
+               },
+    lat: 23.238309011415428,        
+    lng: 87.04622298783468
+  },
+   {
+    city: 'Alipurduar',
+    resources: { covidBeds: '16IiBl8dxZlJiVvjlkBYGNYgN4EaeH0dZ70V2KjbzNvw'
+               },
+    lat: 26.492430263310563,         
+    lng: 89.52803451391192
+  },
+   {
+    city: 'Purba Medinipur',
+    resources: { covidBeds: '1DBbSwqO53kCZ4tz2uxRdOlnpd8VlcYRZ5UyQaAIeDdY'
+               },
+    lat: 22.438673165782824,          
+    lng: 87.30148304517705
+  },
+   {
+    city: 'Kalimpong',
+    resources: { covidBeds: '1Go6Szx5VLPzYmCmX0JT-LdBpHLYUk8AVlvUYm_YAdzA'
+               },
+    lat: 27.05933151210706,           
+    lng: 88.45098131468372
+  },
+   {
+    city: 'Nadia',
+    resources: { covidBeds: '1xupTY7mZEQME6cqOLrbxiHge00kCyEfe3FolAZa9UrI'
+               },
+    lat: 22.706744188827827,            
+    lng: 88.75406247035404
+  },
+   {
+    city: 'Howrah',
+    resources: { covidBeds: '1jZYD5wtt1w48gbXNX9t6Po5DWBSEoc0EE8PVJtaxYFo'
+               },
+    lat: 22.547589332152697,            
+    lng:  88.16049660744564
+  },
+  {
+    city: 'Dakshin Dinajpur',
+    resources: { covidBeds: '1FHyqM-3IcfCtLA6lt1LPPHwd2KI_r0UBaOlwHbpmYK4'
+               },
+    lat: 25.445203420865735,             
+    lng:  88.4454084475202
+  },
+  {
+    city: 'Darjeeling',
+    resources: { covidBeds: '1U6bM-YxqQcuMabsoUyU68AwWhBRVMhnEBjuabyifc24'
+               },
+    lat: 27.033728987370232,              
+    lng:  88.2538602893443
+  },
+   {
+    city: 'Pashim Bardhaman',
+    resources: { covidBeds: '1eB0Iu3hBwiXL5ehFEwp6CWxGQkqklShEXyoP6mj_dLA'
+               },
+    lat: 23.253080609572066,               
+    lng:  87.86530491599584
+  },
+  {
+    city: 'Malda',
+    resources: { covidBeds: '1mgMm1OryNfPv5tfdTtRF8vjZkcx7gRiwQr5u6PeuYAs'
+               },
+    lat: 25.011420278983817,                
+    lng:  88.12805529460931
+  },
+  {
+    city: 'Birbhum',
+    resources: { covidBeds: '10k9Wx46Pw2_SPqYmmEaGcryGO0AMN_WhBfp44MyP6Yk'
+               },
+    lat: 24.359906374636225,                 
+    lng:  87.84193741184451
+  },
+  {
+    city: 'Hooghly',
+    resources: { covidBeds: '1wDVVmLhPPCN7rVLApjv6V36lIXlwAt0TrzS8MQmNfns'
+               },
+    lat: 22.895074629544794,                 
+    lng:   88.38106410340144
+  },
+    {
+    city: 'Jalpaiguri',
+    resources: { covidBeds: '1ns7QZl63HMnK_gKwiJIlkC0TFHVIE5TgQLr1fEkSyy4'
+               },
+    lat: 26.542201339663627,                  
+    lng:   88.67683405671835
+  },
+    {
+    city: 'Jhargram',
+    resources: { covidBeds: '1_8UiGXdKDgKcLv8aflkHKAh63pdbR3hqBbzJvYV916c'
+               },
+    lat: 22.462928733458252,                  
+    lng:    86.98915535160222
+  },
+   {
+    city: 'Uttar Dinajpur',
+    resources: { covidBeds: '1mMhK3dmg5-hX8R1qknMka-TIPbTEJys7pZTu4sRoxgA'
+               },
+    lat: 25.96991787908612,                   
+    lng:    87.95998447569255
+  },
+    {
+    city: 'Uttar 24 Pargana',
+    resources: { covidBeds: '1OoMCrpo2DdZ9fTTxmi3eM1DS5fU7rbedQ2rYcpEPjyw'
+               },
+    lat: 22.793283982945475,                   
+    lng:    88.74028246925985
+  },
+ 
+  {
+    city: 'Paschim Medinipur',
+    resources: { covidBeds: '1h30e3JTMr1sp4y9xsIsgp-0DqWFYgMuvJMZsFQPq-Mc'
+               },
+    lat: 22.45695305658366,                    
+    lng:    87.09014019916918
+  },
+    {
     city: 'Krishna',
     resources: { covidBeds: '1IOChcK9xY3-hvPHHQaHGeh5ER3prAKTOIriXlhCkbyY'},
     lat: 16.396893086921445,                       
@@ -928,7 +1089,184 @@ const citiesWithResources = [
     lat: 13.20825895747156,                                   
     lng: 79.09000591613848         
   },
+  {
+    city: 'Dispur',
+    resources: { oxygenSupply: '1sx5gscjpnvdAnVF-AepnygZFHSnIoIMnJvxcnGsiYfE'},
+    lat: 26.14295020537283,                                    
+    lng: 91.78902868412459         
+  },
+  
+  {
+    city: 'Cochin',
+    resources: { oxygenSupply: '1SFdwBriuyLxu8gocSQC702El-ZqK7tgwGb7JEkGXBew'},
+    lat: 9.96408348755382,                                     
+    lng: 76.31396914190627         
+  },
+   {
+    city: 'Almora',
+    resources: { covidBeds: '1wjVw9SfVMtDd3GHWDwvuZ81nOPcTIZwu0S2O2RYq_gs'},
+    lat: 29.59493745518106,                                      
+    lng: 79.646597058318         
+  },
+  
+   {
+    city: 'Haridwar',
+    resources: { covidBeds: '1ODaQi5O0TpoA-T5pDG3YcXD6Hyh5E5ZD3gnP2Hkr8yc'},
+    lat: 29.941935795823774,                                       
+    lng: 78.0961843255898         
+  },
+  {
+    city: 'Dehradun',
+    resources: { covidBeds: '1HK8GD7rDcjbyTuyeV-iUfgJ5iPo21jvP3RK4piO5ZL4',
+                 oxygenSupply: '1oObB_y8FPnr8qly29mlPNffLVuwfrudjQfQ2OyBzo2U'
+               },
+    lat: 30.320978488338188,                                        
+    lng: 77.98263034786419         
+  },
+  {
+    city: 'Nainital',
+    resources: { covidBeds: '1Ig5af3dwVFgBordIAuXafXy5a6Xc66pYU5xMr4cRGXA'},
+    lat: 29.394266013474155,                                         
+    lng: 79.45574279620949         
+  },
+  {
+    city: 'Udham Singh Nagar',
+    resources: { covidBeds: '1HOaJtCR7PR4RoE2yPcrci5-0-nXGj-rAhnF3FWPsgCw'},
+    lat: 29.060190723560403,                                          
+    lng: 79.30636231983026         
+  },
+  {
+    city: 'Champawat',
+    resources: { covidBeds: '1T6k_euIfTEIJur3yRqEuUBF7pBMw8EGRo5iwN2NMgyg'},
+    lat: 29.33813838330643,                                           
+    lng: 80.09182535237791         
+  },
+  {
+    city: 'Tehri Garhwal',
+    resources: { covidBeds: '1mWtIpox1-lQ2MzeVcMKkQ-tF6OePTDxYtcJjABLOAUw'},
+    lat: 30.387388969351537,                                            
+    lng: 78.46950765565313         
+  },
+  {
+    city: 'Pauri Garhwal',
+    resources: { covidBeds: '1tHSBjM9GngUCIXfUyWcvbNucAAIJ80TLYBFWIPgvlcQ'},
+    lat: 30.387388969351537,                                            
+    lng: 78.46950765565313         
+  },
+  {
+    city: 'Rudraprayag',
+    resources: { covidBeds: '1lJRfL1gBTGfgTWC4ulYLglRsrSH6Mv15bq9_e6zEQZQ'},
+    lat: 30.28372353338845,                                             
+    lng: 78.97896412594955         
+  },
+  {
+    city: 'Chamoli',
+    resources: { covidBeds: '1d1zha73Fl0cWDeHeA1Db-7KCq4cnPkGb020BktLqtFE'},
+    lat: 30.12437969988813,                                              
+    lng: 78.65473334867922         
+  },
+  {
+    city: 'Bageshwar',
+    resources: { covidBeds: '1dd2R1Npuwnk2d6Wyzv2NepTEWEbrxxhv93KBxH9fpYY'},
+    lat: 29.840209703154397,                                               
+    lng: 79.76605295477198         
+  },
+  {
+    city: 'Pithoragarh',
+    resources: { covidBeds: '1krw8alfH5muBzqCg5qu1arnlOQKHnFlWtMo7RwNURMw'},
+    lat: 29.587872393824142,                                                
+    lng: 80.2210306792313         
+  },
+  {
+    city: 'Uttarakashi',
+    resources: { covidBeds: '1j6nHPdZw4uqsaZ4zXv8l72cKQtW1DktzEEO1isG9Llo'},
+    lat: 30.726876135168116,                                                
+    lng: 78.43085996829741         
+  },
+  {
+    city: 'Alappuzha',
+    resources: { covidBeds: '1EviRgBbnupcLziourVke5U5CG72LzOnDRigmE1oM2-M'},
+    lat: 9.53082639956268,                                                 
+    lng: 76.31738393090492         
+  },
+  {
+    city: 'Ernakulam',
+    resources: { covidBeds: '1Bk397i6m-tLjIcIMLRS5RKnBA1QQvNNiQaHEGoO7dtI'},
+    lat: 9.968162191,                                                 
+    lng: 76.30657506         
+  },
+  {
+    city: 'Kottayam',
+    resources: { covidBeds: '1j2DY7QXMnDpnCPnvQHfYhCiokUdxPEMSStMM9IXnRgA'},
+    lat: 9.601480325777741,	                                                 
+    lng: 76.51956263         
+  },
+  {
+    city: 'Kannur',
+    resources: { covidBeds: '11SpU5FqbW7zmzxVWHskWI4sIQ8NXQIocM4f5sVE1Obw'},
+    lat: 11.87567368,	                                                 
+    lng: 75.36428388         
+  },
+  {
+    city: 'Kozhikode',
+    resources: { covidBeds: '1xMfJOPFnDSjDvsMU31c2YNAXf8JJrDeo8PGeJkHz1kg'},
+    lat: 11.27838585,	                                                 
+    lng: 75.81630544         
+  },
+  {
+    city: 'Kollam',
+    resources: { covidBeds: '1Ey5F2Y_pbzemXMMa56ydBB5Sb63ko1z0VtZArABCYxg'},
+    lat: 8.912879376,	                                                 
+    lng: 76.55232925         
+  },
+  {
+    city: 'Thrissur',
+    resources: { covidBeds: '1yd6ubGZrFiOgWUNGKNYh1RNM75EsTH8tNl_HCHrnXyg'},
+    lat: 10.52286255,	                                                 
+    lng: 76.18050635        
+  },
+  {
+    city: 'Thiruvananthapuram',
+    resources: { covidBeds: '1B39vsjzGN4B-esgcGrAoGWoPkQWvEhhQff_lCh2tMBI'},
+    lat: 8.529266567,	                                                 
+    lng: 76.9142086        
+  },
+  {
+    city: 'Pathanamthitta',
+    resources: { covidBeds: '1MwggfGdXhcKF8rXRS9CTum90IDmRL8zl5mTG5fSQ62A'},
+    lat: 9.261176645,	                                                 
+    lng: 76.75179715        
+  },
+  {
+    city: 'Kasaragod',
+    resources: { covidBeds: '13ru-ew19JBXSh77rXA2aGR_atzd_iLsWKl3dZfd-TlE'},
+    lat: 12.50806571,	                                                 
+    lng: 74.97945745        
+  },
+  {
+    city: 'Palakkad',
+    resources: { covidBeds: '1Q-pqEAAYZczvFRmmg9J_zRHUA0-5Vzt6DXKb51Oj0j8'},
+    lat: 10.8072209,	                                                 
+    lng: 76.63708438        
+  },
+  {
+    city: 'Malappuram',
+    resources: { covidBeds: '1UG9rfEESfu5OLV-7SRI2KTfpyLPTDpZTHxP5hEER8Bo'},
+    lat: 11.052510850970473,  	                                                 
+    lng: 76.0699365630597        
+  },
+  {
+    city: 'Wayanad',
+    resources: { covidBeds: '1gVQGzcwwOoAtZbl4yPtAWwR6pAHOz1uF9e78MlLeNR0'},
+    lat: 11.7107682	,	                                                 
+    lng: 76.08421677       
+  },
+  {
+    city: 'Idukki',
+    resources: { covidBeds: '1zYwKN3AbDoptVL8guxjwU5bQM42UO73uXTEIdZvFsSY'},
+    lat: 9.832305619,	                                                 
+    lng: 76.89560917       
+  }
 ]
-
 
 // module.exports.citiesWithResources = citiesWithResources;

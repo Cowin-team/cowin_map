@@ -16,7 +16,10 @@ class MealsMapFilters {
   
         return true;
       }
+      if (this.parentMapFilters.state.shouldHavePaid && location.hasPaid) {
   
+        return true;
+      }
       return false;
     }
   }
