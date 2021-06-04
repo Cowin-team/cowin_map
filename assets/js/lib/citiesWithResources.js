@@ -1232,7 +1232,7 @@ const citiesWithResources = [
     lng: 76.9142086        
   },
   {
-    city: 'Pathannamthitta',
+    city: 'Pathanamthitta',
     resources: { covidBeds: '1MwggfGdXhcKF8rXRS9CTum90IDmRL8zl5mTG5fSQ62A'},
     lat: 9.261176645,	                                                 
     lng: 76.75179715        
@@ -1244,13 +1244,13 @@ const citiesWithResources = [
     lng: 74.97945745        
   },
   {
-    city: 'Pallakad',
+    city: 'Palakkad',
     resources: { covidBeds: '1Q-pqEAAYZczvFRmmg9J_zRHUA0-5Vzt6DXKb51Oj0j8'},
     lat: 10.8072209,	                                                 
     lng: 76.63708438        
   },
   {
-    city: 'Mallapuram',
+    city: 'Malappuram',
     resources: { covidBeds: '1UG9rfEESfu5OLV-7SRI2KTfpyLPTDpZTHxP5hEER8Bo'},
     lat: 11.06666261,	                                                 
     lng: 76.05414375        
