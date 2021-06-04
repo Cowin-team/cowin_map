@@ -1252,8 +1252,8 @@ const citiesWithResources = [
   {
     city: 'Malappuram',
     resources: { covidBeds: '1UG9rfEESfu5OLV-7SRI2KTfpyLPTDpZTHxP5hEER8Bo'},
-    lat: 11.06666261,	                                                 
-    lng: 76.05414375        
+    lat: 11.058400301411062, 	                                                 
+    lng: 76.05805090911021        
   },
   {
     city: 'Wayanad',
