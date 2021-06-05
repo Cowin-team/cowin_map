@@ -32,13 +32,13 @@
   <!-- End Google Tag Manager -->
 
   <script src="https://kit.fontawesome.com/d14f08e7fd.js" crossorigin="anonymous"></script>
-
-
+  
+  
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
@@ -55,68 +55,69 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header>
+    <!--non-collapsible navbar-->
+    <nav class="navbar navbar-light navbar-expand-xl bg-light flex-row justify-content-center">
+     <div class="navbar-header"> 
+       <a class="navbar-brand" href="index.html" style="font-size: 20px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;text-decoration: none"><img class="img-responsive"       
+         src="assets/images/cowin_logo.png">The Cowin Map</a>
+       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapsedMenu" aria-controls="navbarCollapsedMenu" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     </div>
+ 
+     <!-- Links -->
+     <div class="collapse navbar-collapse" id="navbarCollapsedMenu">
+       <ul class="navbar-nav navbar-center has-text-centered">
+         <li class="nav-item">
+           <a class="nav-link active" href="index.html">Home</a>
+         </li>      
+         <!-- Uncomment this when these pages are ready-->
+         <!-- <li class="nav-item">
+           <a class="nav-link" href="about_us.html">About Us</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Media Kit</a>
+         </li> -->
+         <li class="nav-item">
+           <a class="nav-link" href="https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sources</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="disclaimer.html">Disclaimer</a>
+         </li>
+         <li>
+           <a href="https://twitter.com/The_CowinMap" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+         </li>
+         <li>
+           <a href="https://www.instagram.com/the_cowinmap/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+         </li>
+         <li>
+           <a href="https://www.linkedin.com/company/the-cowin-map/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+         </li>
+       </ul>
+     </div>
+    </nav>   
+   </header>
 
-   <!--non-collapsible navbar-->
-   <nav class="navbar navbar-light navbar-expand-xl bg-light ml-auto flex-row justify-content-center">
-    <div class="navbar-header"> 
-      <a class="navbar-brand brand-name title is-3" href="index.html" style="font-size: 24px; text-decoration: none"><img class="img-responsive"       
-        src="assets/images/cowin_logo.png">The Cowin Map</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon my-toggler"></span>
-    </button>
-    <!-- Links -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
-      <ul class="navbar-nav ml-auto navbar-center">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
-        </li>      
-        <li class="nav-item">
-          <a class="nav-link" href="about_us.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Media Kit</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sources</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="disclaimer.html" target="_blank">Disclaimer</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/The_CowinMap" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/the_cowinmap/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/the-cowin-map/" class="nav-link" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
-        </li>
-      </ul>
-    </div>
-  </nav>   
-    
-  <div class="container mt-3 is-hidden-tablet">
+  <div class="container mt-3 is-hidden-tablet collapse" id="contentIntro">
     <div class="content">
-      <span class="is-hidden-tablet">
+      <span>
         <!-- Shown only on mobile -->
         <p class="is-size-7" style="font-weight:bold; font-style: italic;">Now looking for urgent Covid-related help near you has become easier!</p>
-        <p class="is-size-7">Select the resource(s) you are looking for, the city, and click on the result(s) / icon(s) on the map for details. All the very best!</p>  
-        <p class="is-size-7">These are obtained from government and other sources all across India, and are diligently verified by our volunteers. Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to know our sources. </p>
-        <p class="is-size-7"> (See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</a></p>
-   
+        <p class="is-size-7">These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
+          Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" 
+          target="_blank" rel="noopener noreferrer">here</a> to know our sources. <i>(See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</i></a></p>
+        <p class="is-size-7">Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for details. All the very best!</p>  
       </span>
     </div>
   </div>
 
-  </header>
 
 
   <div class="pt-2 pb-2 bg-secondary">
     <div class="container level">
       <div class="content level-left">
 
-        <div class="level-item toggler-container" data-toggle="collapse" data-target="#navbarSupportedContent-4">
+        <div class="level-item toggler-container collapsed" data-toggle="collapse" data-target="#contentIntro">
             <a target="_blank" class="button is-text" style="color:white">Click for details</a>
         </div>        
 
@@ -253,7 +254,7 @@
     </div>
   </div>
 
-  <div class = "container is-hidden-mobile collapse" style="width: 300px; height: 100px; overflow-x: hidden; float:left; margin:30px;" id="navbarSupportedContent-4">
+  <div class = "container is-hidden-mobile collapse" style="width: 300px; height: 100px; overflow-x: hidden; float:left; margin:30px;" id="contentIntro">
 
     <div class = "block">
       <p style="font-size: large; font-weight:bold; font-style: italic;">
@@ -267,10 +268,12 @@
       </p>
 
       <p style="font-size: large;">
-        These are obtained from government and other sources all across India, and are diligently verified by our volunteers. Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to know our sources. 
+        These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
+        Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" 
+        rel="noopener noreferrer">here</a> to know our sources. <i></i>
       </p>
       
-      <p style="font-size: large; font-style: italic;">
+      <p style="font-size: medium; font-style: italic;">
         (See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</a>
       </p>
     </div>
