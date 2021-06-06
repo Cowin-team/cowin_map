@@ -94,16 +94,18 @@ class CowinMap {
   };
 
   plotCowinMapMarker(cowinMapMarker) {
-     if (cowinMapMarker instanceof OxygenSupplyMarker) {
-       this.oxygenCluster.addMarker(cowinMapMarker.marker);
-     } else if (cowinMapMarker instanceof CovidBedMarker) {
-       this.hospitalCluster.addMarker(cowinMapMarker.marker);
-     } else if (cowinMapMarker instanceof MealsMarker) {
-       this.mealCluster.addMarker(cowinMapMarker.marker);
-     } else if (cowinMapMarker instanceof TriageMarker) {
-       this.triageCluster.addMarker(cowinMapMarker.marker);
-     }
-   }
+    if (this.shouldPlotCowinMapMarker(cowinMapMarker)) {
+      if (cowinMapMarker instanceof OxygenSupplyMarker) {
+        this.oxygenCluster.addMarker(cowinMapMarker.marker);
+      } else if (cowinMapMarker instanceof CovidBedMarker) {
+        this.hospitalCluster.addMarker(cowinMapMarker.marker);
+      } else if (cowinMapMarker instanceof MealsMarker) {
+        this.mealCluster.addMarker(cowinMapMarker.marker);
+      } else if (cowinMapMarker instanceof TriageMarker) {
+        this.triageCluster.addMarker(cowinMapMarker.marker);
+      }
+    }
+  }
 
   shouldPlotCowinMapMarker(cowinMapMarker) {
     let shouldPlot = false;
@@ -152,10 +154,8 @@ class CowinMap {
 
   replotAllMarkerClusters() {
     this.resetMarkerClusters()
-    let filteredMarkers = this.cowinMapMarkers.filter((cowinMapMarker) => {
-      if (this.shouldPlotCowinMapMarker(cowinMapMarker)) {
-        this.plotCowinMapMarker(cowinMapMarker);
-      }
+    this.cowinMapMarkers.forEach((cowinMapMarker) => {
+      this.plotCowinMapMarker(cowinMapMarker);
     });
   }
 }
