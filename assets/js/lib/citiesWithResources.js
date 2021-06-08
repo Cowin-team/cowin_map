@@ -1281,7 +1281,7 @@ const citiesWithResources = [
   },
   {
     city: 'Anuppur',
-    resources: { covidBeds: '1TL2TDvPpxq5pN1crUqnz23QhD-Xm5bNVV8SOyHR0Lzs/'},
+    resources: { covidBeds: '1TL2TDvPpxq5pN1crUqnz23QhD-Xm5bNVV8SOyHR0Lzs'},
     lat: 23.03525965,	                                                 
     lng: 81.38844385    
   },
@@ -1320,6 +1320,66 @@ const citiesWithResources = [
     resources: { covidBeds: '1ybCerJeOqHeCrZLIWBMrrISy0zAmYAZR6LqgbVk6XEM'},
     lat: 23.2584857,	                                                 
     lng: 77.401989    
+  },
+  {
+    city: 'Burhanpur',
+    resources: { covidBeds: '1upXjg8LFOk1KVIFcDVK6o0_Q1ZwDwzJn9QxQVUkazNA'},
+    lat: 26.2697215,	                                                 
+    lng: 82.99442537    
+  },
+  {
+    city: 'Chhatarpur',
+    resources: { covidBeds: '1fNBJY_Gl6yN62X0mNWR_siXBVFJXj28Fp81PJCaD_MQ'},
+    lat: 24.75,		                                                 
+    lng: 79.75	    
+  },
+  {
+    city: 'Chhindwara',
+    resources: { covidBeds: '19deyWowUft5D3NgcgC4kuIxDAZ_NeyLs7kUGiLTOKwQ'},
+    lat: 22.13983105,	                                                 
+    lng: 78.80964495    
+  },
+  {
+    city: 'Damoh',
+    resources: { covidBeds: '1MDAbSGaj7DCdM9_w11luEeOx98KEF6_7m0Pj3RGa_rU'},
+    lat: 23.75,                                                 
+    lng: 79.583333		    
+  },
+  {
+    city: 'Datia',
+    resources: { covidBeds: '	1W46-Ogd_lwdsqLYRrb3VN_HgylEpXRbvzYPiCpemK6U'},
+    lat: 25.75,	                                                 
+    lng: 78.5	    
+  },
+  {
+    city: 'Dewas',
+    resources: { covidBeds: '1PSbSn0EHc-LMW5ClFhQVE1ZvBtL5rL_JacGmfVQ0Qt4'},
+    lat: 23.00,	                                                 
+    lng: 76.166667	   
+  },
+  {
+    city: 'Dhar',
+    resources: { covidBeds: '1CggkM8Uw1wdBxfE3f3PyOe5MkSsx0Bf_42jsLhVjnfU'},
+    lat: 22.5,	                                                 
+    lng: 75.25	    
+  },
+  {
+    city: 'Dindori',
+    resources: { covidBeds: '1DP6IRmuM5R8K1-AFLVM9NV_2RqfIFnuQeYzYoYitsEw'},
+    lat: 20.25527235,	                                                 
+    lng: 73.80730056		    
+  },
+  {
+    city: 'Guna',
+    resources: { covidBeds: '1ZAOFxLnvVU3dL2A1GqZASB3519cTkiaUAOJuWKgN7fI'},
+    lat: 24.5,	                                                 
+    lng: 77.5    
+  },
+  {
+    city: 'Gwalior',
+    resources: { covidBeds: '1mgeAT1Yy-iU-N2IXHcEL0mVjDii1X0k0KJx8c-I-e4U'},
+    lat: 26.2037247,	                                                 
+    lng: 78.1573628    
   }
 ]
 
