@@ -1390,8 +1390,8 @@ const citiesWithResources = [
   {
     city: 'Hoshangabad',
     resources: { covidBeds: '1tYJsh6g1KBLaOl1lxE2e0kfah4V4i50gC5PTbOK9uHY'},
-    lat: 22.7203616,		                                                 
-    lng: 75.8681996	    
+    lat: 22.754342794946453, 		                                                 
+    lng: 77.72881925662529    
   },
   {
     city: 'Indore',
@@ -1500,6 +1500,84 @@ const citiesWithResources = [
     resources: { covidBeds: '1CIa61jScwYhZ84RF4PuRf45qZVbQKW0vzvjTMXvxYQY'},
     lat: 23.80961225,	                                                 
     lng: 78.75911361    
+  },
+  {
+    city: 'Satna',
+    resources: { covidBeds: '1CMOhIvYcsd0YbbI-TGilWic5C5vRlYtOwdwk-eH_Rz4'},
+    lat: 24.5124,	                                                 
+    lng: 81.01267	    
+  },
+  {
+    city: 'Sehore',
+    resources: { covidBeds: '1KFwgLVeA0CoeKjmWiURUmCNeL_8JGkW9vto5FVLJTtw'},
+    lat: 23.1156882,		                                                 
+    lng: 77.06623939	    
+  },
+  {
+    city: 'Seoni',
+    resources: { covidBeds: '1I1mHmsqv4YtBfuNkQiSkVBkJCCCXJHP4CWu3GOMt6hU'},
+    lat: 22.2758789	,	                                                 
+    lng: 79.72104465  
+  },
+  {
+    city: 'Shahdol',
+    resources: { covidBeds: '1TH2qJjpXOGFNTyNIM8ltKDxLiuIqcCpEygPAx5i3wpw'},
+    lat: 23.3002343	,                                                 
+    lng: 81.364771	    
+  },
+  {
+    city: 'Shajapur',
+    resources: { covidBeds: '16v_WKCDtt1i7gig1lXE3OwSSG5JZ8T8SscAdP1pHfdQ'},
+    lat: 23.37074105,	                                                 
+    lng: 76.62051527	    
+  },
+  {
+    city: 'Sheopur',
+    resources: { covidBeds: '1ACkJqu0IgP9XrRgeBQE82aLfAZLuvRNU_SDSE6PEkmM'},
+    lat: 25.6656611	,	                                                 
+    lng: 76.6954843		   
+  },
+  {
+    city: 'Shivpuri',
+    resources: { covidBeds: '1_jwlDJg0X_cKR9ff4O_tQoaSk8T-yezSEvm8pvXDjfw'},
+    lat: 25.37524125,	                                                 
+    lng: 77.82811933			    
+  },
+  {
+    city: 'Sidhi',
+    resources: { covidBeds: '1kJSoDfX5RI6AOmZRooNFq119YLEWN1VProOjnUn2QdM'},
+    lat: 24.25563,	                                                 
+    lng: 82.00253		    
+  },
+  {
+    city: 'Singrauli',
+    resources: { covidBeds: '1mGxoWdDD_2SoK4mcNglT3WU7kyKnYghp6IHgJfNxrg4'},
+    lat: 24.1974432	,	                                                 
+    lng: 82.6661453    
+  },
+  {
+    city: 'Tikamgarh',
+    resources: { covidBeds: '1sO04dDD0RTz0ZWkNDJtd41_fI1AtrwMl2DJeasIm-zk'},
+    lat: 24.85450275	,	                                                 
+    lng: 79.04698124    
+  },
+  {
+    city: 'Ujjain',
+    resources: { covidBeds: '1NLicXRKqtj1ni1-WDhlKkLqgBv9p2R8GXlA0s1qJacY'},
+    lat: 23.174597,	                                                 
+    lng: 75.7851423		    
+  },
+  {
+    city: 'Umaria',
+    resources: { covidBeds: '1Nmw7wkQgQxVcH3jyVN9DWuVflgJVwK-Js8Hi4TnmQqs'},
+    lat: 23.64319305,	                                                 
+    lng: 80.94239522    
+  },
+  {
+    city: 'Vidisha',
+    resources: { covidBeds: '1KrJfpKUoQHHuVQvnZyxQCgtp0s9tOgnSlR_0EME7mCs'},
+    lat: 23.916667,	                                                 
+    lng: 78.000123    
   }
 ]
 
