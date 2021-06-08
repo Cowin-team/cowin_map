@@ -1380,6 +1380,126 @@ const citiesWithResources = [
     resources: { covidBeds: '1mgeAT1Yy-iU-N2IXHcEL0mVjDii1X0k0KJx8c-I-e4U'},
     lat: 26.2037247,	                                                 
     lng: 78.1573628    
+  },
+  {
+    city: 'Harda',
+    resources: { covidBeds: '14notGAz6Dtzu4hlnB1sF85x_G3rNWyo8DGs57xW-sZo'},
+    lat: 22.3388828,	                                                 
+    lng: 77.0929933	    
+  },
+  {
+    city: 'Hoshangabad',
+    resources: { covidBeds: '1tYJsh6g1KBLaOl1lxE2e0kfah4V4i50gC5PTbOK9uHY'},
+    lat: 22.7203616,		                                                 
+    lng: 75.8681996	    
+  },
+  {
+    city: 'Indore',
+    resources: { covidBeds: '19D1z0GWywzdyKb2PU6IlKOQAXCJ5iSZsiODPggz7T6I'},
+    lat: 22.7203616,	                                                 
+    lng: 75.8681996  
+  },
+  {
+    city: 'Jabalpur',
+    resources: { covidBeds: '1I09S-eT89g2zTw8HX2aKiW8mtJxyST0VXYJExQjy7I4'},
+    lat: 23.1608938,                                                 
+    lng: 79.9497702		    
+  },
+  {
+    city: 'Jhabua',
+    resources: { covidBeds: '	1CcSHTlZHRXNYISbwXGPbgYqFPyaTrkaFFStMAd1qA4s'},
+    lat: 22.88585225,	                                                 
+    lng: 74.72513369	    
+  },
+  {
+    city: 'Katni',
+    resources: { covidBeds: '1OPSMIyacpbGJdMfuZDZGBigLGgsqgEGIWqbee7ITQ1k'},
+    lat: 23.8339621,	                                                 
+    lng: 80.392456	   
+  },
+  {
+    city: 'Khandwa',
+    resources: { covidBeds: '1rxgE-buuzl6p_gqilJYdsIOHv92FnEN6ACZVvLrVQmo'},
+    lat: 21.9778642,	                                                 
+    lng: 76.56882823		    
+  },
+  {
+    city: 'Khargone',
+    resources: { covidBeds: '1346x9bQDX7OCmE4qmkhPYKdMust7euWCW8Z_guPN1F4'},
+    lat: 21.8187743,	                                                 
+    lng: 75.6064577		    
+  },
+  {
+    city: 'Mandla',
+    resources: { covidBeds: '13cJuNNAsSHhfkUSOLyoD_nuL6ED6JZ398og4c524UEk'},
+    lat: 22.68536625,	                                                 
+    lng: 80.58150562    
+  },
+  {
+    city: 'Mandsaur',
+    resources: { covidBeds: '1SB9F6AuH92Cr5KUAXvTPPeHZV5t_G0qmQtdFHWMuek8'},
+    lat: 24.2651306,	                                                 
+    lng: 75.38718194    
+  },
+  {
+    city: 'Morena',
+    resources: { covidBeds: '1fX29mgooKxGtKpBxwYVucKeCIwJu2Z9kCNomrU1yD60'},
+    lat: 26.166667,	                                                 
+    lng: 77.53	    
+  },
+  {
+    city: 'Narsinghpur',
+    resources: { covidBeds: '1BFpE9V_ISXM1hunZfB4BIwFVL687Y8svHUFjNcNsThI'},
+    lat: 22.9467047,		                                                 
+    lng: 79.1980228	    
+  },
+  {
+    city: 'Neemuch',
+    resources: { covidBeds: '1ipeSCWgQQ7A8BtOgZ6ljvTDzKenGW7yFybuINl3kmnc'},
+    lat: 24.63044655,	                                                 
+    lng: 75.18339615  
+  },
+  {
+    city: 'Niwari',
+    resources: { covidBeds: '1vnpWEV78WTZKeo3dw9c7XLBsejVKUIbwVltQL6Uffwc'},
+    lat: 25.3124704,                                                 
+    lng: 78.66785017	    
+  },
+  {
+    city: 'Panna',
+    resources: { covidBeds: '1kYi4KOnHV6l3XBnqPw6s8e2BDWuOL-IvT8gLr-USRGY'},
+    lat: 24.5,	                                                 
+    lng: 80.25	    
+  },
+  {
+    city: 'Raisen',
+    resources: { covidBeds: '1ueUOKIXiljlLhQtm4I4w8uEwsMJ_hqOL0BSF4M_tWJk'},
+    lat: 23.25,	                                                 
+    lng: 78.083333		   
+  },
+  {
+    city: 'Rajgarh',
+    resources: { covidBeds: '1fZuXQMI24G7XjMh1JCUkS8M2hHBxCju4W9EzPOu35RA'},
+    lat: 23.87167135,	                                                 
+    lng: 76.7748902			    
+  },
+  {
+    city: 'Ratlam',
+    resources: { covidBeds: '1auZYEwcO1i8dAK5VJ_LB_mK9a40pceg8IwGBaYvZPKI'},
+    lat: 23.4805919,	                                                 
+    lng: 74.91778971		    
+  },
+  {
+    city: 'Rewa',
+    resources: { covidBeds: '1KTRxd9q3ppZTujHdfXpWkQB1N_l5YA_ct2qIcXknwwE'},
+    lat: 24.75926685,	                                                 
+    lng: 81.65500021    
+  },
+  {
+    city: 'Sagar',
+    resources: { covidBeds: '1CIa61jScwYhZ84RF4PuRf45qZVbQKW0vzvjTMXvxYQY'},
+    lat: 23.80961225,	                                                 
+    lng: 78.75911361    
   }
 ]
 
