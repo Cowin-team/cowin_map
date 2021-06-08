@@ -1266,6 +1266,60 @@ const citiesWithResources = [
     resources: { covidBeds: '1zYwKN3AbDoptVL8guxjwU5bQM42UO73uXTEIdZvFsSY'},
     lat: 9.832305619,	                                                 
     lng: 76.89560917       
+  },
+  {
+    city: 'Agar Mala',
+    resources: { covidBeds: '1f8wEstzqTn55zYevQVhKpY1X5jZQyp-qHpqMOD4zBK4'},
+    lat: 23.9342963,	                                                 
+    lng: 76.14523314	    
+  },
+  {
+    city: 'Alirajpur',
+    resources: { covidBeds: '1qBFfHSY_-xdtNELvukyqfLTGJxbSEmr5wS3dwtJRGRU'},
+    lat: 22.28593955,		                                                 
+    lng: 74.35468609	    
+  },
+  {
+    city: 'Anuppur',
+    resources: { covidBeds: '1TL2TDvPpxq5pN1crUqnz23QhD-Xm5bNVV8SOyHR0Lzs/'},
+    lat: 23.03525965,	                                                 
+    lng: 81.38844385    
+  },
+  {
+    city: 'Ashoknagar',
+    resources: { covidBeds: '1O_Y-4kqE_u8pLtbzY_OEPXGmtkK0sbugvoI3h5Ns5rI'},
+    lat: 23.9342963,	                                                 
+    lng: 76.14523314	    
+  },
+  {
+    city: 'Balaghat',
+    resources: { covidBeds: '	1Wepx9idyORsmsXHyPorj302I2kaw77YETZGe6DqjCUA'},
+    lat: 21.966667,	                                                 
+    lng: 80.333333	    
+  },
+  {
+    city: 'Barwani',
+    resources: { covidBeds: '1c996a4h0ojmgiMBjZWxlECclPF7fxmNLU0_HnB7dlw8'},
+    lat: 21.75194325,	                                                 
+    lng: 74.89175175    
+  },
+  {
+    city: 'Betul',
+    resources: { covidBeds: '12nwhwLSRhm2GPE1wEVZ0CBOkD9udXi38dOEF-7_aTyU'},
+    lat: 21.8796162,	                                                 
+    lng: 77.87568125	    
+  },
+  {
+    city: 'Bhind',
+    resources: { covidBeds: '1gmdVaLv6JGJyfhQWjGKcNw528m-ik-Tqeu65iwzQHnE'},
+    lat: 26.5,	                                                 
+    lng: 78.75		    
+  },
+  {
+    city: 'Bhopal',
+    resources: { covidBeds: '1ybCerJeOqHeCrZLIWBMrrISy0zAmYAZR6LqgbVk6XEM'},
+    lat: 23.2584857,	                                                 
+    lng: 77.401989    
   }
 ]
 
