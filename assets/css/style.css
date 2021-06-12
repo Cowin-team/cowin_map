@@ -4,27 +4,6 @@
   height: 100%;
 }
 
-/*Making the logo responsive
-.img-responsive{
-  height: auto;
-  width: auto;
-  max-height: 72px;
-}
-*/
-.navbar .navbar-brand {
-  text-align: center;
-  display: block;
-  width: 100%;
-}
-.navbar .navbar-brand > .navbar-item,
-.navbar .navbar-brand .navbar-link {
-  display: inline-block;
-}
-.navbar-menu {
-  justify-content: center;
-  text-align: center;
-}
-
 /*Social Media Icons*/
 /* Style all font awesome icons */
 .fa {
