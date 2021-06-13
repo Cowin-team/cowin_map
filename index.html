@@ -42,7 +42,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -55,8 +55,8 @@
     <!--non-collapsible navbar-->
     <nav class="navbar is-light" role="navigation" aria-label="main navigation">
      <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="assets/images/cowin_logo.png">The Cowin Map
+      <a class="navbar-item" href="index.html" style="font-size: 20px;">
+        <img style="max-height: 72px;" src="assets/images/cowin_logo.png">The Cowin Map
       </a>
       <a class="navbar-burger" role="button" data-target ="navMenu" aria-label="menu" aria-expanded="false">
         <span></span>
@@ -81,7 +81,7 @@
     </nav>
    </header>
 
-  <div class="container mt-3 is-hidden-tablet collapse" id="contentIntro">
+  <div class="container mt-3 is-hidden-tablet collapse mobileView">
     <div class="content">
       <span>
         <!-- Shown only on mobile -->
@@ -96,12 +96,13 @@
 
 
 
-  <div class="pt-2 pb-2 bg-secondary">
+  <div class="pt-2 pb-2" style="background-color: gray !important;">
     <div class="container level">
       <div class="content level-left">
 
-        <div class="level-item toggler-container collapsed" data-toggle="collapse" data-target="#contentIntro">
-            <a target="_blank" class="button is-text" style="color:white">Click for details</a>
+        <div class="level-item" data-toggle="collapse" data-target=".collapse" data-text="Collapse">
+            <a class="button is-text" style="color:white">Click for details
+            </a>
         </div>        
 
 
@@ -237,7 +238,7 @@
     </div>
   </div>
 
-  <div class = "container is-hidden-mobile collapse" style="width: 300px; height: 100px; overflow-x: hidden; float:left; margin:30px;" id="contentIntro">
+  <div class = "container is-hidden-mobile collapse desktopView">
 
     <div class = "block">
       <p style="font-size: large; font-weight:bold; font-style: italic;">
@@ -270,7 +271,9 @@
 <script src="assets/js/lib/citiesWithResources.js"></script>
 <script src="assets/js/lib/markers/markerclusterer.js"></script>
 <script src="assets/js/lib/bulmaInteractions.js"></script>
-<script src="assets/js/lib/bulma2.js"></script>
+<script src="assets/js/lib/bulma_details.js"></script>
+<script src="assets/js/lib/bulma_navbar.js"></script>
+
 <script src="assets/js/lib/selectAll.js"></script>
 
 <script src="assets/js/lib/locations/covidBedLocation.js"></script>
@@ -295,7 +298,7 @@
 
 <script src="assets/js/lib/cityDropdown.js"></script>
 
-<script src="assets/js/lib/navbarIcon.js"></script>
+<
 
 <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
 <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
