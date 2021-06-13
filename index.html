@@ -36,9 +36,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -69,7 +67,8 @@
      <div class="navbar-menu" id ="navMenu">
 
        <div class="navbar-end">
-         <a class="navbar-item" href="index.html">Home</a>
+         <a class="navbar-item" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+         <a class="navbar-item" href="about_us.html" target="_blank" rel="noopener noreferrer">About Us</a>
          <a class="navbar-item" href="https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Sources</a>
          <a class="navbar-item" href="disclaimer.html">Disclaimer</a>
          <a class="navbar-item" href="https://twitter.com/The_CowinMap" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
@@ -81,7 +80,7 @@
     </nav>
    </header>
 
-  <div class="container mt-3 is-hidden-tablet collapse mobileView">
+  <div class="containerDetails mt-3 is-hidden-tablet" style="margin:18px;" id="toggledDetailsMobile">
     <div class="content">
       <span>
         <!-- Shown only on mobile -->
@@ -100,8 +99,8 @@
     <div class="container level">
       <div class="content level-left">
 
-        <div class="level-item" data-toggle="collapse" data-target=".collapse" data-text="Collapse">
-            <a class="button is-text" style="color:white">Click for details
+        <div class="level-item">
+            <a class="is-text button" id="toggleButton" style="color:white">Click for details
             </a>
         </div>        
 
@@ -109,7 +108,7 @@
         <div class="dropdown ml-2">
           <div class="dropdown-trigger">
             <div class="button level-item" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>-- I'm looking for --</span>
+              <span>Looking for</span>
               <span class="icon is-small">
                 <i class="fas fa-angle-down" aria-hidden="true"></i>
               </span>
@@ -229,7 +228,7 @@
               </div>
             </div>
           </div>
-          <div class="select ml-5 level-item">
+          <div class="select ml-3 level-item">
             <select id="citySelector"></select>
           </div>
         </div>
@@ -238,30 +237,31 @@
     </div>
   </div>
 
-  <div class = "container is-hidden-mobile collapse desktopView">
+  <div class = "container is-hidden-mobile" style = "float:left; width:20%; padding:30px" id="toggledDetailsDesktop">
+      <div class = "block">
+        <p style="font-size: large; font-weight:bold; font-style: italic;">
+          Now looking for urgent Covid-related help near you has become easier!
+        </p>
+      </div>
 
-    <div class = "block">
-      <p style="font-size: large; font-weight:bold; font-style: italic;">
-        Now looking for urgent Covid-related help near you has become easier!
-      </p>
-    </div>
+      <div class = "block">
+        <p style="font-size: large;">
+          Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!
+        </p>
+      </div>
 
-    <div class = "block">
-      <p style="font-size: large;">
-        Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!
-      </p>
-
-      <p style="font-size: large;">
-        These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
-        Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" 
-        rel="noopener noreferrer">here</a> to know our sources. <i></i>
-      </p>
-      
-      <p style="font-size: medium; font-style: italic;">
-        (See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</a>
-      </p>
-    </div>
-  
+      <div>
+        <p style="font-size: large;">
+          These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
+          Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" 
+          rel="noopener noreferrer">here</a> to know our sources. <i></i>
+        </p>
+        
+        <p style="font-size: medium; font-style: italic;">
+          (See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</a>
+        </p>
+      </div>
+      </div>
   </div>
 
   <div id="map"></div>
@@ -271,7 +271,6 @@
 <script src="assets/js/lib/citiesWithResources.js"></script>
 <script src="assets/js/lib/markers/markerclusterer.js"></script>
 <script src="assets/js/lib/bulmaInteractions.js"></script>
-<script src="assets/js/lib/bulma_details.js"></script>
 <script src="assets/js/lib/bulma_navbar.js"></script>
 
 <script src="assets/js/lib/selectAll.js"></script>
@@ -298,7 +297,6 @@
 
 <script src="assets/js/lib/cityDropdown.js"></script>
 
-<
 
 <!-- Replace the value of the key parameter in the call to the Google Maps JavaScript API URL below with your own API key. -->
 <!-- Make sure your API key is authorised to access the Google Maps API - you can enable that through your Google Developer console. -->
