@@ -38,17 +38,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   // if supported touch, otherwise click event:
   btn.addEventListener("click", () => {
-    if (targetDivM.style.display !== "none") {
-      targetDivM.style = "display:none";
-    } else {
-      targetDivM.style = "display:block; margin:18px";
-    }
-
-    if (targetDivD.style.display !== "none") {
-      targetDivD.style.display = "none";
-    } else {
-      targetDivD.style = "display:block; float:left; width:20%; padding:30px";
-    }
+    targetDivM.classList.toggle("is-hidden");
+    targetDivD.classList.toggle("is-hidden");
   });
 });
 
