@@ -4,6 +4,16 @@
   height: 100%;
 }
 
+.hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.this-will-not-be-read {
+  display: none !important;
+}
+
 /*Social Media Icons*/
 /* Style all font awesome icons */
 .fa {
