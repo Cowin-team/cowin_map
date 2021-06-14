@@ -1,0 +1,10 @@
+const DEFAULT_COUNTRY_TEXT = "India";
+const DEFAULT_STATE_TEXT = "-- Change State --";
+const DEFAULT_CITY_TEXT = "-- Change City --";
+const DEFAULT_VALUE = "default";
+const COWIN_MAP_DATA_API_URL = "https://cowinmapapis.com/resource/get_details";
+const CACHED_COUNTRY_KEY = "cachedCountry";
+const CACHED_STATE_KEY = "cachedStateKey";
+const CACHED_CITY_KEY = "cachedCityKey";
+const CACHED_CITY_LAT = "cachedCityLat";
+const CACHED_CITY_LNG = "cachedCityLng";

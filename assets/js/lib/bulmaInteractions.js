@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       event.stopPropagation();
       dropdown.closest(".dropdown").classList.toggle('is-active');
     });
+
   });
 
     //Collapse navbar with burger icon in narrower screens
@@ -46,6 +47,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     targetDivM.classList.toggle("is-hidden");
     targetDivD.classList.toggle("is-hidden");
   });
+
+  let checkboxes = document.querySelectorAll("input[type='checkbox']");
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function(event) {
+      window.sessionStorage.setItem("cb-"+checkbox.name, checkbox.checked);
+    });
+  })
 });
-
-
