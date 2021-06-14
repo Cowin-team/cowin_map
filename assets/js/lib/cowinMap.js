@@ -38,18 +38,27 @@ class CowinMap {
     this.resetMarkerClusters();
   }
 
-  initialiseMap() {
-    // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
-    this.map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: new google.maps.LatLng(11.0117016, 76.8971953)
-    });
+  async initialiseMap() {
+    const cachedLat = window.sessionStorage.getItem(cachedCityLat);
+    const cachedLng = window.sessionStorage.getItem(cachedCityLng);
+    if (cachedLat!=null && cachedLng!=null) {
+      this.map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(parseFloat(cachedLng), parseFloat(cachedLng))
+      });
+    } else {
+      // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
+      this.map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(11.0117016, 76.8971953)
+      });
+    }
 
     const urlParams = new URLSearchParams(window.location.search);
     const city = urlParams.get('city');
 
     if (city !== null) {
-      this.setMapAddress(city)
+      await this.setMapAddress(city)
     } else if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -76,10 +85,19 @@ class CowinMap {
     this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
   }
 
-  setMapAddress(city) {
-    citiesWithResources.forEach((element) => {
-      if(element.city.toLowerCase() == city.toLowerCase()) {
+  async setMapAddress(city) {
+    let locationData = [];
+    let cachedLocationData = window.sessionStorage.getItem(cachedCowinMapDataKey);
+    if (cachedLocationData !=null) {
+      locationData = await fetchCachedDataFromAPI(cachedLocationData);
+    } else {
+      locationData = await fetchLocationDataFromAPI();
+    }
+    locationData.forEach((element) => {
+      if(element.city.toLowerCase() === city.toLowerCase()) {
         this.map.setCenter(new google.maps.LatLng(element.lat, element.lng));
+        window.sessionStorage.setItem(cachedCityLat, element.lat);
+        window.sessionStorage.setItem(cachedCityLng, element.lng);
       }
     })
   }
@@ -109,7 +127,6 @@ class CowinMap {
 
   shouldPlotCowinMapMarker(cowinMapMarker) {
     let shouldPlot = false;
-
     for (let index in this.filters) {
       if (this.filters[index].shouldShowLocation(cowinMapMarker.location)) {
         shouldPlot = true;
@@ -121,7 +138,6 @@ class CowinMap {
 
   resetMarkerClusters() {
     this.markerClusters.forEach(cluster => cluster.clearMarkers());
-
     this.markerClusters = [];
     this.oxygenCluster = new MarkerClusterer(
       this.map,
@@ -159,3 +175,5 @@ class CowinMap {
     });
   }
 }
+
+
