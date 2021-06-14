@@ -1,6 +1,6 @@
 async function fetchLocationDataFromAPI(){
     let locationData = []
-    let response = await fetch(CowinMapDataAPIUrl);
+    let response = await fetch(cowinMapDataAPIUrl);
     let jsonData = await response.json();
     window.sessionStorage.setItem(cachedCowinMapDataKey, JSON.stringify(jsonData));
 
@@ -12,7 +12,7 @@ async function fetchLocationDataFromAPI(){
     return locationData;
 }
 
-async function fetchCachedDataFromAPI(cachedLocationData){
+async function fetchCachedLocationData(cachedLocationData){
     let locationData = []
     Object.keys(JSON.parse(cachedLocationData)).forEach(function (key) {
         let newObj = JSON.parse(cachedLocationData)[key];

@@ -89,7 +89,7 @@ class CowinMap {
     let locationData = [];
     let cachedLocationData = window.sessionStorage.getItem(cachedCowinMapDataKey);
     if (cachedLocationData !=null) {
-      locationData = await fetchCachedDataFromAPI(cachedLocationData);
+      locationData = await fetchCachedLocationData(cachedLocationData);
     } else {
       locationData = await fetchLocationDataFromAPI();
     }
