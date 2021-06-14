@@ -76,20 +76,20 @@
     </nav>
    </header>
 
-  <div class="containerDetails mt-3 is-hidden-tablet" style="margin:18px;" id="toggledDetailsMobile">
+  <div class="box mb-0 is-hidden-tablet" id="toggledDetailsMobile">
     <div class="content">
-      <span>
-        <!-- Shown only on mobile -->
-        <p class="is-size-7" style="font-weight:bold; font-style: italic;">Now looking for urgent Covid-related help near you has become easier!</p>
-        <p class="is-size-7">These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
-          Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" 
-          target="_blank" rel="noopener noreferrer">here</a> to know our sources. <i>(See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</i></a></p>
-        <p class="is-size-7">Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!</p>  
-      </span>
+      <!-- Shown only on mobile -->
+      <p class="is-size-7 is-italic has-text-weight-bold">Now looking for urgent Covid-related help near you has become easier!</p>
+      <p class="is-size-7">These have been collected from government and other sources across India, and are diligently verified by our volunteers.
+      Click <a class="has-text-weight-bold"
+               href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing"
+               target="_blank"
+               rel="noopener noreferrer">here</a>
+      to know our sources.
+      <i>(See our <a class="has-text-weight-bold" href = "disclaimer.html">disclaimer).</i></a></p>
+      <p class="is-size-7">Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!</p>
     </div>
   </div>
-
-
 
   <div class="pt-2 pb-2" style="background-color: gray !important;">
     <div class="container level">
@@ -98,7 +98,7 @@
         <div class="level-item">
             <a class="is-text button" id="toggleButton" style="color:white">Click for details
             </a>
-        </div>        
+        </div>
 
 
         <div class="dropdown ml-2">
@@ -233,34 +233,29 @@
     </div>
   </div>
 
-  <div class = "container is-hidden-mobile" style = "float:left; width:20%; padding:30px" id="toggledDetailsDesktop">
-      <div class = "block">
-        <p style="font-size: large; font-weight:bold; font-style: italic;">
-          Now looking for urgent Covid-related help near you has become easier!
-        </p>
-      </div>
+  <div style="float:left; width:20%;" class="column is-3 container is-hidden-mobile" id="toggledDetailsDesktop">
+    <div class="content box">
+      <p class="is-italic has-text-weight-bold">
+      Now looking for urgent Covid-related help near you has become easier!
+      </p>
 
-      <div class = "block">
-        <p style="font-size: large;">
-          Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!
-        </p>
-      </div>
+      <p>
+      Select the resource(s) you are looking for, the city, and click on the icon(s) on the map for the status, contact number, and other details. All the very best!
+      </p>
 
-      <div>
-        <p style="font-size: large;">
-          These have been collected from government and other sources across India, and are diligently verified by our volunteers. 
-          Click <a style = "font-weight: bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank" 
-          rel="noopener noreferrer">here</a> to know our sources. <i></i>
-        </p>
-        
-        <p style="font-size: medium; font-style: italic;">
-          (See our <a style = "font-weight: bold" href = "disclaimer.html">disclaimer).</a>
-        </p>
-      </div>
-      </div>
+      <p>
+      These have been collected from government and other sources across India, and are diligently verified by our volunteers.
+      Click <a class="has-text-weight-bold" href = "https://docs.google.com/document/d/1NtArK6_mnCg0i5XRfzmU557U3K1ixnVLNMH3lqi4SOU/edit?usp=sharing" target="_blank"
+                                                                                                                                                      rel="noopener noreferrer">here</a> to know our sources.
+      </p>
+
+      <p class="is-italic">
+      (See our <a class="has-text-weight-bold" href = "disclaimer.html">disclaimer).</a>
+      </p>
+    </div>
   </div>
-
   <div id="map"></div>
+
 
 
 
