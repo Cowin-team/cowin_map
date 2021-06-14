@@ -35,9 +35,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const targetDivM = document.getElementById("toggledDetailsMobile");
   const targetDivD = document.getElementById("toggledDetailsDesktop");
   const btn = document.getElementById("toggleButton");
+  const clickToOpenTextSpan = document.querySelector("#toggleButton .clickToOpenText");
+  const clickToCloseTextSpan = document.querySelector("#toggleButton .clickToCloseText");
 
   // if supported touch, otherwise click event:
   btn.addEventListener("click", () => {
+    clickToOpenTextSpan.classList.toggle("is-hidden");
+    clickToCloseTextSpan.classList.toggle("is-hidden");
+
     targetDivM.classList.toggle("is-hidden");
     targetDivD.classList.toggle("is-hidden");
   });
