@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Cowin Map - About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.8.335/build/pdf.min.js"></script> -->
+    
+    <style>
+    @media only screen and (max-width: 1800px) {
+      span{
+        font-size: larger;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%; /* from the aspect ratio 16:9 -> 9/16 = 0.5625 = 56.25% */
+
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width:1024px) {
+      span{
+        font-size: larger;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 133%; /* based on an aspect ratio */
+
+      }
+    }
+
+
+    @media only screen and (max-width: 768px) {
+
+      span{
+        font-size: large;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 200%; /*based on the aspect ratio in portrait mode. Issues with zoom. Issues in landscape mode. */
+      }
+    }
+
+    /* Then style the iframe to fit in the container div with full height and width */
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <span>About Us</span>
+    <div class="container">
+      <iframe src="assets\documents\About_us.pdf" class='responsive-iframe'>
+     </iframe>
+    </div>
+  </body>
+
+</html>
