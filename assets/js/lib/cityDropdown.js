@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const city = urlParams.get('city');
 
     let option = document.createElement("option");
-    option.text = "-- Change city --";
+    option.text = "Change city";
     option.value = 'default'
     citySelector.add(option)
 
