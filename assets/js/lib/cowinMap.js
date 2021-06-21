@@ -29,7 +29,7 @@ class CowinMap {
     });
     this.filters.push(this.triageMapFilters);
 
-    this.pharmaMapFilters = new PharmaFilters((newFiltersState) => {
+    this.pharmaMapFilters = new PharmaMapFilters((newFiltersState) => {
       this.replotAllMarkerClusters()
     });
     this.filters.push(this.pharmaMapFilters);

@@ -37,13 +37,22 @@ class City {
     if (resources.includes('triage')) {
       this.fetchTriageData();
     }
+
+    this.pharmaLocations  = [];
+    this.pharmaMarkers    = [];
+    this.hasFetchedPharmaData = false;
+
+    if (resources.includes('pharma')) {
+      this.fetchPharmaData();
+    }
   }
 
   fetchedAllData() {
      if ((this.availableResources.includes("beds") && !this.hasFetchedCovidBedsData) ||
        (this.availableResources.includes("oxygen") && !this.hasFetchedOxygenData) ||
        (this.availableResources.includes("meals") && !this.hasFetchedMealsData) ||
-       (this.availableResources.includes("triage") && !this.hasFetchedTriageData)) {
+       (this.availableResources.includes("triage") && !this.hasFetchedTriageData) ||
+       (this.availableResources.includes("pharma") && !this.hasFetchedPharmaData)) {
 
        return false;
      }
@@ -133,6 +142,27 @@ class City {
       .catch(error => {
          console.error(`!!!! Failed to fetch TRIAGE for ${this.name}: ${error}`);
          this.hasFetchedTriageData = true;
+       });;
+  }
+
+  fetchPharmaData() {
+    let dataUrl = `https://cowinmapapis.com/sheet/fetch?city=${this.name}&resource=pharma`
+
+    fetch(dataUrl)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach((dataRow) => {
+          let pharmaLocation = new PharmaLocation(dataRow);
+          this.pharmaLocations.push(pharmaLocation);
+          this.pharmaMarkers.push(new PharmaMarker(pharmaLocation));
+        });
+
+        this.hasFetchedPharmaData = true;
+        this.afterFetchCallback(this.pharmaMarkers);
+      })
+      .catch(error => {
+         console.error(`!!!! Failed to fetch Pharma for ${this.name}: ${error}`);
+         this.hasFetchedPharmaData = true;
        });;
   }
 }

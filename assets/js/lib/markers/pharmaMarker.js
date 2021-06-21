@@ -5,7 +5,7 @@ class PharmaMarker {
         position: location.position,
         map: null,
         title: location.title,
-        // icon: "assets/images/oxygen_marker.png"
+        icon: "assets/images/capsule.png"
       });
       this.position = this.marker.position;
   

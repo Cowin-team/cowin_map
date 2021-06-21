@@ -15,7 +15,12 @@ class PharmaLocation {
            console.log(e);
         }
       }
-      this.pharmaType    = dataRow[6]
+      
+      if (dataRow[6] !==undefined){
+        this.isGovt = this.parseYesOrNo(dataRow[6]);
+        this.isPrivate = !this.isGovt
+      }
+
       this.additionalInfo  = dataRow[7]
       this.updatedAt       = dataRow[9];
       this.contacts       = [];
