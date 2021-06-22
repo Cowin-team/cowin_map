@@ -1,9 +1,9 @@
 function initialiseMap() {
-  let c = new CowinMap();
+  let cowinMap = new CowinMap();
 
   let afterCityDataFetchCallback = (cowinMapMarkers) => {
     cowinMapMarkers.forEach((cowinMapMarker) => {
-      c.setupAndPlotCowinMapMarker(cowinMapMarker);
+      cowinMap.setupAndPlotCowinMapMarker(cowinMapMarker);
     });
   };
 

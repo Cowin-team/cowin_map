@@ -39,8 +39,8 @@ class CowinMap {
   }
 
   async initialiseMap() {
-    const cachedLat = window.sessionStorage.getItem(cachedCityLat);
-    const cachedLng = window.sessionStorage.getItem(cachedCityLng);
+    const cachedLat = window.sessionStorage.getItem(CACHED_CITY_LAT);
+    const cachedLng = window.sessionStorage.getItem(CACHED_CITY_LNG);
     if (cachedLat!=null && cachedLng!=null) {
       this.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
@@ -86,18 +86,12 @@ class CowinMap {
   }
 
   async setMapAddress(city) {
-    let locationData = [];
-    let cachedLocationData = window.sessionStorage.getItem(cachedCowinMapDataKey);
-    if (cachedLocationData !=null) {
-      locationData = await fetchCachedLocationData(cachedLocationData);
-    } else {
-      locationData = await fetchLocationDataFromAPI();
-    }
+    let locationData =  await fetchLocationDataFromAPI();
     locationData.forEach((element) => {
       if(element.city.toLowerCase() === city.toLowerCase()) {
         this.map.setCenter(new google.maps.LatLng(element.lat, element.lng));
-        window.sessionStorage.setItem(cachedCityLat, element.lat);
-        window.sessionStorage.setItem(cachedCityLng, element.lng);
+        window.sessionStorage.setItem(CACHED_CITY_LAT, element.lat);
+        window.sessionStorage.setItem(CACHED_CITY_LNG, element.lng);
       }
     })
   }

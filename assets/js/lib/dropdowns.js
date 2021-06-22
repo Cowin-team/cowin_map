@@ -5,16 +5,16 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     let citySelector = document.getElementById('citySelector')
 
     // get cached user selected location preferences
-    const country = window.sessionStorage.getItem(cachedCountryKey);
-    const state = window.sessionStorage.getItem(cachedStateKey);
-    const city = window.sessionStorage.getItem(cachedCityKey);
+    const country = window.sessionStorage.getItem(CACHED_COUNTRY_KEY);
+    const state = window.sessionStorage.getItem(CACHED_STATE_KEY);
+    const city = window.sessionStorage.getItem(CACHED_CITY_KEY);
 
     // fetch & clean up state & city info from cowin map api
     let locationData = await fetchLocationDataFromAPI();
 
     if (country != null && state!= null && city != null) {
         // if cached user selected location preferences are available, set them in the dropdowns
-        addOption(countrySelector, defaultCountryText, defaultCountryText);
+        addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
         addOption(stateSelector, state, state);
         addOption(citySelector, city, city);
         populateStateNames(locationData, stateSelector);
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             }
         });
         removeOptions(document.getElementById('citySelector'));
-        addOption(citySelector, defaultCityText, defaultValue);
+        addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
         cityNames.forEach(cityName => {
             addOption(citySelector, cityName, cityName);
         });
@@ -42,18 +42,18 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     // listener for when the city name is changed by the user in the dropdown
     // the url & cache gets updated and map gets reloaded
     citySelector.addEventListener("change", function () {
-        window.sessionStorage.setItem(cachedCountryKey, countrySelector.value);
-        window.sessionStorage.setItem(cachedStateKey, stateSelector.value);
-        window.sessionStorage.setItem(cachedCityKey, citySelector.value);
+        window.sessionStorage.setItem(CACHED_COUNTRY_KEY, countrySelector.value);
+        window.sessionStorage.setItem(CACHED_STATE_KEY, stateSelector.value);
+        window.sessionStorage.setItem(CACHED_CITY_KEY, citySelector.value);
         let base_url = window.location.origin + window.location.pathname;
         window.location.href = base_url + '?city=' + citySelector.value;
     });
 });
 
 function populateDefaultDropdowns(citiesAndStatesList, countrySelector, stateSelector, citySelector){
-    addOption(countrySelector, defaultCountryText, defaultCountryText);
-    addOption(stateSelector, defaultStateText, defaultValue);
-    addOption(citySelector, defaultCityText, defaultValue);
+    addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
+    addOption(stateSelector, DEFAULT_STATE_TEXT, DEFAULT_VALUE);
+    addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
 }
 
 function populateStateNames(citiesAndStatesList, stateSelector){
