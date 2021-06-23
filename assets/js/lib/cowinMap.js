@@ -41,10 +41,13 @@ class CowinMap {
   async initialiseMap() {
     const cachedLat = window.sessionStorage.getItem(CACHED_CITY_LAT);
     const cachedLng = window.sessionStorage.getItem(CACHED_CITY_LNG);
-    if (cachedLat!=null && cachedLng!=null) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const city = urlParams.get('city');
+
+    if (cachedLat != null && cachedLng != null && city !== null) {
       this.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: new google.maps.LatLng(parseFloat(cachedLng), parseFloat(cachedLng))
+        center: new google.maps.LatLng(parseFloat(cachedLat), parseFloat(cachedLng))
       });
     } else {
       // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
@@ -53,47 +56,6 @@ class CowinMap {
         center: new google.maps.LatLng(11.0117016, 76.8971953)
       });
     }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const city = urlParams.get('city');
-
-    if (city !== null) {
-      await this.setMapAddress(city)
-    } else if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          this.map.setCenter(pos);
-        },
-        () => {
-          // could not fetch location
-          this.setDefaultMapLocation()
-        }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      // No city found in url param
-      // Center on Coimbatore
-      this.setDefaultMapLocation()
-    }
-  }
-
-  setDefaultMapLocation() {
-    this.map.setCenter(new google.maps.LatLng(11.0117016, 76.8971953));
-  }
-
-  async setMapAddress(city) {
-    let locationData =  await fetchLocationDataFromAPI();
-    locationData.forEach((element) => {
-      if(element.city.toLowerCase() === city.toLowerCase()) {
-        this.map.setCenter(new google.maps.LatLng(element.lat, element.lng));
-        window.sessionStorage.setItem(CACHED_CITY_LAT, element.lat);
-        window.sessionStorage.setItem(CACHED_CITY_LNG, element.lng);
-      }
-    })
   }
 
   setupAndPlotCowinMapMarker(cowinMapMarker) {
