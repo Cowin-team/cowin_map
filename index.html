@@ -107,149 +107,161 @@
       </div>
 
 
-      <div class="dropdown ml-2">
-        <div class="dropdown-trigger">
-          <div class="button level-item" aria-haspopup="true" aria-controls="dropdown-menu">
-            <span>Looking for</span>
-            <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
+      <div class="level-item">
+        <div class="columns">
+          <div class="column">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <div class="button level-item" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>Looking for</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="dropdown-menu all-filter-inputs" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <label class="checkbox has-text-grey">
+                      <input type="checkbox" class="selectAllFiltersToggle"
+                      data-target-inputs-selector=".all-filter-inputs input" value="1" checked>
+                      Select all
+                    </label>
+                  </div>
+                  <hr class="dropdown-divider">
+                  <div class="hospital-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveCovidBeds]" data-filter-name="shouldHaveCovidBeds"
+                        value="1" checked>
+                        Covid Beds
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveOxygenBeds]" data-filter-name="shouldHaveOxygenBeds"
+                                                                                    value="1" checked>
+                        Oxygen Beds
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveICUs]" data-filter-name="shouldHaveICUs" value="1"
+                                                                                                                checked>
+                        ICUs
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveVentilators]"
+                                               data-filter-name="shouldHaveVentilators" value="1" checked>
+                        Ventilators
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveHDUBeds]" data-filter-name="shouldHaveHDUBeds"
+                                                                                 value="1" checked>
+                        HDU Beds
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="dropdown-divider">
+
+                  <div class="oxygen-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveRefilling]" data-filter-name="shouldHaveRefilling"
+                                                                                   value="1" checked>
+                        Oxygen Refilling
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveCylinders]" data-filter-name="shouldHaveCylinders"
+                                                                                   value="1" checked>
+                        Oxygen Cylinders
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveCans]" data-filter-name="shouldHaveCans" value="1"
+                                                                                                                checked>
+                        Oxygen Cans
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveConcentrator]"
+                                               data-filter-name="shouldHaveConcentrator" value="1" checked>
+                        Oxygen Concentrators
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="dropdown-divider">
+
+                  <div class="meals-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHaveFree]" data-filter-name="shouldHaveFree" value="1"
+                                                                                                                checked>
+                        Free Meals
+                      </label>
+                    </div>
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[shouldHavePaid]" data-filter-name="shouldHavePaid" value="1"
+                                                                                                                checked>
+                        Paid Meals
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="dropdown-divider">
+
+                  <div class="triage-filters">
+                    <div class="dropdown-item">
+                      <label class="checkbox">
+                        <input type="checkbox" name="filters[showTriageCenters]" data-filter-name="showTriageCenters" value="1"
+                        checked>
+                        Show Triage Centers/War Rooms
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr class="dropdown-divider">
+
+                  <div class="dropdown-item">
+                    <a href="https://docs.google.com/document/d/1J2n02MOj-iaxKgKAVLvLfpvWcPAfAIKeqpkdEg4g8mU/edit"
+                       class="button is-text"
+                       target="_blank">
+                      See our upcoming resources
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="dropdown-menu all-filter-inputs" role="menu">
-          <div class="dropdown-content">
-            <div class="dropdown-item">
-              <label class="checkbox has-text-grey">
-                <input type="checkbox" class="selectAllFiltersToggle"
-                       data-target-inputs-selector=".all-filter-inputs input" value="1" checked>
-                Select all
-              </label>
-            </div>
-            <hr class="dropdown-divider">
-            <div class="hospital-filters">
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveCovidBeds]" data-filter-name="shouldHaveCovidBeds"
-                         value="1" checked>
-                  Covid Beds
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveOxygenBeds]" data-filter-name="shouldHaveOxygenBeds"
-                         value="1" checked>
-                  Oxygen Beds
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveICUs]" data-filter-name="shouldHaveICUs" value="1"
-                         checked>
-                  ICUs
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveVentilators]"
-                         data-filter-name="shouldHaveVentilators" value="1" checked>
-                  Ventilators
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveHDUBeds]" data-filter-name="shouldHaveHDUBeds"
-                         value="1" checked>
-                  HDU Beds
-                </label>
-              </div>
-            </div>
-
-            <hr class="dropdown-divider">
-
-            <div class="oxygen-filters">
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveRefilling]" data-filter-name="shouldHaveRefilling"
-                         value="1" checked>
-                  Oxygen Refilling
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveCylinders]" data-filter-name="shouldHaveCylinders"
-                         value="1" checked>
-                  Oxygen Cylinders
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveCans]" data-filter-name="shouldHaveCans" value="1"
-                         checked>
-                  Oxygen Cans
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveConcentrator]"
-                         data-filter-name="shouldHaveConcentrator" value="1" checked>
-                  Oxygen Concentrators
-                </label>
-              </div>
-            </div>
-
-            <hr class="dropdown-divider">
-
-            <div class="meals-filters">
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHaveFree]" data-filter-name="shouldHaveFree" value="1"
-                         checked>
-                  Free Meals
-                </label>
-              </div>
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[shouldHavePaid]" data-filter-name="shouldHavePaid" value="1"
-                         checked>
-                  Paid Meals
-                </label>
-              </div>
-            </div>
-
-            <hr class="dropdown-divider">
-
-            <div class="triage-filters">
-              <div class="dropdown-item">
-                <label class="checkbox">
-                  <input type="checkbox" name="filters[showTriageCenters]" data-filter-name="showTriageCenters" value="1"
-                         checked>
-                  Show Triage Centers/War Rooms
-                </label>
-              </div>
-            </div>
-
-            <hr class="dropdown-divider">
-
-            <div class="dropdown-item">
-              <a href="https://docs.google.com/document/d/1J2n02MOj-iaxKgKAVLvLfpvWcPAfAIKeqpkdEg4g8mU/edit"
-                 class="button is-text"
-                 target="_blank">
-                See our upcoming resources
-              </a>
+          <div class="column">
+            <div class="select">
+              <select id="countrySelector"></select>
             </div>
           </div>
-        </div>
-        <div class="select ml-3 level-item">
-          <select id="countrySelector"></select>
-        </div>
 
-        <div class="select ml-3 level-item">
-          <select id="stateSelector"></select>
-        </div>
+          <div class="column">
+            <div class="select">
+              <select id="stateSelector"></select>
+            </div>
+          </div>
 
-        <div class="select ml-3 level-item">
-          <select id="citySelector"></select>
+          <div class="column">
+            <div class="select">
+              <select id="citySelector"></select>
+            </div>
+          </div>
         </div>
       </div>
 
