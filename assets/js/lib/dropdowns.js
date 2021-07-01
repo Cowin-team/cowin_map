@@ -28,6 +28,8 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     // populate the states in the country in the state drop down
     countrySelector.addEventListener("change", function () {
         populateStateNames(locationData, stateSelector, countrySelector.value);
+        removeOptions(document.getElementById('citySelector'));
+        addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
     });
 
     
