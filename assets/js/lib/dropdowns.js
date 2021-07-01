@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     // listener for when the country name is changed by the user in the dropdown
     // populate the states in the country in the state drop down
     countrySelector.addEventListener("change", function () {
-        populateCityNames(locationData, stateSelector, countrySelector.value);
+        populateStateNames(locationData, stateSelector, countrySelector.value);
     });
 
     
