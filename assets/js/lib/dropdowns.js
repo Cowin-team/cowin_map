@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 
     // fetch & clean up state & city info from cowin map api
     let locationData = await fetchLocationDataFromAPI();
-    populateCountryNames(countrySelector);
+    populateCountryNames(locationData, countrySelector);
     populateStateNames(locationData, stateSelector);
 
     // get cached user selected location preferences
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     });
 });
 
-function populateCountryNames (countrySelector) {
+function populateCountryNames (locationData, countrySelector) {
     removeOptions(document.getElementById('countrySelector'));
     addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
     
