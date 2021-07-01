@@ -63,7 +63,7 @@ function populateCountryNames (locationData, countrySelector) {
 function populateStateNames (locationData, stateSelector, country) {
     removeOptions(document.getElementById('stateSelector'));
 
-    let stateNames = [DEFAULT_COUNTRY_TEXT];
+    let stateNames = [DEFAULT_STATE_TEXT];
     
     locationData.forEach(object => {
         if (object['country'].toLowerCase() === country.toLowerCase()) {
