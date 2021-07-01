@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         setSelectedIndex(citySelector, city);
     } else {
         addOption(stateSelector, DEFAULT_STATE_TEXT, DEFAULT_STATE_TEXT);
+        populateStateNames(locationData, stateSelector, DEFAULT_COUNTRY_TEXT);
         addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
     }
 
