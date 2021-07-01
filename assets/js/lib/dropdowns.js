@@ -4,17 +4,17 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     let stateSelector = document.getElementById('stateSelector');
     let citySelector = document.getElementById('citySelector');
 
-    // fetch & clean up state & city info from cowin map api
-    let locationData = await fetchLocationDataFromAPI();
-    populateCountryNames(locationData, countrySelector);
-    populateStateNames(locationData, stateSelector, countrySelector.value);
-
     // get cached user selected location preferences
     const country = window.sessionStorage.getItem(CACHED_COUNTRY_KEY);
     const state = window.sessionStorage.getItem(CACHED_STATE_KEY);
     const city = window.sessionStorage.getItem(CACHED_CITY_KEY);
+    
+    // fetch & clean up state & city info from cowin map api
+    let locationData = await fetchLocationDataFromAPI();
+    populateCountryNames(locationData, countrySelector);
 
     if (country != null && state != null && city != null) {
+        populateStateNames(locationData, stateSelector, country);
         populateCityNames(locationData, citySelector, state);
         // if cached user selected location preferences are available, set them as selected in the dropdowns
         setSelectedIndex(countrySelector, country);
