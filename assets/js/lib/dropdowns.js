@@ -24,6 +24,13 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
     }
 
+    // listener for when the country name is changed by the user in the dropdown
+    // populate the states in the country in the state drop down
+    countrySelector.addEventListener("change", function () {
+        populateCityNames(locationData, stateSelector, countrySelector.value);
+    });
+
+    
     // listener for when the state name is changed by the user in the dropdown
     // populate the cities in the state in the city drop down
     stateSelector.addEventListener("change", function () {
@@ -41,7 +48,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 
 function populateCountryNames (locationData, countrySelector) {
     removeOptions(document.getElementById('countrySelector'));
-    addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
+    //addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
     
     let countryNames = locationData.map(object => {
         return object.country;
