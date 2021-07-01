@@ -42,6 +42,15 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 function populateCountryNames (countrySelector) {
     removeOptions(document.getElementById('countrySelector'));
     addOption(countrySelector, DEFAULT_COUNTRY_TEXT, DEFAULT_COUNTRY_TEXT);
+    
+    let countryNames = locationData.map(object => {
+        return object.country;
+    });
+    let uniqueCountryNames = [...new Set(countryNames)];
+    uniqueCountryNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    uniqueCountryNames.forEach(countryName => {
+        addOption(countrySelector, countryName, countryName);
+    });
 }
 
 function populateStateNames (locationData, stateSelector) {
