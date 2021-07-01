@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         setSelectedIndex(stateSelector, state);
         setSelectedIndex(citySelector, city);
     } else {
+        addOption(stateSelector, DEFAULT_STATE_TEXT, DEFAULT_STATE_TEXT);
         addOption(citySelector, DEFAULT_CITY_TEXT, DEFAULT_VALUE);
     }
 
