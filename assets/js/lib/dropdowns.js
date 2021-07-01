@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     // fetch & clean up state & city info from cowin map api
     let locationData = await fetchLocationDataFromAPI();
     populateCountryNames(locationData, countrySelector);
-    populateStateNames(locationData, stateSelector);
+    populateStateNames(locationData, stateSelector, DEFAULT_COUNTRY_TEXT);
 
     // get cached user selected location preferences
     const country = window.sessionStorage.getItem(CACHED_COUNTRY_KEY);
@@ -60,14 +60,16 @@ function populateCountryNames (locationData, countrySelector) {
     });
 }
 
-function populateStateNames (locationData, stateSelector) {
-    addOption(stateSelector, DEFAULT_STATE_TEXT, DEFAULT_VALUE);
-    let stateNames = locationData.map(object => {
-        return object.state;
+function populateStateNames (locationData, stateSelector, country) {
+    let stateNames = [];
+    locationData.forEach(object => {
+        if (object['country'].toLowerCase() === country.toLowerCase()) {
+            stateNames.push(object['state']);
+        }
     });
-    let uniqueStateNames = [...new Set(stateNames)];
-    uniqueStateNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-    uniqueStateNames.forEach(stateName => {
+    removeOptions(document.getElementById('stateSelector'));
+    addOption(stateSelector, DEFAULT_STATE_TEXT, DEFAULT_STATE_VALUE);
+    stateNames.forEach(stateName => {
         addOption(stateSelector, stateName, stateName);
     });
 }
