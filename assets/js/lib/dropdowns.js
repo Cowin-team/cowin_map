@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     // fetch & clean up state & city info from cowin map api
     let locationData = await fetchLocationDataFromAPI();
     populateCountryNames(locationData, countrySelector);
-    populateStateNames(locationData, stateSelector, DEFAULT_COUNTRY_TEXT);
+    populateStateNames(locationData, stateSelector, CACHED_COUNTRY_KEY);
 
     // get cached user selected location preferences
     const country = window.sessionStorage.getItem(CACHED_COUNTRY_KEY);
