@@ -52,11 +52,11 @@ class CowinMap {
           parseFloat(cachedLng)
         ),
       });
-      //Adding Idle Listener
+      //Adding Idle Listener to getResources when the bounds change
       google.maps.event.addListener(
         this.map,
         "idle",
-        this.getResourcesByBound(this.map)
+        this.getResourcesByBounds
       );
     } else {
       // Center on (0, 0). Map center and zoom will reconfigure later (fitbounds method)
@@ -64,58 +64,13 @@ class CowinMap {
         zoom: 10,
         center: new google.maps.LatLng(11.0117016, 76.8971953),
       });
-      //Adding Idle Listener
-      google.maps.event.addListener(this.map, "idle", function () {
-        {
-          var bounds = this.getBounds();
-          var NECorner = bounds.getNorthEast();
-          var SWCorner = bounds.getSouthWest();
-          var NWCorner = new google.maps.LatLng(NECorner.lat(), SWCorner.lng());
-          var SECorner = new google.maps.LatLng(SWCorner.lat(), NECorner.lng());
-          console.log(this);
-          //Zoom level 11 seems good
-          console.log("Zoom level of this map is: ", this.getZoom());
-          if (this.getZoom() >= 11) {
-            const params = {
-              pt1: NECorner.lng()
-                .toString()
-                .concat("," + NECorner.lat().toString()),
-              pt2: SWCorner.lng()
-                .toString()
-                .concat("," + SWCorner.lat().toString()),
-              pt3: NWCorner.lng()
-                .toString()
-                .concat("," + NWCorner.lat().toString()),
-              pt4: SECorner.lng()
-                .toString()
-                .concat("," + SECorner.lat().toString()),
-            };
-
-            fetch(
-              "https://cowinmapapis.com/data/fetch?" +
-                "pt1=" +
-                params.pt1 +
-                "&pt2=" +
-                params.pt2 +
-                "&pt3=" +
-                params.pt3 +
-                "&pt4=" +
-                params.pt4
-            )
-              .then((response) => response.json())
-              .then((data) => console.log(data));
-          } else {
-            console.log("Zoom in more to see resources");
-          }
-        }
-      });
+      //Adding Idle Listener to getResources when the bounds change
+      google.maps.event.addListener(
+        this.map,
+        "idle",
+        this.getResourcesByBounds
+      );
     }
-    //Adding Idle Listener
-    // google.maps.event.addListener(
-    //   this.map,
-    //   "idle",
-    //   this.getResourcesByBound(this.map)
-    // );
   }
 
   setupAndPlotCowinMapMarker(cowinMapMarker) {
@@ -128,16 +83,16 @@ class CowinMap {
     this.plotCowinMapMarker(cowinMapMarker);
   }
   //
-  getResourcesByBound() {
-    var bounds = this.map.getBounds();
+  getResourcesByBounds() {
+    var bounds = this.getBounds();
     var NECorner = bounds.getNorthEast();
     var SWCorner = bounds.getSouthWest();
     var NWCorner = new google.maps.LatLng(NECorner.lat(), SWCorner.lng());
     var SECorner = new google.maps.LatLng(SWCorner.lat(), NECorner.lng());
-    console.log(map);
+    console.log(this);
     //Zoom level 11 seems good
-    console.log("Zoom level of this map is: ", map.getZoom());
-    if (map.getZoom() >= 11) {
+    console.log("Zoom level of this map is: ", this.getZoom());
+    if (this.getZoom() >= 11) {
       const params = {
         pt1: NECorner.lng()
           .toString()
