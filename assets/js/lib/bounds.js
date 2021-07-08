@@ -21,13 +21,15 @@ class Bounds {
     //Plot beds
     //This logic will be reused for the each resource type
     //Inspired from the implementation in city.js
-    // resources.beds.forEach((dataRow) => {
-    //   console.log(dataRow);
-    //   let covidBedLocation = new CovidBedLocation(dataRow);
-    //   this.covidBedLocations.push(covidBedLocation);
-    //   this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
-    //   this.afterFetchCallback(this.covidBedMarkers);
-    // });
+
+    resources.beds.forEach((dataRow) => {
+      console.log(dataRow);
+      let covidBedLocation = new CovidBedLocation(dataRow);
+      this.covidBedLocations.push(covidBedLocation);
+      this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
+      this.afterFetchCallback(this.covidBedMarkers);
+    });
+
     //Plot meals
     console.log(resources.meals);
     resources.meals.forEach((dataRow) => {
