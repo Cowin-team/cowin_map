@@ -10,29 +10,21 @@ function initialiseMap() {
   let resourceUrl = "https://cowinmapapis.com/resource/get";
   let cities = [];
 
-  let boundsList = [];
-
-  //const event = new Event("build");
   // Listen for the event.
   document.addEventListener("beginBoundsRender", boundsRender, false);
 
   function boundsRender(e) {
     let boundsResources = e.detail;
-    console.log("Inside beginBoundsRender event");
     console.log(boundsResources);
-    //Clear boundsList
-    //boundsList.push(new Bounds(boundsResources, afterCityDataFetchCallback));
+
+    //A new Bounds Object is created to render all the data
+    //TODO Set up logic to not rerender already drawn markers
     let DisplayedBounds = new Bounds(
       boundsResources,
       afterCityDataFetchCallback
     );
   }
-
-  // Dispatch the event.
-
-  //Create a new bounds object that accepts a callback, we wouldn't need a bound array
-  //since we are onky dealing with one bounds at a time
-
+  //Commented out the previous city based implementation below
   // fetch(resourceUrl)
   //   .then((response) => response.json())
   //   .then((data) => {

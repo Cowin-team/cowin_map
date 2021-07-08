@@ -18,32 +18,27 @@ class Bounds {
     this.triageMarkers = [];
     this.hasFetchedTriageData = true;
 
-    // for (const [key, value] of Object.entries(resources)) {
-    //   if (key == "beds") {
-    //     value.forEach((dataRow) => {
-    //       console.log("Inside beds forloop");
-    //       let covidBedLocation = new CovidBedLocation(dataRow);
-    //       this.covidBedLocations.push(covidBedLocation);
-    //       this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
-    //       this.afterFetchCallback(this.covidBedMarkers);
-    //     });
-    //   } else if (key == "meals") {
-    //     console.log("Inside meals loop");
-
-    //   }
-    // }
-    resources.beds.forEach((dataRow) => {
-      console.log(dataRow);
-      let covidBedLocation = new CovidBedLocation(dataRow);
-      this.covidBedLocations.push(covidBedLocation);
-      this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
-      this.afterFetchCallback(this.covidBedMarkers);
-    });
+    //Plot beds
+    //This logic will be reused for the each resource type
+    //Inspired from the implementation in city.js
+    // resources.beds.forEach((dataRow) => {
+    //   console.log(dataRow);
+    //   let covidBedLocation = new CovidBedLocation(dataRow);
+    //   this.covidBedLocations.push(covidBedLocation);
+    //   this.covidBedMarkers.push(new CovidBedMarker(covidBedLocation));
+    //   this.afterFetchCallback(this.covidBedMarkers);
+    // });
+    //Plot meals
+    console.log(resources.meals);
     resources.meals.forEach((dataRow) => {
+      console.log(dataRow);
       let mealsLocation = new MealsLocation(dataRow);
       this.mealsLocations.push(mealsLocation);
       this.mealsMarkers.push(new MealsMarker(mealsLocation));
       this.afterFetchCallback(this.mealsMarkers);
     });
+    //Plot OxygenSupply
+
+    //Plot Triage
   }
 }
