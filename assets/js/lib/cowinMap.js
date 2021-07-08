@@ -84,15 +84,16 @@ class CowinMap {
   }
   //
   getResourcesByBounds() {
+    let boundsList = [];
     var bounds = this.getBounds();
     var NECorner = bounds.getNorthEast();
     var SWCorner = bounds.getSouthWest();
     var NWCorner = new google.maps.LatLng(NECorner.lat(), SWCorner.lng());
     var SECorner = new google.maps.LatLng(SWCorner.lat(), NECorner.lng());
-    console.log(this);
+    //console.log(this);
     //Zoom level 11 seems good
-    console.log("Zoom level of this map is: ", this.getZoom());
-    if (this.getZoom() >= 11) {
+    //console.log("Zoom level of this map is: ", this.getZoom());
+    if (this.getZoom() >= 12) {
       const params = {
         pt1: NECorner.lng()
           .toString()
@@ -120,7 +121,14 @@ class CowinMap {
           params.pt4
       )
         .then((response) => response.json())
-        .then((data) => console.log(data));
+        .then((data) => {
+          //Trigger an event and attach response data to this event
+          // document.dispatchEvent(new Event("beginBoundsRender"));
+          document.dispatchEvent(
+            new CustomEvent("beginBoundsRender", { detail: data })
+          );
+          //boundsList.push(new Bounds(data, afterCityDataFetchCallback));
+        });
     } else {
       console.log("Zoom in more to see resources");
     }
